@@ -1,0 +1,19 @@
+/* Custom tweaks on top of Tailwind */
+body {
+    font-synthesis: none;
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+video {
+    pointer-events: none;
+}
