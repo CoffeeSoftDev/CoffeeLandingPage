@@ -8,8 +8,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
 
     <script>
         tailwind.config = {
@@ -21,53 +21,37 @@
                         sand: '#f7f5f2'
                     },
                     fontFamily: {
-                        heading: ['\"Poppins\"', 'ui-sans-serif', 'system-ui'],
-                         sans: ['Inter', 'system-ui', 'sans-serif'],
-                        body: ['\"Inter\"', 'ui-sans-serif', 'system-ui']
+                        heading: ['"Poppins"', 'ui-sans-serif', 'system-ui'],
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        body: ['"Inter"', 'ui-sans-serif', 'system-ui']
                     }
                 }
             }
         }
     </script>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="bg-white text-slate-800 font-body">
-    <!-- Hero -->
+    <!-- Hero (estático - no cambia con datos de API) -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6">
-        <video class="absolute w-full object-cover" src="https://huubie.com.mx/video/prueba.mp4" autoplay muted loop
-            playsinline></video>
-            <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/50"></div>
+        <video class="absolute w-full object-cover" src="https://huubie.com.mx/video/prueba.mp4" autoplay muted loop playsinline></video>
+        <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/50"></div>
 
-                    <!-- <div class="absolute inset-0  bg-gradient-to-b from-black/55 via-black/35 to-black/45">     -->
-
-        <!-- <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/60"> -->
-        </div>
-        <header
-            class="absolute top-8 sm:top-12 md:top-14 lg:top-16 xl:top-20 left-0 right-0 flex items-center justify-center px-6 sm:px-8 md:px-10">
-            <nav
-                class="hidden md:flex items-center gap-6 bg-white/90 backdrop-blur rounded-full px-2 py-1 shadow-lg text-sm font-medium">
-                <img src="assets/img/logo-agrinol.png" alt="AGRINOL logo"
-                    class="h-9 sm:h-10 w-28 object-cover text-center">
+        <header class="absolute top-8 sm:top-12 md:top-14 lg:top-16 xl:top-20 left-0 right-0 flex items-center justify-center px-6 sm:px-8 md:px-10">
+            <nav class="hidden md:flex items-center gap-6 bg-white/90 backdrop-blur rounded-full px-2 py-1 shadow-lg text-sm font-medium">
+                <img src="assets/img/logo-agrinol.png" alt="AGRINOL logo" class="h-9 sm:h-10 w-28 object-cover text-center">
                 <a href="#quienes" class="hover:text-primary transition-colors">Quiénes somos</a>
                 <a href="#asociados" class="hover:text-primary transition-colors">Asociados</a>
                 <a href="#proyectos" class="hover:text-primary transition-colors">Proyectos</a>
                 <a href="#portafolio" class="hover:text-primary transition-colors">Portafolio</a>
-                <a href="#contacto"
-                    class="hidden md:inline-flex items-center justify-center bg-primary text-white rounded-full px-5 py-2 shadow-lg hover:bg-primary/90 transition-colors text-sm font-semibold">Contáctanos</a>
+                <a href="#contacto" class="hidden md:inline-flex items-center justify-center bg-primary text-white rounded-full px-5 py-2 shadow-lg hover:bg-primary/90 transition-colors text-sm font-semibold">Contáctanos</a>
             </nav>
-
         </header>
-        <div class="absolute bottom-64 md:bottom-20 left-12 z-16 w-full max-w-6xl  pl-8 md:pl-16 lg:pl-24">
+
+        <div class="absolute bottom-64 md:bottom-20 left-12 z-16 w-full max-w-6xl pl-8 md:pl-16 lg:pl-24">
             <div class="text-left max-w-[46rem]">
-                <h1
-                    class="font-sans font-semibold text-white/90
-                        tracking-[0.03em] leading-[1.2]
-                        text-[clamp(2.8rem,5.6vw,2rem)]
-                        drop-shadow-[0_15px_40px_rgba(0,0.3,0,0.5)]
-                        antialiased">
+                <h1 class="font-sans font-semibold text-white/90 tracking-[0.03em] leading-[1.2] text-[clamp(2.8rem,5.6vw,2rem)] drop-shadow-[0_15px_40px_rgba(0,0.3,0,0.5)] antialiased">
                     Comprometidos con<br>
                     el desarrollo de la<br>
                     costa Chiapas.
@@ -75,7 +59,6 @@
             </div>
         </div>
         
-        <!-- Bloque inferior derecho -->
         <div class="absolute bottom-20 right-24 z-10 max-w-xl">
             <div class="bg-[#848484]/30 backdrop-blur-sm rounded-md px-6 py-4">
                 <p class="text-white text-sm md:text-lg font-semibold leading-relaxed">Recursos sostenibles y responsables para impulsar el desarrollo regional del Soconusco.</p>
@@ -84,355 +67,29 @@
         </div>
     </section>
 
-    <!-- Quiénes somos -->
+    <!-- Quiénes somos (renderizado dinámicamente) -->
     <section id="quienes" class="py-24 fade-section min-h-screen">
-        <!-- <div class="max-w-6xl mx-auto px-6 px-lg-0 space-y-8">
-            <div class="text-center mt-10 mb-16">
-                <h2 class="text-primary text-4xl font-heading font-semibold "> A qué nos dedicamos en
-                    <span class="font-bold">Agrinol</span>?
-                </h2>
-             
-            </div> -->
-        <div class="max-w-6xl mx-auto px-6  space-y-6">
-                <div class="text-center mt-10 mb-10">
-                    <h2 class="text-4xl text-primary font-heading font-semibold mt-6 mb-6">¿A qué nos dedicamos en
-                        <span class="font-bold">Agrinol</span>?</h2>
-                    <p class="text-sm md:text-base text-slate-600 mt-3 max-w-3xl mx-auto px-16">Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo regional del soconusco. Detonando el potencial del pacífico mexicano al convertir a puerto chiapas en un polo de desarrollo marítimo - industrial. </p>
-                </div>
-                <div class="flex flex-col md:flex-row items-stretch gap-6">
-                    <div class="relative w-full md:w-2/5 rounded-3xl shadow-lg overflow-hidden min-h-[260px]">
-                        <img src="https://huubie.com.mx/video/barquito.png" alt="Puerto"
-                            class="absolute inset-0 w-full h-full object-cover">
-                    </div>
-                    <div class="bg-[#F8F7F2] rounded-3xl p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700">
-                        <!-- <p>Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo regional del soconusco.
-                            Detonando el potencial del
-                            pacífico mexicano al convertir a puerto chiapas en un polo de desarrollo marítimo - industrial.
-                        </p> -->
-                        <p>Tenemos como misión desarrollar el potencial de puerto chiapas con el concurso de las
-                            autoridades, invitando a la
-                            sociedad civil a ser copartícipe de este proyecto en beneficio del interés nacional.
-                            <br>
-                            <br>
-                            Con la visión y gestión del ing. Carlos Alberto Vila Serrano, conocedor del entorno de negocios
-                            del sector público y
-                            privado, con la firma: AGRINOL SAPI DE CV, es el líder de esta gran promoción en beneficio de
-                            chiapas y méxico.</p>
-                    </div>
-                </div>
-
-            <div class="flex flex-col md:flex-row items-stretch gap-6">
-                <div
-                    class="bg-[#F8F7F2] rounded-3xl p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 flex flex-col justify-center ">
-                    <div class="mb-10">
-                        <h3 class="text-2xl font-heading font-semibold text-primary">Misión</h3>
-                        <p>Gestionar e implementar proyectos sustentables del desarrollo y bienestar.</p>
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-heading font-semibold text-primary">Visión</h3>
-                        <p>Provocar el desarrollo y bienestar de Chiapas en forma sostenible.</p>
-                    </div>
-                </div>
-                <div class="relative w-full md:w-2/5 rounded-3xl shadow-lg overflow-hidden min-h-[260px]">
-                    <img src="https://huubie.com.mx/video/barquito.png" alt="Puerto"
-                        class="absolute inset-0 w-full h-full object-cover">
-                </div>
-            </div>
-        </div>
+        <!-- Contenido cargado desde apiData -->
     </section>
 
-    <!-- Asociados -->
+    <!-- Asociados (renderizado dinámicamente) -->
     <section id="asociados" class="py-28 fade-section min-h-screen bg-sand">
-        <div class="max-w-6xl mx-auto px-6 text-center space-y-6">
-            <div class="text-center mt-10 mb-16">
-                <h2 class="text-4xl font-heading font-semibold mt-6 mb-6">Asociados</h2>
-                <p class="text-sm md:text-base text-slate-600 mt-3 max-w-3xl mx-auto px-16">Conformamos un equipo
-                    estratégico
-                    integrado por profesionales altamente comprometidos que suman conocimientos especializados para el
-                    éxito de cada proyecto.</p>
-            </div>
-            <div class="brands_list-wrapper">
-                <div class="brands_list">
-                    <!-- Original cards -->
-                    <div class="brands_item-block cursor-pointer" data-name="Carlos Alberto Vila" data-role="Director General" data-img="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80" data-bio="Líder visionario con amplia experiencia en el sector público y privado. Conocedor del entorno de negocios y promotor del desarrollo regional del Soconusco.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 1" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Carlos Alberto Vila</h4>
-                            <p class="brands_item-desc">Director General</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="María González" data-role="Directora de Operaciones" data-img="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=400&q=80" data-bio="Especialista en gestión de proyectos sustentables con más de 15 años de experiencia en el sector energético y desarrollo regional.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 2" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">María González</h4>
-                            <p class="brands_item-desc">Directora de Operaciones</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="Roberto Hernández" data-role="Director Financiero" data-img="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80" data-bio="Experto en finanzas corporativas y estructuración de proyectos de inversión. Amplia trayectoria en el sector portuario.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 3" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Roberto Hernández</h4>
-                            <p class="brands_item-desc">Director Financiero</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="Ana Martínez" data-role="Directora Legal" data-img="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" data-bio="Abogada especializada en derecho corporativo y regulación portuaria. Asesora en temas de comercio internacional.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 4" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Ana Martínez</h4>
-                            <p class="brands_item-desc">Directora Legal</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="Luis Ramírez" data-role="Director de Proyectos" data-img="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" data-bio="Ingeniero civil con especialidad en infraestructura portuaria. Líder de proyectos de desarrollo marítimo-industrial.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 5" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Luis Ramírez</h4>
-                            <p class="brands_item-desc">Director de Proyectos</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="Pedro Sánchez" data-role="Director Comercial" data-img="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" data-bio="Especialista en desarrollo de negocios y relaciones comerciales internacionales. Promotor de alianzas estratégicas.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 6" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Pedro Sánchez</h4>
-                            <p class="brands_item-desc">Director Comercial</p>
-                        </div>
-                    </div>
-                    <!-- Duplicated cards for seamless loop -->
-                    <div class="brands_item-block cursor-pointer" data-name="Carlos Alberto Vila" data-role="Director General" data-img="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80" data-bio="Líder visionario con amplia experiencia en el sector público y privado. Conocedor del entorno de negocios y promotor del desarrollo regional del Soconusco.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 1" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Carlos Alberto Vila</h4>
-                            <p class="brands_item-desc">Director General</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="María González" data-role="Directora de Operaciones" data-img="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=400&q=80" data-bio="Especialista en gestión de proyectos sustentables con más de 15 años de experiencia en el sector energético y desarrollo regional.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 2" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">María González</h4>
-                            <p class="brands_item-desc">Directora de Operaciones</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="Roberto Hernández" data-role="Director Financiero" data-img="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80" data-bio="Experto en finanzas corporativas y estructuración de proyectos de inversión. Amplia trayectoria en el sector portuario.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 3" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Roberto Hernández</h4>
-                            <p class="brands_item-desc">Director Financiero</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="Ana Martínez" data-role="Directora Legal" data-img="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" data-bio="Abogada especializada en derecho corporativo y regulación portuaria. Asesora en temas de comercio internacional.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 4" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Ana Martínez</h4>
-                            <p class="brands_item-desc">Directora Legal</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="Luis Ramírez" data-role="Director de Proyectos" data-img="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80" data-bio="Ingeniero civil con especialidad en infraestructura portuaria. Líder de proyectos de desarrollo marítimo-industrial.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 5" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Luis Ramírez</h4>
-                            <p class="brands_item-desc">Director de Proyectos</p>
-                        </div>
-                    </div>
-                    <div class="brands_item-block cursor-pointer" data-name="Pedro Sánchez" data-role="Director Comercial" data-img="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80" data-bio="Especialista en desarrollo de negocios y relaciones comerciales internacionales. Promotor de alianzas estratégicas.">
-                        <div class="brands_item-logo-wrap">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80"
-                                loading="lazy" alt="Asociado 6" class="brands_item-logo">
-                        </div>
-                        <div class="brands_item-texts">
-                            <h4 class="brands_item-name">Pedro Sánchez</h4>
-                            <p class="brands_item-desc">Director Comercial</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Contenido cargado desde apiData -->
     </section>
 
-
-    <!-- Proyectos -->
+    <!-- Proyectos (renderizado dinámicamente) -->
     <section id="proyectos" class="py-28 fade-section min-h-screen">
-        <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-                <h2 class="text-4xl font-heading font-semibold leading-tight text-primary mb-6">Nuestros
-                    Proyectos<br>Más
-                    Recientes</h2>
-                <div class="text-slate-700 text-sm md:text-base space-y-1">
-                    <div class="mb-6">
-                        <p class="font-semibold">Terminal Portuaria Remota.</p>
-                        <ul class="list-disc list-inside space-y-1">
-                            <li>Complementar puerto Chiapas con una terminal mar adentro sin asolvés (25 Ha).</li>
-                            <li>Tres muelles (150, 225, 300).</li>
-                            <li>Podebi en zona de reserva de la asipona (270 Ha).</li>
-                            <li>Construcción y operación regulada por SEMAR.</li>
-                            <li>Inversión privada complementando a la inversión pública.</li>
-                        </ul>
-                    </div>
-                    <div class="mb-6">
-                        <p class="font-semibold">Constraucción de las rutas comerciales.</p>
-                        <ul class="list-disc list-inside space-y-1">
-                            <li>Nuevo terminal portuaria.</li>
-                            <li>Instalaciones de cada plantel.</li>
-                            <li>Centro de datos.</li>
-                        </ul>
-                    </div>
-
-
-
-                </div>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4 pt-16">
-                <!-- Video principal -->
-                <div class="relative rounded-3xl shadow-lg overflow-hidden col-span-2 h-64 video-container">
-                    <video class="w-full h-full object-cover" poster="https://huubie.com.mx/video/palomas.png" preload="metadata">
-                        <source src="https://www.agrinol.mx/vid/gespro.mp4" type="video/mp4">
-                    </video>
-                    <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-                        <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-primary ml-1" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-                <!-- Video 2 -->
-                <div class="relative rounded-3xl shadow-lg overflow-hidden h-32 video-container">
-                    <video class="w-full h-full object-cover" poster="https://huubie.com.mx/video/computadora.png" preload="metadata">
-                        <source src="https://www.agrinol.mx/vid/gespro.mp4" type="video/mp4">
-                    </video>
-                    <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-                        <div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-                <!-- Video 3 -->
-                <div class="relative rounded-3xl shadow-lg overflow-hidden h-32 video-container">
-                    <video class="w-full h-full object-cover" poster="https://huubie.com.mx/video/pasto.png" preload="metadata">
-                        <source src="https://www.agrinol.mx/vid/gespro.mp4" type="video/mp4">
-                    </video>
-                    <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-                        <div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-                <!-- Video 4 -->
-                <div class="relative rounded-3xl shadow-lg overflow-hidden h-32 video-container">
-                    <video class="w-full h-full object-cover" poster="https://huubie.com.mx/video/pasto.png" preload="metadata">
-                        <source src="https://www.agrinol.mx/vid/gespro.mp4" type="video/mp4">
-                    </video>
-                    <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-                        <div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-                <!-- Video 5 -->
-                <div class="relative rounded-3xl shadow-lg overflow-hidden h-32 video-container">
-                    <video class="w-full h-full object-cover" poster="https://huubie.com.mx/video/computadora.png" preload="metadata">
-                        <source src="https://www.agrinol.mx/vid/gespro.mp4" type="video/mp4">
-                    </video>
-                    <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-                        <div class="w-10 h-10 bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary ml-0.5" fill="currentColor" viewBox="0 0 24 24">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </button>
-                </div>
-            </div>
-
-        </div>
+        <!-- Contenido cargado desde apiData -->
     </section>
 
-    <!-- Portafolio -->
+    <!-- Portafolio (renderizado dinámicamente) -->
     <section id="portafolio" class="py-16 fade-section min-h-screen bg-sand">
-        <div class="max-w-6xl mx-auto px-6 space-y-8"></div>
-            <div class="text-center mb-10 mt-10">
-                <h2 class="text-3xl font-heading font-semibold">Portafolio</h2>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-4 px-20">
-                <div class="md:col-span-2 bg-white rounded-3xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" class="w-full h-72 object-cover" alt="Proyecto 1">
-                    <div class="p-4">
-                        <p class="font-semibold text-sm uppercase tracking-wide">Proyecto 1</p>
-                        <p class="text-slate-600 text-sm">Description</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80" class="w-full h-72 object-cover" alt="Proyecto 2">
-                    <div class="p-4">
-                        <p class="font-semibold text-sm uppercase tracking-wide">Proyecto 2</p>
-                        <p class="text-slate-600 text-sm">Description</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover" alt="Proyecto 3">
-                    <div class="p-4">
-                        <p class="font-semibold text-sm uppercase tracking-wide">Proyecto 3</p>
-                        <p class="text-slate-600 text-sm">Description</p>
-                    </div>
-                </div>
-                <div class="md:col-span-2 bg-white rounded-3xl overflow-hidden shadow-lg">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80" class="w-full h-64 object-cover" alt="Proyecto 4">
-
-                    <div class="p-4">
-                        <p class="font-semibold text-sm uppercase tracking-wide">Proyecto 4</p>
-                        <p class="text-slate-600 text-sm">Description</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        <!-- Contenido cargado desde apiData -->
     </section>
 
-    <!-- Footer -->
+    <!-- Footer (renderizado dinámicamente) -->
     <footer id="contacto" class="py-10">
-        <div class="max-w-5xl mx-auto px-6 text-center space-y-4">
-            <img src="assets/img/logo-agrinol.png" alt="AGRINOL logo" class="mx-auto h-16 w-auto">
-            <p class="text-slate-500 text-sm">Todos los derechos reservados | 2026</p>
-        </div>
+        <!-- Contenido cargado desde apiData -->
     </footer>
 
     <script src="assets/js/index.js"></script>
