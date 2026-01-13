@@ -128,10 +128,25 @@ A lo largo de su carrera ha liderado iniciativas en infraestructura, agroindustr
     ]
   },
 
-  // Footer
+  // Footer / Contacto
   footer: {
     logo: "assets/img/logo-agrinol.png",
-    copyright: "Todos los derechos reservados | 2026"
+    copyright: "Todos los derechos reservados | 2026",
+    contacto: {
+      titulo: "Contacto",
+      direccion: {
+        texto: "19 Oriente #38, colonia centro. Tapachula, Chiapas",
+        url: "https://www.google.com/maps/place/Capsula+CC/@14.9131086,-92.2544204,89m/data=!3m1!1e3!4m6!3m5!1s0x858e0f24609096f3:0xfb9517e5666ed8a8!8m2!3d14.9129978!4d-92.2544324!16s%2Fg%2F11fp3pwhf9?hl=es-ES&entry=ttu"
+      },
+      telefono: {
+        texto: "+52 962 184 0551",
+        url: "https://api.whatsapp.com/send/?phone=%2B529621840551&text&type=phone_number&app_absent=0"
+      },
+      email: {
+        texto: "presidencia@agrinol.mx",
+        url: "mailto:presidencia@agrinol.mx"
+      }
+    }
   }
 };
 
@@ -143,7 +158,7 @@ A lo largo de su carrera ha liderado iniciativas en infraestructura, agroindustr
 function renderQuienesSomos() {
   const section = document.getElementById('quienes');
   if (!section) return;
-  
+
   const data = apiData.quienesSomos;
   section.innerHTML = `
     <div class="max-w-6xl mx-auto px-6 space-y-6">
@@ -181,7 +196,7 @@ function renderQuienesSomos() {
 function renderAsociados() {
   const section = document.getElementById('asociados');
   if (!section) return;
-  
+
   const data = apiData.asociados;
   const miembrosHTML = data.miembros.map(m => `
     <div class="brands_item-block cursor-pointer" data-name="${m.nombre}" data-role="${m.rol}" data-img="${m.imagen}" data-bio="${m.bio}">
@@ -194,10 +209,10 @@ function renderAsociados() {
       </div>
     </div>
   `).join('');
-  
+
   // Duplicar para el loop infinito
   const miembrosDuplicados = miembrosHTML + miembrosHTML;
-  
+
   section.innerHTML = `
     <div class="max-w-6xl mx-auto px-6 text-center space-y-6">
       <div class="text-center mt-10 mb-16">
@@ -214,9 +229,9 @@ function renderAsociados() {
 function renderProyectos() {
   const section = document.getElementById('proyectos');
   if (!section) return;
-  
+
   const data = apiData.proyectos;
-  
+
   const proyectosHTML = data.items.map(p => `
     <div class="mb-6">
       <p class="font-semibold">${p.nombre}.</p>
@@ -225,7 +240,7 @@ function renderProyectos() {
       </ul>
     </div>
   `).join('');
-  
+
   const videosHTML = data.videos.map((v, i) => {
     const isLarge = v.size === 'large';
     return `
@@ -243,7 +258,7 @@ function renderProyectos() {
       </div>
     `;
   }).join('');
-  
+
   section.innerHTML = `
     <div class="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-8 items-center">
       <div class="space-y-4">
@@ -258,9 +273,9 @@ function renderProyectos() {
 function renderPortafolio() {
   const section = document.getElementById('portafolio');
   if (!section) return;
-  
+
   const data = apiData.portafolio;
-  
+
   const proyectosHTML = data.proyectos.map(p => `
     <div class="${p.destacado ? 'md:col-span-2' : ''} bg-white rounded-3xl overflow-hidden shadow-lg">
       <img src="${p.imagen}" class="w-full ${p.destacado ? 'h-72' : 'h-64'} object-cover" alt="${p.nombre}">
@@ -270,7 +285,7 @@ function renderPortafolio() {
       </div>
     </div>
   `).join('');
-  
+
   section.innerHTML = `
     <div class="max-w-6xl mx-auto px-6 space-y-8">
       <div class="text-center mb-10 mt-10">
@@ -284,12 +299,40 @@ function renderPortafolio() {
 function renderFooter() {
   const footer = document.getElementById('contacto');
   if (!footer) return;
-  
+
   const data = apiData.footer;
+  const c = data.contacto;
+
   footer.innerHTML = `
-    <div class="max-w-5xl mx-auto px-6 text-center space-y-4">
-      <img src="${data.logo}" alt="AGRINOL logo" class="mx-auto h-16 w-auto">
-      <p class="text-slate-500 text-sm">${data.copyright}</p>
+    <div class="max-w-5xl mx-auto px-6 space-y-8">
+      <div class="text-center">
+        <img src="${data.logo}" alt="AGRINOL logo" class="mx-auto h-20 w-auto mb-1">
+        <h3 class="text-2xl font-heading font-semibold text-primary mb-6">${c.titulo}</h3>
+      </div>
+      <div class="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-12 text-sm text-slate-600">
+        <a href="${c.direccion.url}" target="_blank" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+          </svg>
+          ${c.direccion.texto}
+        </a>
+        <a href="${c.telefono.url}" target="_blank" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          ${c.telefono.texto}
+        </a>
+        <a href="${c.email.url}" class="flex items-center gap-2 hover:text-primary transition-colors">
+          <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          ${c.email.texto}
+        </a>
+      </div>
+      <div class="text-center pt-6 border-t border-slate-200">
+        <p class="text-slate-400 text-sm">${data.copyright}</p>
+      </div>
     </div>
   `;
 }
@@ -306,7 +349,7 @@ function initApp() {
   renderProyectos();
   renderPortafolio();
   renderFooter();
-  
+
   // Inicializar funcionalidades después del renderizado
   initFadeObserver();
   initSmoothScroll();
@@ -332,11 +375,18 @@ function initFadeObserver() {
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', evt => {
+      evt.preventDefault();
       const targetId = anchor.getAttribute('href');
       const el = document.querySelector(targetId);
       if (el) {
-        evt.preventDefault();
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Usar setTimeout para asegurar que el layout esté calculado
+        setTimeout(() => {
+          const offsetTop = el.getBoundingClientRect().top + window.pageYOffset;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }, 15);
       }
     });
   });
@@ -380,13 +430,13 @@ function initModal() {
     </div>
   `;
   document.body.appendChild(modal);
-  
+
   const modalImg = document.getElementById('modalImg');
   const modalName = document.getElementById('modalName');
   const modalRole = document.getElementById('modalRole');
   const modalBio = document.getElementById('modalBio');
   const closeModalBtn = document.getElementById('closeModal');
-  
+
   function openModal(card) {
     modalImg.src = card.dataset.img;
     modalImg.alt = card.dataset.name;
@@ -397,18 +447,18 @@ function initModal() {
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
   }
-  
+
   function closeModal() {
     modal.classList.add('hidden');
     modal.classList.remove('flex');
     document.body.style.overflow = '';
   }
-  
+
   // Event listeners
   document.querySelectorAll('.brands_item-block').forEach(card => {
     card.addEventListener('click', () => openModal(card));
   });
-  
+
   closeModalBtn.addEventListener('click', closeModal);
   modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
   document.addEventListener('keydown', (e) => {
@@ -421,7 +471,7 @@ function initVideoPlayers() {
     const video = container.querySelector('video');
     const playBtn = container.querySelector('.play-btn');
     if (!video || !playBtn) return;
-    
+
     playBtn.addEventListener('click', () => {
       if (video.paused) {
         document.querySelectorAll('.video-container video').forEach(v => {
@@ -434,7 +484,7 @@ function initVideoPlayers() {
         playBtn.classList.add('hidden');
       }
     });
-    
+
     video.addEventListener('click', () => { video.pause(); playBtn.classList.remove('hidden'); });
     video.addEventListener('ended', () => { playBtn.classList.remove('hidden'); });
   });
