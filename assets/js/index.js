@@ -29,38 +29,56 @@ const apiData = {
         rol: "Director General",
         imagen: "./assets/img/carlos_agrinol.png",
         bio: `Ingeniero civil y empresario con amplia trayectoria en el desarrollo de proyectos regionales de alto impacto. Es fundador y director de AGRINOL, SAPI de C.V., empresa enfocada en la estructuración, gestión e implementación de proyectos estratégicos que impulsan el crecimiento económico y social del sureste de México.
-A lo largo de su carrera ha liderado iniciativas en infraestructura, agroindustria, logística y conectividad regional, articulando la participación del sector privado, organizaciones sociales y los distintos niveles de gobierno. Ha encabezado proyectos de alcance nacional como la Terminal Portuaria Remota en Puerto Chiapas y los Polos de Desarrollo para el Bienestar (PODEBIs) Tapachula I y II, consolidándose como una figura clave en la planeación y ejecución de proyectos que transforman territorios y fortalecen el desarrollo regional.
+A lo largo de su carrera ha liderado iniciativas en infraestructura, agroindustria, logística y conectividad regional, articulando la participación del sector privado, organizaciones sociales y los distintos niveles de gobierno.<br><br>Ha encabezado proyectos de alcance nacional como la Terminal Portuaria Remota en Puerto Chiapas y los Polos de Desarrollo para el Bienestar (PODEBIs) Tapachula I y II, consolidándose como una figura clave en la planeación y ejecución de proyectos que transforman territorios y fortalecen el desarrollo regional.
 `
       },
       {
-        nombre: "María González",
-        rol: "Directora de Operaciones",
-        imagen: "https://images.unsplash.com/photo-1603415526960-f7e0328c63b1?auto=format&fit=crop&w=400&q=80",
-        bio: "Especialista en gestión de proyectos sustentables con más de 15 años de experiencia en el sector energético y desarrollo regional."
+        nombre: "Miguel Cid del Prado Martínez",
+        rol: "Planeación Estratégica y Economía Social",
+        imagen: "./assets/img/MIGUEL-CID-DEL-PRADO.jpg",
+        bio: `Doctor en Ingeniería Aplicada y especialista en Ingeniería en Gestión Empresarial, con una sólida trayectoria en planeación estratégica, desarrollo de proyectos y economía social y solidaria. Actualmente se desempeña como Coordinador de la Especialidad en Economía Social y Solidaria en el Instituto Tecnológico de Tuxtla Gutiérrez, donde impulsa modelos de emprendimiento con enfoque sostenible y de impacto social.<br><br>Ha participado como asesor en estrategias de desarrollo económico local, auditor líder de sistemas de gestión de calidad y docente en áreas clave como planes de negocio, ingeniería económica y gestión de la producción. Su experiencia combina rigor académico, aplicación práctica y transferencia de tecnología, contribuyendo al fortalecimiento de proyectos productivos, innovación social y formación de talento orientado al desarrollo regional sostenible.`
       },
       {
-        nombre: "Roberto Hernández",
-        rol: "Director Financiero",
-        imagen: "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=400&q=80",
-        bio: "Experto en finanzas corporativas y estructuración de proyectos de inversión. Amplia trayectoria en el sector portuario."
+        nombre: "Alberto Pineda Tuells",
+        rol: "Finanzas y Desarrollo Económico",
+        imagen: "./assets/img/JEAN-FRANCOIS-ENCINAS.jpg",
+        bio: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`
       },
       {
-        nombre: "Ana Martínez",
-        rol: "Directora Legal",
-        imagen: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
-        bio: "Abogada especializada en derecho corporativo y regulación portuaria. Asesora en temas de comercio internacional."
+        nombre: "José Luis Díaz Covarrubias Hanún",
+        rol: "Infraestructura Portuaria y Logística",
+        imagen: "./assets/img/JOSE-LUIS-DIAZ.jpg",
+        bio: `Ejecutivo y consultor especializado en administración portuaria, con más de cuatro décadas de experiencia en la operación, planeación y desarrollo de puertos, terminales marítimas y proyectos de infraestructura logística en México.<br><br>A lo largo de su trayectoria ha ocupado posiciones de alta dirección en el sistema portuario nacional, incluyendo la Gerencia de Operaciones de la Administración Portuaria Integral de Altamira y la Subdirección Administrativa de una de las principales terminales multipropósito del país. Actualmente asesora proyectos estratégicos en diseño portuario, concesiones, operación, licitaciones y desarrollo de nuevos puertos, integrando una visión técnica, financiera y operativa orientada a resultados, seguridad y sostenibilidad.`
       },
       {
-        nombre: "Luis Ramírez",
-        rol: "Director de Proyectos",
-        imagen: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=400&q=80",
-        bio: "Ingeniero civil con especialidad en infraestructura portuaria. Líder de proyectos de desarrollo marítimo-industrial."
+        nombre: "Carlos Winkler Schroeder",
+        rol: "Desarrollo de Negocios e Inversión",
+        imagen: "./assets/img/CARLOS-WINKLER-S.jpg",
+        bio: `Consultor empresarial y emprendedor con más de 20 años de experiencia en el desarrollo de negocios, estrategia comercial e inversión. Es fundador y director de VITAL Consultoría, firma desde la cual acompaña a empresas en procesos de profesionalización, crecimiento y atracción de capital, ayudándolas a construir modelos de negocio sólidos y escalables.<br><br>A lo largo de su trayectoria ha impulsado y liderado proyectos de alto impacto en sectores como tecnología, entretenimiento, agronegocios y energía. Destaca como creador de HolaStaff, plataforma tecnológica de reclutamiento y capital humano, así como inversionista y fundador de TX América Cinemas, cadena de cines en Estados Unidos enfocada en el mercado latino.<br><br>Su visión estratégica, liderazgo y capacidad para identificar oportunidades lo han posicionado como un aliado clave en proyectos empresariales innovadores y de largo alcance.`
       },
       {
-        nombre: "Pedro Sánchez",
-        rol: "Director Comercial",
-        imagen: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=400&q=80",
-        bio: "Especialista en desarrollo de negocios y relaciones comerciales internacionales. Promotor de alianzas estratégicas."
+        nombre: "Rafael Alfredo Nava Ricaño",
+        rol: "Agroindustria",
+        imagen: "./assets/img/HECTOR-LOPEZ-GUTIERREZ.jpg",
+        bio: `Empresario agroindustrial y presidente de NAVA Corp., con una trayectoria construida desde la tercera generación familiar dedicada a la producción y comercialización agroalimentaria en Chiapas. Lidera un ecosistema empresarial integrado que abarca producción, transformación, logística y exportación de productos agrícolas de alto valor.<br><br>A lo largo de su carrera ha impulsado modelos productivos enfocados en trazabilidad, innovación, sostenibilidad y expansión de mercados, trabajando con cultivos estratégicos como plátano, cacao del Soconusco, café de altura y mango Ataulfo. Además, participa activamente en organismos clave del sector, desde donde contribuye al fortalecimiento y profesionalización de la agroindustria regional, con una visión de impacto nacional e internacional.`
+      },
+      {
+        nombre: "Dr. Jorge Castañeda",
+        rol: "Innovación y Liderazgo Estratégico",
+        imagen: "./assets/img/Jorge-O-Castaneda.png",
+        bio: `CEO global del Tony Buzan Group & Academy y una de las voces más influyentes a nivel internacional en pensamiento estratégico, innovación y liderazgo organizacional. Su trabajo se centra en el diseño de modelos que impulsan el crecimiento económico sostenible, integrando visión empresarial, gobernanza y desarrollo de talento.<br><br>Es creador del Mapeo Sistémico de Causas Raíz, metodología aplicada en gobiernos y empresas para comprender ecosistemas complejos y acelerar la toma de decisiones estratégicas. Ha desarrollado modelos propios de liderazgo e innovación utilizados en proyectos de gran escala que requieren alineación entre actores públicos y privados.<br><br>Académico, autor y coautor de diversas obras junto a Tony Buzan, el Dr. Castañeda combina rigor intelectual con aplicación práctica, aportando valor en iniciativas de transformación organizacional, atracción de inversión y desarrollo industrial de largo plazo.`
+      },
+      {
+        nombre: "José Ignacio Irigoyen Palacios",
+        rol: "Capital Privado y Finanzas",
+        imagen: "./assets/img/JOSE-I-IRIGOYEN-P.jpg",
+        bio: `Líder financiero con más de 20 años de experiencia en capital privado, venture capital y fusiones y adquisiciones. Es cofundador de Sentinel Capital Fund, donde encabeza la estructuración financiera, recaudación de capital y relaciones con inversionistas. Actualmente también se desempeña como Presidente de TX America Cinemas y Director de Finanzas (CFO) en VITAL y HolaStaff.<br><br>A lo largo de su trayectoria ha acompañado a empresas en procesos de crecimiento, expansión internacional y exit, aportando una visión estratégica enfocada en maximizar rendimientos ajustados al riesgo. Ha sido reconocido como Premio Nacional del Emprendedor, conferencista en Harvard Business School y miembro de Endeavor y del Salón de la Fama de EY Entrepreneur Of The Year™, consolidándose como una referencia en el ecosistema financiero y de inversión.`
+      },
+      {
+        nombre: "Camilo Antonio Ángel Urdaneta",
+        rol: "Banca de Inversión y Capital Privado",
+        imagen: "./assets/img/CAMILO-A.jpg",
+        bio: `Financiero y banquero privado especializado en la administración de fondos de capital privado, con experiencia gestionando portafolios por más de US$1,000 millones. Cuenta con una maestría en Finanzas por Boston College y una trayectoria consolidada en banca de inversión y gestión patrimonial.<br><br>Es fundador de ComSustenta, firma enfocada en estructurar y administrar capital con una visión estratégica y sostenible. A lo largo de su carrera ha impulsado plataformas empresariales en energía e inclusión financiera, combinando disciplina financiera, visión de largo plazo y enfoque en impacto, posicionándose como un referente en la gestión de capital privado en México.`
       }
     ]
   },
@@ -219,8 +237,20 @@ function renderAsociados() {
         <h2 class="text-4xl font-heading font-semibold mt-6 mb-6">${data.titulo}</h2>
         <p class="text-sm md:text-base text-slate-600 mt-3 max-w-3xl mx-auto px-16">${data.descripcion}</p>
       </div>
-      <div class="brands_list-wrapper">
-        <div class="brands_list">${miembrosDuplicados}</div>
+      <div class="brands_carousel-container relative">
+        <button class="brands_nav-btn brands_nav-prev absolute left-0 top-[7.5rem] z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Anterior">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+        <div class="brands_list-wrapper">
+          <div class="brands_list">${miembrosDuplicados}</div>
+        </div>
+        <button class="brands_nav-btn brands_nav-next absolute right-0 top-[7.5rem] z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Siguiente">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
       </div>
     </div>
   `;
@@ -248,13 +278,22 @@ function renderProyectos() {
         <video class="w-full h-full object-cover" poster="${v.poster}" preload="metadata">
           <source src="${v.src}" type="video/mp4">
         </video>
-        <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-          <div class="${isLarge ? 'w-16 h-16' : 'w-10 h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-            <svg xmlns="http://www.w3.org/2000/svg" class="${isLarge ? 'h-8 w-8 ml-1' : 'h-5 w-5 ml-0.5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-          </div>
-        </button>
+        <div class="control-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300">
+          <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
+            <div class="${isLarge ? 'w-16 h-16' : 'w-10 h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="${isLarge ? 'h-8 w-8 ml-1' : 'h-5 w-5 ml-0.5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </button>
+          <button class="pause-btn hidden absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
+            <div class="${isLarge ? 'w-16 h-16' : 'w-10 h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="${isLarge ? 'h-8 w-8' : 'h-5 w-5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+              </svg>
+            </div>
+          </button>
+        </div>
       </div>
     `;
   }).join('');
@@ -353,6 +392,7 @@ function initApp() {
   // Inicializar funcionalidades después del renderizado
   initFadeObserver();
   initSmoothScroll();
+  initCarouselNavigation();
   initModal();
   initVideoPlayers();
 }
@@ -392,38 +432,153 @@ function initSmoothScroll() {
   });
 }
 
+function initCarouselNavigation() {
+  const wrapper = document.querySelector('.brands_list-wrapper');
+  const list = document.querySelector('.brands_list');
+  const prevBtn = document.querySelector('.brands_nav-prev');
+  const nextBtn = document.querySelector('.brands_nav-next');
+  const container = document.querySelector('.brands_carousel-container');
+  
+  if (!wrapper || !list || !prevBtn || !nextBtn) return;
+  
+  const itemWidth = 256; // 15rem + gap
+  const animationDuration = 30; // segundos
+  let isManualMode = false;
+  let currentPosition = 0;
+  
+  function getCurrentAnimationProgress() {
+    const computedStyle = window.getComputedStyle(list);
+    const matrix = new DOMMatrix(computedStyle.transform);
+    return matrix.m41 || 0;
+  }
+  
+  function enterManualMode() {
+    if (isManualMode) return;
+    isManualMode = true;
+    
+    // Capturar posición actual de la animación
+    currentPosition = getCurrentAnimationProgress();
+    
+    // Detener animación y fijar posición
+    list.style.animation = 'none';
+    list.style.transform = `translateX(${currentPosition}px)`;
+  }
+  
+  function resumeAnimation() {
+    if (!isManualMode) return;
+    isManualMode = false;
+    
+    // Calcular delay para continuar desde la posición actual
+    const totalWidth = list.scrollWidth / 2;
+    const progress = Math.abs(currentPosition) / totalWidth;
+    const delay = -(progress * animationDuration);
+    
+    // Restaurar animación desde donde quedó
+    list.style.transition = '';
+    list.style.transform = '';
+    list.style.animation = `scroll-left ${animationDuration}s linear infinite`;
+    list.style.animationDelay = `${delay}s`;
+  }
+  
+  function scrollCarousel(direction) {
+    enterManualMode();
+    
+    // Calcular nueva posición
+    const scrollAmount = direction === 'next' ? -itemWidth : itemWidth;
+    const totalWidth = list.scrollWidth / 2;
+    let newPosition = currentPosition + scrollAmount;
+    
+    // Normalizar posición para el loop
+    if (newPosition < -totalWidth) newPosition += totalWidth;
+    if (newPosition > 0) newPosition -= totalWidth;
+    
+    // Animar al nuevo punto
+    list.style.transition = 'transform 0.4s ease';
+    list.style.transform = `translateX(${newPosition}px)`;
+    
+    // Actualizar posición actual
+    currentPosition = newPosition;
+    
+    // Quitar transición después de completar
+    setTimeout(() => {
+      list.style.transition = '';
+    }, 400);
+  }
+  
+  prevBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    scrollCarousel('prev');
+  });
+  
+  nextBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    scrollCarousel('next');
+  });
+  
+  // Reanudar animación al hacer clic fuera del carrusel
+  document.addEventListener('click', (e) => {
+    if (!container.contains(e.target)) {
+      resumeAnimation();
+    }
+  });
+  
+  // Pausar al pasar mouse sobre las cards
+  const cards = wrapper.querySelectorAll('.brands_item-block');
+  cards.forEach(card => {
+    card.addEventListener('mouseenter', () => {
+      if (!isManualMode) {
+        list.style.animationPlayState = 'paused';
+      }
+    });
+    card.addEventListener('mouseleave', () => {
+      if (!isManualMode) {
+        list.style.animationPlayState = 'running';
+      }
+    });
+  });
+}
+
 function initModal() {
   // Crear modal dinámicamente - diseño horizontal
   const modal = document.createElement('div');
   modal.id = 'asociadoModal';
-  modal.className = 'fixed inset-0 z-50 hidden items-center justify-center bg-black/50 backdrop-blur-sm';
+  modal.className = 'fixed inset-0 z-50 hidden items-center justify-center bg-slate-800/70 backdrop-blur-sm';
   modal.innerHTML = `
-    <div class="bg-[#f5f5f5] rounded-xl shadow-2xl max-w-4xl w-full mx-4 overflow-hidden transform transition-all flex flex-col md:flex-row">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-4 overflow-hidden transform transition-all flex flex-col md:flex-row">
       <!-- Imagen lado izquierdo -->
-      <div class="relative w-full md:w-2/5 bg-white">
-        <div class="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-primary via-secondary to-primary"></div>
-        <img id="modalImg" src="" alt="" class="w-full h-64 md:h-full object-cover object-top">
+      <div class="w-full md:w-2/5 p-6 flex items-center justify-center">
+        <img id="modalImg" src="" alt="" class="w-64 h-64 md:w-80 md:h-80 object-cover object-top rounded-lg shadow-md">
       </div>
       <!-- Contenido lado derecho -->
-      <div class="w-full md:w-3/5 p-8 md:p-10 relative">
+      <div class="w-full md:w-3/5 p-6 md:p-8 relative flex flex-col">
         <button id="closeModal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
           </svg>
         </button>
-        <h3 id="modalName" class="text-3xl md:text-4xl font-heading font-semibold text-slate-800 mb-2"></h3>
-        <p id="modalRole" class="text-sm uppercase tracking-widest text-slate-500 mb-6 border-b border-slate-200 pb-4"></p>
-        <p id="modalBio" class="text-slate-600 leading-relaxed text-sm md:text-base"></p>
-        <!-- Iconos sociales decorativos -->
-        <div class="flex gap-4 mt-8 pt-6 border-t border-slate-200">
-          <a href="#" class="text-slate-400 hover:text-primary transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-          </a>
-          <a href="#" class="text-slate-400 hover:text-primary transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-          </a>
-          <a href="#" class="text-slate-400 hover:text-primary transition-colors">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        <h3 id="modalName" class="text-2xl md:text-3xl font-heading font-semibold text-slate-800 mb-1 pr-8"></h3>
+        <p id="modalRole" class="text-xs uppercase tracking-widest text-primary font-medium mb-4"></p>
+        <p id="modalBio" class="text-slate-600 leading-relaxed text-sm flex-grow text-justify"></p>
+        <!-- Iconos sociales y botón CV -->
+        <div class="flex justify-between items-center mt-6 pt-4 border-t border-slate-100">
+          <div class="flex items-center gap-4">
+            <a href="#" class="text-slate-400 hover:text-primary transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+            </a>
+            <a href="#" class="text-slate-400 hover:text-primary transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="text-slate-400 hover:text-primary transition-colors">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            </a>
+          </div>
+          <a id="modalCvBtn" href="#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-teal-600 transition-all">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+            </svg>
+            CV
           </a>
         </div>
       </div>
@@ -442,7 +597,7 @@ function initModal() {
     modalImg.alt = card.dataset.name;
     modalName.textContent = card.dataset.name;
     modalRole.textContent = card.dataset.role;
-    modalBio.textContent = card.dataset.bio;
+    modalBio.innerHTML = card.dataset.bio;
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
@@ -469,24 +624,67 @@ function initModal() {
 function initVideoPlayers() {
   document.querySelectorAll('.video-container').forEach(container => {
     const video = container.querySelector('video');
+    const overlay = container.querySelector('.control-overlay');
     const playBtn = container.querySelector('.play-btn');
-    if (!video || !playBtn) return;
+    const pauseBtn = container.querySelector('.pause-btn');
+    if (!video || !playBtn || !pauseBtn || !overlay) return;
 
+    // Helper: mostrar estado de play
+    function showPlayState() {
+      playBtn.classList.remove('hidden');
+      pauseBtn.classList.add('hidden');
+      overlay.classList.remove('playing');
+    }
+
+    // Helper: mostrar estado de pause
+    function showPauseState() {
+      playBtn.classList.add('hidden');
+      pauseBtn.classList.remove('hidden');
+      overlay.classList.add('playing');
+    }
+
+    // Helper: pausar todos los otros videos
+    function pauseOtherVideos() {
+      document.querySelectorAll('.video-container').forEach(otherContainer => {
+        if (otherContainer === container) return;
+        const otherVideo = otherContainer.querySelector('video');
+        const otherPlayBtn = otherContainer.querySelector('.play-btn');
+        const otherPauseBtn = otherContainer.querySelector('.pause-btn');
+        const otherOverlay = otherContainer.querySelector('.control-overlay');
+        if (otherVideo && !otherVideo.paused) {
+          otherVideo.pause();
+          otherPlayBtn?.classList.remove('hidden');
+          otherPauseBtn?.classList.add('hidden');
+          otherOverlay?.classList.remove('playing');
+        }
+      });
+    }
+
+    // Click en play
     playBtn.addEventListener('click', () => {
-      if (video.paused) {
-        document.querySelectorAll('.video-container video').forEach(v => {
-          if (v !== video) {
-            v.pause();
-            v.closest('.video-container')?.querySelector('.play-btn')?.classList.remove('hidden');
-          }
-        });
-        video.play();
-        playBtn.classList.add('hidden');
+      pauseOtherVideos();
+      video.play();
+      showPauseState();
+    });
+
+    // Click en pause
+    pauseBtn.addEventListener('click', () => {
+      video.pause();
+      showPlayState();
+    });
+
+    // Click en video para pausar
+    video.addEventListener('click', () => {
+      if (!video.paused) {
+        video.pause();
+        showPlayState();
       }
     });
 
-    video.addEventListener('click', () => { video.pause(); playBtn.classList.remove('hidden'); });
-    video.addEventListener('ended', () => { playBtn.classList.remove('hidden'); });
+    // Video terminado
+    video.addEventListener('ended', () => {
+      showPlayState();
+    });
   });
 }
 

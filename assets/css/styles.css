@@ -90,3 +90,45 @@ video {
 .brands_list:hover {
     animation-play-state: paused;
 }
+
+/* Carousel Navigation */
+.brands_carousel-container {
+    position: relative;
+    padding: 0 2.5rem;
+}
+
+.brands_nav-btn {
+    opacity: 0.7;
+    transition: opacity 0.3s ease, transform 0.2s ease;
+}
+
+.brands_nav-btn:hover {
+    opacity: 1;
+}
+
+.brands_carousel-container:hover .brands_list {
+    animation-play-state: paused;
+}
+
+
+/* Video Player Controls */
+.video-container video {
+    pointer-events: auto;
+}
+
+.control-overlay {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.control-overlay.playing {
+    opacity: 0.3;
+}
+
+.control-overlay.playing:hover {
+    opacity: 1;
+}
+
+.video-container:hover .control-overlay.playing {
+    opacity: 1;
+}
