@@ -232,13 +232,13 @@ function renderAsociados() {
   const miembrosDuplicados = miembrosHTML + miembrosHTML;
 
   section.innerHTML = `
-    <div class="max-w-6xl mx-auto px-6 text-center space-y-6">
-      <div class="text-center mt-10 mb-16">
-        <h2 class="text-4xl font-heading font-semibold mt-6 mb-6">${data.titulo}</h2>
-        <p class="text-sm md:text-base text-slate-600 mt-3 max-w-3xl mx-auto px-16">${data.descripcion}</p>
+    <div class="max-w-6xl mx-auto px-4 md:px-6 text-center space-y-6">
+      <div class="text-center mt-6 md:mt-10 mb-8 md:mb-16">
+        <h2 class="text-3xl md:text-4xl font-heading font-semibold mt-4 md:mt-6 mb-4 md:mb-6">${data.titulo}</h2>
+        <p class="text-sm md:text-base text-slate-600 mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
       </div>
       <div class="brands_carousel-container relative">
-        <button class="brands_nav-btn brands_nav-prev absolute left-0 top-[7.5rem] z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Anterior">
+        <button class="brands_nav-btn brands_nav-prev absolute left-0 md:left-0 top-[6rem] md:top-[7.5rem] z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Anterior">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
@@ -246,7 +246,7 @@ function renderAsociados() {
         <div class="brands_list-wrapper">
           <div class="brands_list">${miembrosDuplicados}</div>
         </div>
-        <button class="brands_nav-btn brands_nav-next absolute right-0 top-[7.5rem] z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Siguiente">
+        <button class="brands_nav-btn brands_nav-next absolute right-0 md:right-0 top-[6rem] md:top-[7.5rem] z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Siguiente">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
@@ -541,28 +541,29 @@ function initCarouselNavigation() {
 }
 
 function initModal() {
-  // Crear modal dinámicamente - diseño horizontal
+  // Crear modal dinámicamente - diseño horizontal en desktop, vertical en móvil
   const modal = document.createElement('div');
   modal.id = 'asociadoModal';
-  modal.className = 'fixed inset-0 z-50 hidden items-center justify-center bg-slate-800/70 backdrop-blur-sm';
+  modal.className = 'fixed inset-0 z-50 hidden items-center justify-center bg-slate-800/70 backdrop-blur-sm p-4';
   modal.innerHTML = `
-    <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-4 overflow-hidden transform transition-all flex flex-col md:flex-row">
-      <!-- Imagen lado izquierdo -->
-      <div class="w-full md:w-2/5 p-6 flex items-center justify-center">
-        <img id="modalImg" src="" alt="" class="w-64 h-64 md:w-80 md:h-80 object-cover object-top rounded-lg shadow-md">
+    <div class="bg-white rounded-2xl shadow-2xl max-w-3xl w-full mx-auto overflow-hidden transform transition-all flex flex-col md:flex-row relative max-h-[90vh] md:max-h-none">
+      <!-- Botón cerrar - siempre visible arriba -->
+      <button id="closeModal" class="absolute top-3 right-3 z-10 bg-white/90 hover:bg-white rounded-full p-1.5 text-slate-500 hover:text-slate-700 transition-colors shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <!-- Imagen - arriba en móvil, izquierda en desktop -->
+      <div class="w-full md:w-2/5 p-4 pt-12 md:pt-6 md:p-6 flex items-center justify-center flex-shrink-0">
+        <img id="modalImg" src="" alt="" class="w-40 h-40 md:w-72 md:h-72 object-cover object-top rounded-lg shadow-md">
       </div>
-      <!-- Contenido lado derecho -->
-      <div class="w-full md:w-3/5 p-6 md:p-8 relative flex flex-col">
-        <button id="closeModal" class="absolute top-4 right-4 text-slate-400 hover:text-slate-600 transition-colors">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <h3 id="modalName" class="text-2xl md:text-3xl font-heading font-semibold text-slate-800 mb-1 pr-8"></h3>
-        <p id="modalRole" class="text-xs uppercase tracking-widest text-primary font-medium mb-4"></p>
+      <!-- Contenido - abajo en móvil, derecha en desktop -->
+      <div class="w-full md:w-3/5 p-4 md:p-8 md:pt-6 flex flex-col overflow-y-auto">
+        <h3 id="modalName" class="text-xl md:text-3xl font-heading font-semibold text-slate-800 mb-1 pr-2"></h3>
+        <p id="modalRole" class="text-xs uppercase tracking-widest text-primary font-medium mb-3 md:mb-4"></p>
         <p id="modalBio" class="text-slate-600 leading-relaxed text-sm flex-grow text-justify"></p>
         <!-- Iconos sociales y botón CV -->
-        <div class="flex justify-between items-center mt-6 pt-4 border-t border-slate-100">
+        <div class="flex justify-between items-center mt-4 md:mt-6 pt-4 border-t border-slate-100">
           <div class="flex items-center gap-4">
             <a href="#" class="text-slate-400 hover:text-primary transition-colors">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>

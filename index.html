@@ -22,8 +22,8 @@
                     },
                     fontFamily: {
                         heading: ['"Poppins"', 'ui-sans-serif', 'system-ui'],
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        body: ['"Inter"', 'ui-sans-serif', 'system-ui']
+                        sans   : ['Inter', 'system-ui', 'sans-serif'],
+                        body   : ['"Inter"', 'ui-sans-serif', 'system-ui']
                     }
                 }
             }
@@ -35,7 +35,7 @@
 <body class="bg-white text-slate-800 font-body">
     <!-- Hero (estático - no cambia con datos de API) -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6">
-        <video class="absolute w-full object-cover" src="https://huubie.com.mx/video/prueba.mp4" autoplay muted loop playsinline></video>
+        <video class="absolute inset-0 w-full h-full object-cover object-center" src="https://huubie.com.mx/video/prueba.mp4" autoplay muted loop playsinline></video>
         <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/50"></div>
 
         <header class="absolute top-8 sm:top-12 md:top-14 lg:top-16 xl:top-20 left-0 right-0 flex items-center justify-center px-6 sm:px-8 md:px-10">
@@ -49,9 +49,9 @@
             </nav>
         </header>
 
-        <div class="absolute bottom-64 md:bottom-20 left-12 z-16 w-full max-w-6xl pl-8 md:pl-16 lg:pl-24">
+        <div class="absolute bottom-52 sm:bottom-56 lg:bottom-20 lg:top-auto left-4 sm:left-8 md:left-12 z-16 w-full max-w-6xl px-4 sm:px-0 md:pl-16 lg:pl-24">
             <div class="text-left max-w-[46rem]">
-                <h1 class="font-sans font-semibold text-white/90 tracking-[0.03em] leading-[1.2] text-[clamp(2.8rem,5.6vw,2rem)] drop-shadow-[0_15px_40px_rgba(0,0.3,0,0.5)] antialiased">
+                <h1 class="font-sans font-semibold text-white/90 tracking-[0.03em] leading-[1.2] text-2xl sm:text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_15px_40px_rgba(0,0.3,0,0.5)] antialiased">
                     Comprometidos con<br>
                     el desarrollo de la<br>
                     costa Chiapas.
@@ -59,7 +59,7 @@
             </div>
         </div>
         
-        <div class="absolute bottom-20 right-24 z-10 max-w-xl">
+        <div class="absolute bottom-16 sm:bottom-20 left-4 right-4 sm:left-auto sm:right-24 z-10 max-w-xl">
             <div class="bg-[#848484]/30 backdrop-blur-sm rounded-md px-6 py-4">
                 <p class="text-white text-sm md:text-lg font-semibold leading-relaxed">Recursos sostenibles y responsables para impulsar el desarrollo regional del Soconusco.</p>
             </div>
@@ -73,7 +73,7 @@
     </section>
 
     <!-- Asociados (renderizado dinámicamente) -->
-    <section id="asociados" class="py-28 fade-section min-h-screen bg-sand">
+    <section id="asociados" class="py-16 md:py-28 fade-section min-h-screen bg-sand">
         <!-- Contenido cargado desde apiData -->
     </section>
 

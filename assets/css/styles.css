@@ -110,6 +110,38 @@ video {
     animation-play-state: paused;
 }
 
+/* Mobile responsive - botones sobre las fotos */
+@media (max-width: 768px) {
+    .brands_carousel-container {
+        padding: 0;
+    }
+    
+    .brands_nav-btn {
+        opacity: 0.9;
+        width: 2.5rem;
+        height: 2.5rem;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .brands_nav-prev {
+        left: 0.5rem !important;
+    }
+    
+    .brands_nav-next {
+        right: 0.5rem !important;
+    }
+    
+    .brands_item-block {
+        width: 12rem;
+        height: 17rem;
+    }
+    
+    .brands_item-logo-wrap {
+        height: 12rem;
+    }
+}
+
 
 /* Video Player Controls */
 .video-container video {
