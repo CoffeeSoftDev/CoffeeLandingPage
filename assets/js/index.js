@@ -4,82 +4,89 @@
 const apiData = {
   // Sección "Quiénes somos"
   quienesSomos: {
-    titulo: "¿A qué nos dedicamos en <span class='font-bold'>Agrinol</span>?",
-    descripcion: "Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo regional del soconusco. Detonando el potencial del pacífico mexicano al convertir a puerto chiapas en un polo de desarrollo marítimo - industrial.",
-    imagen: "https://huubie.com.mx/video/barquito.png",
-    contenido: "Tenemos como misión desarrollar el potencial de puerto chiapas con el concurso de las autoridades, invitando a la sociedad civil a ser copartícipe de este proyecto en beneficio del interés nacional.<br><br>Con la visión y gestión del ing. Carlos Alberto Vila Serrano, conocedor del entorno de negocios del sector público y privado, con la firma: AGRINOL SAPI DE CV, es el líder de esta gran promoción en beneficio de chiapas y méxico.",
+    titulo: `¿A qué nos dedicamos en <span class='font-bold'>Agrinol</span>?`,
+    descripcion: `Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo y bienestar regional.
+    Detonando Puerto Chiapas en un polo de desarrollo y bienestar sostenible.`,
+    imagen: `https://huubie.com.mx/video/barquito.png`,
+    contenido: `Tenemos como misión desarrollar el potencial de puerto chiapas con el concurso de las autoridades,
+     invitando a la sociedad civil a ser copartícipe de este proyecto en beneficio del interés nacional.<br><br>
+     Con la visión y gestión del ing. Carlos Alberto Vila Serrano,
+      conocedor del entorno de negocios del sector público y privado, con la firma: AGRINOL SAPI DE CV, 
+      Queremos desarrollar el potencial de Puerto Chiapas, haciendo partícipe a la sociedad civil y
+       al Gobierno de este proyecto en beneficio del interés nacional`,
     mision: {
-      titulo: "Misión",
-      texto: "Gestionar e implementar proyectos sustentables del desarrollo y bienestar."
+      titulo: `Misión`,
+      texto: `Gestionar e implementar proyectos sustentables del desarrollo y bienestar.`
     },
     vision: {
-      titulo: "Visión",
-      texto: "Provocar el desarrollo y bienestar de Chiapas en forma sostenible."
+      titulo: `Visión`,
+      texto: `Implementar el desarrollo y bienestar de Chiapas en forma sostenible.`
     },
-    imagenMisionVision: "https://huubie.com.mx/video/barquito.png"
+    imagenMisionVision: `https://huubie.com.mx/video/barquito.png`
   },
 
   // Sección "Asociados"
   asociados: {
-    titulo: "Asociados",
-    descripcion: "Conformamos un equipo estratégico integrado por profesionales altamente comprometidos que suman conocimientos especializados para el éxito de cada proyecto.",
+    titulo: `Asociados`,
+    descripcion: `Conformamos un equipo estratégico integrado por profesionales altamente comprometidos que aportan
+     conocimientos especializados para el éxito de cada proyecto.`,
     miembros: [
-     
+
       {
-        nombre: "Miguel Cid del Prado Martínez",
-        rol: "Planeación Estratégica y Economía Social",
-        imagen: "./assets/img/miguel_cid_del_prado.png",
+        nombre: `Miguel Cid del Prado Martínez`,
+        rol: `Planeación Estratégica y Economía Social`,
+        imagen: `./assets/img/miguel_cid_del_prado.png`,
         bio: `Doctor en Ingeniería Aplicada y especialista en Ingeniería en Gestión Empresarial, con una sólida trayectoria en planeación estratégica, desarrollo de proyectos y economía social y solidaria. Actualmente se desempeña como Coordinador de la Especialidad en Economía Social y Solidaria en el Instituto Tecnológico de Tuxtla Gutiérrez, donde impulsa modelos de emprendimiento con enfoque sostenible y de impacto social.<br><br>Ha participado como asesor en estrategias de desarrollo económico local, auditor líder de sistemas de gestión de calidad y docente en áreas clave como planes de negocio, ingeniería económica y gestión de la producción. Su experiencia combina rigor académico, aplicación práctica y transferencia de tecnología, contribuyendo al fortalecimiento de proyectos productivos, innovación social y formación de talento orientado al desarrollo regional sostenible.`
       },
       {
-        nombre: "Carlos Alberto Vila Serrano",
-        rol: "Director General",
+        nombre: `Carlos Alberto Vila Serrano`,
+        rol: `Director General`,
         specialDesign: true,
-        imagen: "./assets/img/carlos_vila.png",
+        imagen: `./assets/img/carlos_vila.png`,
         bio: `Ingeniero civil y empresario con amplia trayectoria en el desarrollo de proyectos regionales de alto impacto. Es fundador y director de AGRINOL, SAPI de C.V., empresa enfocada en la estructuración, gestión e implementación de proyectos estratégicos que impulsan el crecimiento económico y social del sureste de México.
         A lo largo de su carrera ha liderado iniciativas en infraestructura, agroindustria, logística y conectividad regional, articulando la participación del sector privado, organizaciones sociales y los distintos niveles de gobierno.<br><br>Ha encabezado proyectos de alcance nacional como la Terminal Portuaria Remota en Puerto Chiapas y los Polos de Desarrollo para el Bienestar (PODEBIs) Tapachula I y II, consolidándose como una figura clave en la planeación y ejecución de proyectos que transforman territorios y fortalecen el desarrollo regional.
         `
       },
       {
-        nombre: "Alberto Pineda Tuells",
-        rol: "Finanzas y Desarrollo Económico",
-        imagen: "./assets/img/jean_francois_encinas.png",
+        nombre: `Alberto Pineda Tuells`,
+        rol: `Finanzas y Desarrollo Económico`,
+        imagen: `./assets/img/jean_francois_encinas.png`,
         bio: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`
       },
       {
-        nombre: "José Luis Díaz Covarrubias Hanún",
-        rol: "Infraestructura Portuaria y Logística",
-        imagen: "./assets/img/jose_luis_diaz.png",
+        nombre: `José Luis Díaz Covarrubias Hanún`,
+        rol: `Infraestructura Portuaria y Logística`,
+        imagen: `./assets/img/jose_luis_diaz.png`,
         bio: `Ejecutivo y consultor especializado en administración portuaria, con más de cuatro décadas de experiencia en la operación, planeación y desarrollo de puertos, terminales marítimas y proyectos de infraestructura logística en México.<br><br>A lo largo de su trayectoria ha ocupado posiciones de alta dirección en el sistema portuario nacional, incluyendo la Gerencia de Operaciones de la Administración Portuaria Integral de Altamira y la Subdirección Administrativa de una de las principales terminales multipropósito del país. Actualmente asesora proyectos estratégicos en diseño portuario, concesiones, operación, licitaciones y desarrollo de nuevos puertos, integrando una visión técnica, financiera y operativa orientada a resultados, seguridad y sostenibilidad.`
       },
       {
-        nombre: "Carlos Winkler Schroeder",
-        rol: "Desarrollo de Negocios e Inversión",
-        imagen: "./assets/img/carlos_winkler_s1.png",
+        nombre: `Carlos Winkler Schroeder`,
+        rol: `Desarrollo de Negocios e Inversión`,
+        imagen: `./assets/img/carlos_winkler_s1.png`,
         bio: `Consultor empresarial y emprendedor con más de 20 años de experiencia en el desarrollo de negocios, estrategia comercial e inversión. Es fundador y director de VITAL Consultoría, firma desde la cual acompaña a empresas en procesos de profesionalización, crecimiento y atracción de capital, ayudándolas a construir modelos de negocio sólidos y escalables.<br><br>A lo largo de su trayectoria ha impulsado y liderado proyectos de alto impacto en sectores como tecnología, entretenimiento, agronegocios y energía. Destaca como creador de HolaStaff, plataforma tecnológica de reclutamiento y capital humano, así como inversionista y fundador de TX América Cinemas, cadena de cines en Estados Unidos enfocada en el mercado latino.<br><br>Su visión estratégica, liderazgo y capacidad para identificar oportunidades lo han posicionado como un aliado clave en proyectos empresariales innovadores y de largo alcance.`
       },
       {
-        nombre: "Rafael Alfredo Nava Ricaño",
-        rol: "Agroindustria",
-        imagen: "./assets/img/hector_lopez_gutierrez.png",
+        nombre: `Rafael Alfredo Nava Ricaño`,
+        rol: `Agroindustria`,
+        imagen: `./assets/img/hector_lopez_gutierrez.png`,
         bio: `Empresario agroindustrial y presidente de NAVA Corp., con una trayectoria construida desde la tercera generación familiar dedicada a la producción y comercialización agroalimentaria en Chiapas. Lidera un ecosistema empresarial integrado que abarca producción, transformación, logística y exportación de productos agrícolas de alto valor.<br><br>A lo largo de su carrera ha impulsado modelos productivos enfocados en trazabilidad, innovación, sostenibilidad y expansión de mercados, trabajando con cultivos estratégicos como plátano, cacao del Soconusco, café de altura y mango Ataulfo. Además, participa activamente en organismos clave del sector, desde donde contribuye al fortalecimiento y profesionalización de la agroindustria regional, con una visión de impacto nacional e internacional.`
       },
       {
-        nombre: "Dr. Jorge Castañeda",
-        rol: "Innovación y Liderazgo Estratégico",
-        imagen: "./assets/img/jorge_o_castaneda.png",
+        nombre: `Dr. Jorge Castañeda`,
+        rol: `Innovación y Liderazgo Estratégico`,
+        imagen: `./assets/img/jorge_o_castaneda.png`,
         bio: `CEO global del Tony Buzan Group & Academy y una de las voces más influyentes a nivel internacional en pensamiento estratégico, innovación y liderazgo organizacional. Su trabajo se centra en el diseño de modelos que impulsan el crecimiento económico sostenible, integrando visión empresarial, gobernanza y desarrollo de talento.<br><br>Es creador del Mapeo Sistémico de Causas Raíz, metodología aplicada en gobiernos y empresas para comprender ecosistemas complejos y acelerar la toma de decisiones estratégicas. Ha desarrollado modelos propios de liderazgo e innovación utilizados en proyectos de gran escala que requieren alineación entre actores públicos y privados.<br><br>Académico, autor y coautor de diversas obras junto a Tony Buzan, el Dr. Castañeda combina rigor intelectual con aplicación práctica, aportando valor en iniciativas de transformación organizacional, atracción de inversión y desarrollo industrial de largo plazo.`
       },
       {
-        nombre: "José Ignacio Irigoyen Palacios",
-        rol: "Capital Privado y Finanzas",
-        imagen: "./assets/img/jose_i_irigoyen_p1.png",
+        nombre: `José Ignacio Irigoyen Palacios`,
+        rol: `Capital Privado y Finanzas`,
+        imagen: `./assets/img/jose_i_irigoyen_p1.png`,
         bio: `Líder financiero con más de 20 años de experiencia en capital privado, venture capital y fusiones y adquisiciones. Es cofundador de Sentinel Capital Fund, donde encabeza la estructuración financiera, recaudación de capital y relaciones con inversionistas. Actualmente también se desempeña como Presidente de TX America Cinemas y Director de Finanzas (CFO) en VITAL y HolaStaff.<br><br>A lo largo de su trayectoria ha acompañado a empresas en procesos de crecimiento, expansión internacional y exit, aportando una visión estratégica enfocada en maximizar rendimientos ajustados al riesgo. Ha sido reconocido como Premio Nacional del Emprendedor, conferencista en Harvard Business School y miembro de Endeavor y del Salón de la Fama de EY Entrepreneur Of The Year™, consolidándose como una referencia en el ecosistema financiero y de inversión.`
       },
       {
-        nombre: "Camilo Antonio Ángel Urdaneta",
-        rol: "Banca de Inversión y Capital Privado",
-        imagen: "./assets/img/camilo_angel_u.png",
+        nombre: `Camilo Antonio Ángel Urdaneta`,
+        rol: `Banca de Inversión y Capital Privado`,
+        imagen: `./assets/img/camilo_angel_u.png`,
         bio: `Financiero y banquero privado especializado en la administración de fondos de capital privado, con experiencia gestionando portafolios por más de US$1,000 millones. Cuenta con una maestría en Finanzas por Boston College y una trayectoria consolidada en banca de inversión y gestión patrimonial.<br><br>Es fundador de ComSustenta, firma enfocada en estructurar y administrar capital con una visión estratégica y sostenible. A lo largo de su carrera ha impulsado plataformas empresariales en energía e inclusión financiera, combinando disciplina financiera, visión de largo plazo y enfoque en impacto, posicionándose como un referente en la gestión de capital privado en México.`
       }
     ]
@@ -87,7 +94,7 @@ const apiData = {
 
   // Sección "Proyectos"
   proyectos: {
-    titulo: "Nuestros Proyectos<br>Más Recientes",
+    titulo: "Proyectos",
     items: [
       {
         nombre: "Terminal Portuaria Remota",
@@ -100,7 +107,7 @@ const apiData = {
         ]
       },
       {
-        nombre: "Construcción de las rutas comerciales",
+        nombre: "Promoción de rutas comerciales y cabotaje",
         detalles: [
           "Nuevo terminal portuaria.",
           "Instalaciones de cada plantel.",
@@ -122,14 +129,14 @@ const apiData = {
     titulo: "Portafolio",
     proyectos: [
       {
-        nombre: "Proyecto 1",
+        nombre: "Proyecto KUXTAL (Podebi Tapachula I y II)",
         descripcion: "Terminal portuaria de última generación",
         imagen: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
         destacado: true
       },
       {
-        nombre: "Proyecto 2",
-        descripcion: "Centro de negocios marítimo",
+        nombre: "Proyecto FFCC Centro América (Costa Pacífico)",
+        descripcion: "",
         imagen: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
         destacado: false
       },
@@ -190,12 +197,12 @@ function renderQuienesSomos() {
         <div class="relative w-full md:w-2/5 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden min-h-[200px] md:min-h-[260px]">
           <img src="${data.imagen}" alt="Puerto" class="absolute inset-0 w-full h-full object-cover">
         </div>
-        <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700">
+        <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 text-justify">
           <p>${data.contenido}</p>
         </div>
       </div>
       <div class="flex flex-col md:flex-row items-stretch gap-4 md:gap-6">
-        <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 flex flex-col justify-center">
+        <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 text-justify flex flex-col justify-center">
           <div class="mb-6 md:mb-10">
             <h3 class="text-xl md:text-2xl font-heading font-semibold text-primary">${data.mision.titulo}</h3>
             <p>${data.mision.texto}</p>
