@@ -25,6 +25,63 @@ const apiData = {
     imagenMisionVision: `https://huubie.com.mx/video/barquito.png`
   },
 
+  // Sección "Organigrama"
+  organigrama: {
+    titulo: `Estructura Organizacional`,
+    descripcion: `Nuestro equipo está conformado por líderes estratégicos con amplia experiencia en sus áreas de especialización.`,
+    estructura: {
+      ceo: {
+        nombre: `Carlos Alberto Vila Serrano`,
+        cargo: `Director General`,
+        imagen: `./assets/img/carlos_vila.png`
+      },
+      directores: [
+        {
+          nombre: `Alberto Pineda Tuells`,
+          cargo: `Finanzas y Desarrollo Económico`,
+          imagen: `./assets/img/jean_francois_encinas.png`
+        },
+        {
+          nombre: `Dr. Jorge Castañeda`,
+          cargo: `Innovación y Liderazgo Estratégico`,
+          imagen: `./assets/img/jorge_o_castaneda.png`
+        }
+      ],
+      especialistas: [
+        {
+          nombre: `Miguel Cid del Prado Martínez`,
+          cargo: `Planeación Estratégica`,
+          imagen: `./assets/img/miguel_cid_del_prado.png`
+        },
+        {
+          nombre: `José Luis Díaz Covarrubias Hanún`,
+          cargo: `Infraestructura Portuaria`,
+          imagen: `./assets/img/jose_luis_diaz.png`
+        },
+        {
+          nombre: `Carlos Winkler Schroeder`,
+          cargo: `Desarrollo de Negocios`,
+          imagen: `./assets/img/carlos_winkler_s1.png`
+        },
+        {
+          nombre: `Rafael Alfredo Nava Ricaño`,
+          cargo: `Agroindustria`,
+          imagen: `./assets/img/hector_lopez_gutierrez.png`
+        },
+        {
+          nombre: `José Ignacio Irigoyen Palacios`,
+          cargo: `Capital Privado`,
+          imagen: `./assets/img/jose_i_irigoyen_p1.png`
+        },
+        {
+          nombre: `Camilo Antonio Ángel Urdaneta`,
+          cargo: `Banca de Inversión`,
+          imagen: `./assets/img/camilo_angel_u.png`
+        }
+      ]
+    }
+  },
+
   // Sección "Asociados"
   asociados: {
     titulo: `Asociados`,
@@ -220,6 +277,102 @@ function renderQuienesSomos() {
   `;
 }
 
+function renderOrganigrama() {
+  const section = document.getElementById('organigrama');
+  if (!section) return;
+
+  const data = apiData.organigrama;
+  const { ceo, directores, especialistas } = data.estructura;
+
+  // Buscar información completa del CEO en la sección de asociados
+  const getMiembroData = (nombre) => {
+    return apiData.asociados.miembros.find(m => m.nombre === nombre);
+  };
+
+  const ceoData = getMiembroData(ceo.nombre);
+  const ceoDataAttrs = ceoData 
+    ? `data-name="${ceoData.nombre}" data-role="${ceoData.rol}" data-img="${ceoData.imagen}" data-bio="${ceoData.bio}"`
+    : '';
+
+  const directoresHTML = directores.map(d => {
+    const miembroData = getMiembroData(d.nombre);
+    const dataAttrs = miembroData 
+      ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
+      : '';
+    return `
+    <div class="flex flex-col items-center organigrama-card cursor-pointer hover:scale-105 transition-transform" ${dataAttrs}>
+      <div class="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden shadow-lg border-4 border-white mb-3">
+        <img src="${d.imagen}" alt="${d.nombre}" class="w-full h-full object-cover object-top">
+      </div>
+      <h4 class="font-semibold text-sm md:text-base text-slate-800 text-center">${d.nombre}</h4>
+      <p class="text-xs md:text-sm text-slate-500 text-center uppercase tracking-wide">${d.cargo}</p>
+    </div>
+  `}).join('');
+
+  const especialistasHTML = especialistas.map(e => {
+    const miembroData = getMiembroData(e.nombre);
+    const dataAttrs = miembroData 
+      ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
+      : '';
+    return `
+    <div class="flex flex-col items-center organigrama-card cursor-pointer hover:scale-105 transition-transform" ${dataAttrs}>
+      <div class="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden shadow-lg border-4 border-white mb-2">
+        <img src="${e.imagen}" alt="${e.nombre}" class="w-full h-full object-cover object-top">
+      </div>
+      <h5 class="font-medium text-xs md:text-sm text-slate-700 text-center">${e.nombre}</h5>
+      <p class="text-xs text-slate-400 text-center uppercase tracking-wide">${e.cargo}</p>
+    </div>
+  `}).join('');
+
+  section.innerHTML = `
+    <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-6 md:space-y-10">
+      <div class="text-center mt-4 md:mt-10 mb-6 md:mb-10">
+        <h2 class="text-2xl md:text-4xl font-heading font-semibold mt-2 md:mt-6 mb-3 md:mb-6">${data.titulo}</h2>
+        <p class="text-sm md:text-base text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
+      </div>
+
+      <!-- Organigrama -->
+      <div class="relative bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl p-6 md:p-10 shadow-lg">
+        <!-- CEO -->
+        <div class="flex flex-col items-center mb-8 md:mb-12 organigrama-card cursor-pointer hover:scale-105 transition-transform" ${ceoDataAttrs}>
+          <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-xl border-4 border-primary mb-4">
+            <img src="${ceo.imagen}" alt="${ceo.nombre}" class="w-full h-full object-cover object-top">
+          </div>
+          <h3 class="font-bold text-lg md:text-xl text-primary text-center">${ceo.nombre}</h3>
+          <p class="text-sm md:text-base text-slate-600 text-center uppercase tracking-wide font-medium">${ceo.cargo}</p>
+        </div>
+
+        <!-- Línea vertical -->
+        <div class="w-0.5 h-8 md:h-12 bg-slate-300 mx-auto mb-6"></div>
+
+        <!-- Directores -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12 max-w-3xl mx-auto relative">
+          <!-- Línea horizontal superior -->
+          <div class="hidden md:block absolute top-0 left-1/4 right-1/4 h-0.5 bg-slate-300 -translate-y-6"></div>
+          <!-- Líneas verticales a directores -->
+          <div class="hidden md:block absolute top-0 left-1/4 w-0.5 h-6 bg-slate-300 -translate-y-6"></div>
+          <div class="hidden md:block absolute top-0 right-1/4 w-0.5 h-6 bg-slate-300 -translate-y-6"></div>
+          
+          ${directoresHTML}
+        </div>
+
+        <!-- Línea horizontal larga -->
+        <div class="hidden md:block w-full max-w-5xl h-0.5 bg-slate-300 mx-auto mb-6"></div>
+
+        <!-- Especialistas -->
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 relative">
+          <!-- Líneas verticales a especialistas -->
+          ${especialistas.map((_, i) => `
+            <div class="hidden md:block absolute top-0 w-0.5 h-6 bg-slate-300 -translate-y-6" style="left: ${(100 / especialistas.length) * i + (100 / especialistas.length / 2)}%"></div>
+          `).join('')}
+          
+          ${especialistasHTML}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 function renderAsociados() {
   const section = document.getElementById('asociados');
   if (!section) return;
@@ -396,6 +549,7 @@ function renderFooter() {
 function initApp() {
   // Renderizar todas las secciones con datos de la "API"
   renderQuienesSomos();
+  renderOrganigrama();
   renderAsociados();
   renderProyectos();
   renderPortafolio();
@@ -666,6 +820,13 @@ function initModal() {
   // Event listeners
   document.querySelectorAll('.brands_item-block').forEach(card => {
     card.addEventListener('click', () => openModal(card));
+  });
+
+  // Event listeners para organigrama
+  document.querySelectorAll('.organigrama-card').forEach(card => {
+    if (card.dataset.name) {
+      card.addEventListener('click', () => openModal(card));
+    }
   });
 
   closeModalBtn.addEventListener('click', closeModal);
