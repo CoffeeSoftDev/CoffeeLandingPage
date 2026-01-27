@@ -35,7 +35,7 @@
 
 <body class="bg-white text-slate-800 font-body">
     <!-- Hero (estático - no cambia con datos de API) -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4 sm:px-6">
+    <section class="relative h-[70vh] md:h-[80vh] flex items-center justify-center overflow-hidden px-4 sm:px-6">
         <video class="absolute inset-0 w-full h-full object-cover object-center" src="https://huubie.com.mx/video/prueba.mp4" autoplay muted loop playsinline></video>
         <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/50"></div>
 
@@ -68,7 +68,7 @@
                 <nav class="flex flex-col items-center gap-6 text-lg font-medium text-slate-700">
                     <a href="#quienes" class="mobile-menu-link hover:text-primary transition-colors">Quiénes somos</a>
                     <a href="#organigrama" class="mobile-menu-link hover:text-primary transition-colors">Organigrama</a>
-                    <a href="#asociados" class="mobile-menu-link hover:text-primary transition-colors">Asociados</a>
+                    <!-- <a href="#asociados" class="mobile-menu-link hover:text-primary transition-colors">Asociados</a> -->
                     <a href="#proyectos" class="mobile-menu-link hover:text-primary transition-colors">Proyectos</a>
                     <a href="#portafolio" class="mobile-menu-link hover:text-primary transition-colors">Portafolio</a>
                     <a href="#contacto" class="mobile-menu-link inline-flex items-center justify-center bg-primary text-white rounded-full px-8 py-3 shadow-lg hover:bg-primary/90 transition-colors text-base font-semibold w-full text-center">Contáctanos</a>
@@ -76,7 +76,7 @@
             </div>
         </div>
 
-        <div class="absolute bottom-52 sm:bottom-56 lg:bottom-20 lg:top-auto left-4 sm:left-8 md:left-12 z-16 w-full max-w-6xl px-4 sm:px-0 md:pl-16 lg:pl-24">
+        <div class="absolute bottom-40 sm:bottom-44 lg:bottom-28 lg:top-auto left-4 sm:left-8 md:left-12 z-16 w-full max-w-6xl px-4 sm:px-0 md:pl-16 lg:pl-24">
             <div class="text-left max-w-[46rem]">
                 <h1 class="font-sans font-semibold text-white/90 tracking-[0.03em] leading-[1.2] text-2xl sm:text-3xl md:text-4xl lg:text-5xl drop-shadow-[0_15px_40px_rgba(0,0.3,0,0.5)] antialiased">
                     Comprometidos con<br>
@@ -86,7 +86,7 @@
             </div>
         </div>
         
-        <div class="absolute bottom-16 sm:bottom-20 left-4 right-4 sm:left-auto sm:right-24 z-10 max-w-xl">
+        <div class="absolute bottom-8 sm:bottom-12 left-4 right-4 sm:left-auto sm:right-24 z-10 max-w-xl">
             <div class="bg-[#848484]/30 backdrop-blur-sm rounded-md px-6 py-4">
                 <p class="text-white text-sm md:text-lg font-semibold leading-relaxed">Recursos sostenibles y responsables para impulsar el desarrollo regional del Soconusco.</p>
             </div>
@@ -99,13 +99,13 @@
         <!-- Contenido cargado desde apiData -->
     </section>
 
-    <!-- Organigrama (renderizado dinámicamente) -->
-    <section id="organigrama" class="pt-8 pb-10 md:py-24 fade-section bg-white">
+    <!-- Organigrama (renderizado dinámicamente) - Solo visible en laptop/desktop -->
+    <section id="organigrama" class="hidden md:block pt-8 pb-10 md:py-24 fade-section bg-sand">
         <!-- Contenido cargado desde apiData -->
     </section>
 
-    <!-- Asociados (renderizado dinámicamente) -->
-    <section id="asociados" class="pt-8 pb-10 md:py-28 fade-section bg-sand">
+    <!-- Asociados (renderizado dinámicamente) - Solo visible en móvil -->
+    <section id="asociados" class="block md:hidden pt-8 pb-10 md:py-28 fade-section bg-sand">
         <!-- Contenido cargado desde apiData -->
     </section>
 

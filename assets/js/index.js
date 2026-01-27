@@ -231,6 +231,17 @@ const apiData = {
         url: "mailto:presidencia@agrinol.mx"
       }
     }
+  },
+
+  // Terminal Portuaria - Galería
+  terminalPortuaria: {
+    nombre: "Terminal Portuaria Remota",
+    galeria: [
+      { type: "video", src: "./assets/img/project-terminal-portuaria/proyecto1.mp4" },
+      { type: "image", src: "./assets/img/project-terminal-portuaria/EV2.jpg" },
+      { type: "image", src: "./assets/img/project-terminal-portuaria/EV4.jpg" },
+      { type: "image", src: "./assets/img/project-terminal-portuaria/EV7.jpeg" }
+    ]
   }
 };
 
@@ -290,84 +301,115 @@ function renderOrganigrama() {
   };
 
   const ceoData = getMiembroData(ceo.nombre);
-  const ceoDataAttrs = ceoData 
+  const ceoDataAttrs = ceoData
     ? `data-name="${ceoData.nombre}" data-role="${ceoData.rol}" data-img="${ceoData.imagen}" data-bio="${ceoData.bio}"`
     : '';
 
-  const directoresHTML = directores.map(d => {
-    const miembroData = getMiembroData(d.nombre);
-    const dataAttrs = miembroData 
-      ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
-      : '';
-    return `
-    <div class="flex flex-col items-center organigrama-card cursor-pointer hover:scale-105 transition-transform" ${dataAttrs}>
-      <div class="relative w-28 h-28 md:w-32 md:h-32 rounded-full overflow-hidden shadow-lg border-4 border-white mb-3">
-        <img src="${d.imagen}" alt="${d.nombre}" class="w-full h-full object-cover object-top">
-      </div>
-      <h4 class="font-semibold text-sm md:text-base text-slate-800 text-center">${d.nombre}</h4>
-      <p class="text-xs md:text-sm text-slate-500 text-center uppercase tracking-wide">${d.cargo}</p>
-    </div>
-  `}).join('');
+  // Card template estilo organigrama corporativo (como en la imagen)
+  const createOrgCard = (persona, size = 'md', dataAttrs = '') => {
+    const sizes = {
+      lg: { img: 'w-24 h-24 md:w-28 md:h-28', border: 'border-[3px]', text: 'text-xs md:text-sm', subtext: 'text-[10px] md:text-xs', minW: 'min-w-[140px] md:min-w-[180px]' },
+      md: { img: 'w-20 h-20 md:w-24 md:h-24', border: 'border-[3px]', text: 'text-[10px] md:text-xs', subtext: 'text-[9px] md:text-[10px]', minW: 'min-w-[120px] md:min-w-[160px]' },
+      sm: { img: 'w-16 h-16 md:w-20 md:h-20', border: 'border-2', text: 'text-[9px] md:text-[10px]', subtext: 'text-[8px] md:text-[9px]', minW: 'min-w-[100px] md:min-w-[130px]' }
+    };
+    const s = sizes[size];
 
-  const especialistasHTML = especialistas.map(e => {
-    const miembroData = getMiembroData(e.nombre);
-    const dataAttrs = miembroData 
-      ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
-      : '';
     return `
-    <div class="flex flex-col items-center organigrama-card cursor-pointer hover:scale-105 transition-transform" ${dataAttrs}>
-      <div class="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden shadow-lg border-4 border-white mb-2">
-        <img src="${e.imagen}" alt="${e.nombre}" class="w-full h-full object-cover object-top">
+      <div class="org-card flex flex-col items-center organigrama-card cursor-pointer hover:scale-105 transition-transform" ${dataAttrs}>
+        <div class="relative ${s.img} rounded-full overflow-hidden ${s.border} border-[#1a5fb4]">
+          <img src="${persona.imagen}" alt="${persona.nombre}" class="w-full h-full object-cover object-top">
+        </div>
+        <!-- Nombre en recuadro blanco con borde azul -->
+        <div class="org-name bg-white border-2 border-[#1a5fb4] px-2 py-1 md:px-3 md:py-1.5 mt-2 ${s.minW}">
+          <h4 class="font-bold ${s.text} text-[#1a5fb4] text-center leading-tight">${persona.nombre}</h4>
+        </div>
+        <!-- Cargo en recuadro azul sólido -->
+        <div class="org-cargo bg-[#1a5fb4] px-2 py-1 md:px-3 md:py-1.5 ${s.minW}">
+          <p class="${s.subtext} text-white text-center font-semibold uppercase">${persona.cargo}</p>
+        </div>
       </div>
-      <h5 class="font-medium text-xs md:text-sm text-slate-700 text-center">${e.nombre}</h5>
-      <p class="text-xs text-slate-400 text-center uppercase tracking-wide">${e.cargo}</p>
-    </div>
-  `}).join('');
+    `;
+  };
 
   section.innerHTML = `
-    <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-6 md:space-y-10">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 space-y-6 md:space-y-10">
       <div class="text-center mt-4 md:mt-10 mb-6 md:mb-10">
         <h2 class="text-2xl md:text-4xl font-heading font-semibold mt-2 md:mt-6 mb-3 md:mb-6">${data.titulo}</h2>
         <p class="text-sm md:text-base text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
       </div>
 
-      <!-- Organigrama -->
-      <div class="relative bg-gradient-to-br from-slate-50 to-slate-100 rounded-3xl p-6 md:p-10 shadow-lg">
-        <!-- CEO -->
-        <div class="flex flex-col items-center mb-8 md:mb-12 organigrama-card cursor-pointer hover:scale-105 transition-transform" ${ceoDataAttrs}>
-          <div class="relative w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-xl border-4 border-primary mb-4">
-            <img src="${ceo.imagen}" alt="${ceo.nombre}" class="w-full h-full object-cover object-top">
+      <!-- Organigrama Corporativo -->
+      <div class="relative bg-gradient-to-b from-white to-slate-50 rounded-2xl p-6 md:p-10 shadow-xl border border-slate-200 overflow-hidden">
+
+        <!-- Nivel 1: CEO -->
+        <div class="org-level-ceo flex justify-center mb-4">
+          ${createOrgCard(ceo, 'lg', ceoDataAttrs)}
+        </div>
+
+        <!-- Línea vertical del CEO -->
+        <div class="org-connector-vertical w-[2px] h-8 md:h-10 bg-[#1a5fb4] mx-auto"></div>
+
+        <!-- Nivel 2: Directores -->
+        <div class="org-level-directores relative">
+          <!-- Línea horizontal que conecta directores -->
+          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[2px] bg-[#1a5fb4]"></div>
+
+          <!-- Contenedor de directores con líneas verticales -->
+          <div class="flex justify-center gap-8 md:gap-24 lg:gap-32 pt-0 md:pt-4">
+            <div class="flex flex-col items-center">
+              <div class="hidden md:block w-[2px] h-4 bg-[#1a5fb4] -mt-4"></div>
+              ${directores[0] ? (() => {
+                const miembroData = getMiembroData(directores[0].nombre);
+                const dataAttrs = miembroData
+                  ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
+                  : '';
+                return createOrgCard(directores[0], 'md', dataAttrs);
+              })() : ''}
+            </div>
+            <div class="flex flex-col items-center">
+              <div class="hidden md:block w-[2px] h-4 bg-[#1a5fb4] -mt-4"></div>
+              ${directores[1] ? (() => {
+                const miembroData = getMiembroData(directores[1].nombre);
+                const dataAttrs = miembroData
+                  ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
+                  : '';
+                return createOrgCard(directores[1], 'md', dataAttrs);
+              })() : ''}
+            </div>
           </div>
-          <h3 class="font-bold text-lg md:text-xl text-primary text-center">${ceo.nombre}</h3>
-          <p class="text-sm md:text-base text-slate-600 text-center uppercase tracking-wide font-medium">${ceo.cargo}</p>
         </div>
 
-        <!-- Línea vertical -->
-        <div class="w-0.5 h-8 md:h-12 bg-slate-300 mx-auto mb-6"></div>
+        <!-- Línea vertical a especialistas -->
+        <div class="org-connector-vertical w-[2px] h-6 md:h-8 bg-[#1a5fb4] mx-auto mt-4"></div>
 
-        <!-- Directores -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-8 md:mb-12 max-w-3xl mx-auto relative">
-          <!-- Línea horizontal superior -->
-          <div class="hidden md:block absolute top-0 left-1/4 right-1/4 h-0.5 bg-slate-300 -translate-y-6"></div>
-          <!-- Líneas verticales a directores -->
-          <div class="hidden md:block absolute top-0 left-1/4 w-0.5 h-6 bg-slate-300 -translate-y-6"></div>
-          <div class="hidden md:block absolute top-0 right-1/4 w-0.5 h-6 bg-slate-300 -translate-y-6"></div>
-          
-          ${directoresHTML}
+        <!-- Etiqueta "Lider del Proyecto" -->
+        <div class="flex justify-center my-4">
+          <div class="bg-[#1a5fb4] text-white px-6 py-2 font-bold text-sm md:text-base tracking-wider uppercase">
+            Lider del Proyecto
+          </div>
         </div>
 
-        <!-- Línea horizontal larga -->
-        <div class="hidden md:block w-full max-w-5xl h-0.5 bg-slate-300 mx-auto mb-6"></div>
+        <!-- Línea horizontal para especialistas -->
+        <div class="hidden md:block w-[85%] h-[2px] bg-[#1a5fb4] mx-auto mb-4"></div>
 
-        <!-- Especialistas -->
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 relative">
-          <!-- Líneas verticales a especialistas -->
-          ${especialistas.map((_, i) => `
-            <div class="hidden md:block absolute top-0 w-0.5 h-6 bg-slate-300 -translate-y-6" style="left: ${(100 / especialistas.length) * i + (100 / especialistas.length / 2)}%"></div>
-          `).join('')}
-          
-          ${especialistasHTML}
+        <!-- Nivel 3: Especialistas -->
+        <div class="org-level-especialistas relative">
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
+            ${especialistas.map(e => {
+              const miembroData = getMiembroData(e.nombre);
+              const dataAttrs = miembroData
+                ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
+                : '';
+              return `
+                <div class="flex flex-col items-center">
+                  <div class="hidden md:block w-[2px] h-4 bg-[#1a5fb4] -mt-4 mb-2"></div>
+                  ${createOrgCard(e, 'sm', dataAttrs)}
+                </div>
+              `;
+            }).join('')}
+          </div>
         </div>
+
       </div>
     </div>
   `;
@@ -427,14 +469,21 @@ function renderProyectos() {
 
   const data = apiData.proyectos;
 
-  const proyectosHTML = data.items.map(p => `
-    <div class="mb-6">
-      <p class="font-semibold">${p.nombre}.</p>
-      <ul class="list-disc list-inside space-y-1">
-        ${p.detalles.map(d => `<li>${d}</li>`).join('')}
-      </ul>
-    </div>
-  `).join('');
+  const proyectosHTML = data.items.map(p => {
+    const isTerminalPortuaria = p.nombre === "Terminal Portuaria Remota";
+    const nombreHTML = isTerminalPortuaria 
+      ? `<p class="font-semibold">${p.nombre}. <a href="#" onclick="openTerminalPortuariaModal(); return false;" class="text-primary hover:text-cyan-600 underline decoration-2 underline-offset-2 transition-colors ml-1">Ver galería →</a></p>`
+      : `<p class="font-semibold">${p.nombre}.</p>`;
+
+    return `
+      <div class="mb-6">
+        ${nombreHTML}
+        <ul class="list-disc list-inside space-y-1">
+          ${p.detalles.map(d => `<li>${d}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }).join('');
 
   const videosHTML = data.videos.map((v, i) => {
     const isLarge = v.size === 'large';
@@ -543,6 +592,485 @@ function renderFooter() {
 
 
 // ==========================================
+// MODAL CARRUSEL PARA TERMINAL PORTUARIA
+// ==========================================
+
+function createCarouselModal() {
+  const modal = document.createElement('div');
+  modal.id = 'terminalPortuariaModal';
+  modal.className = 'fixed inset-0 z-50 hidden items-center justify-center bg-slate-800/70 backdrop-blur-sm p-2 md:p-4';
+  modal.innerHTML = `
+    <div class="bg-white rounded-2xl shadow-2xl max-w-2xl w-full mx-auto overflow-hidden transform transition-all flex flex-col relative h-[95vh]">
+      <!-- Botón cerrar -->
+      <button id="closeCarouselModal" class="absolute top-3 right-3 z-20 bg-white/90 hover:bg-white rounded-full p-1.5 text-slate-500 hover:text-slate-700 transition-colors shadow-md">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      <!-- Contenedor del carrusel -->
+      <div class="w-full p-3 md:p-5 flex flex-col h-full min-h-0">
+        <!-- Título -->
+        <div class="mb-3 flex-shrink-0">
+          <h3 class="text-lg md:text-xl font-heading font-semibold text-slate-800 mb-1 pr-8">Proyecto Terminal Marítima Remota – Puerto Chiapas</h3>
+          <p class="text-xs uppercase tracking-widest text-primary font-medium">Galería de Proyecto</p>
+        </div>
+
+        <!-- Slide Container - Ahora ocupa el espacio disponible -->
+        <div class="relative flex-1 min-h-0">
+          <div id="carouselSlide" class="relative w-full h-full bg-slate-900 rounded-lg overflow-hidden shadow-md">
+          </div>
+
+          <!-- Controles de navegación -->
+          <button id="carouselPrev" class="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 rounded-full p-3 transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+          </button>
+          <button id="carouselNext" class="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/30 rounded-full p-3 transition-all hover:scale-110">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Indicadores debajo del carousel -->
+        <div id="carouselIndicators" class="flex justify-center gap-2 py-3 flex-shrink-0">
+        </div>
+
+        <!-- Descripción del proyecto - Altura flexible con scroll -->
+        <div class="pt-5 border-t border-slate-100 flex-shrink-0 max-h-[30vh] overflow-y-auto">
+          <div class="text-slate-600 text-xs md:text-sm leading-relaxed text-justify space-y-2 pr-2">
+            <p>La Terminal Marítima Remota de Puerto Chiapas es un proyecto estratégico de infraestructura portuaria diseñado, impulsado y gestionado por Agrinol y su equipo de especialistas, concebido como una iniciativa privada para transformar la capacidad logística de la frontera sur de México.</p>
+            <p>El proyecto plantea la construcción de una terminal marítima de 25 hectáreas, ubicada aproximadamente a 3 kilómetros mar adentro, capaz de recibir buques de gran calado y superar el rezago operativo de casi cinco décadas del puerto original.</p>
+            <p>Con una inversión estimada de 10 mil millones de pesos, incluyendo participación de capital extranjero, la terminal fue planeada para posicionar a Puerto Chiapas como un nodo clave del comercio internacional, fortaleciendo el manejo de graneles, contenedores y carga refrigerada, así como su integración al corredor transístmico.</p>
+            <p>El proyecto se encuentra validado y proyectado para iniciar su construcción en una siguiente etapa, contemplando además la modernización ferroviaria y la conectividad terrestre del puerto.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(modal);
+}
+
+function initCarouselModal() {
+  createCarouselModal();
+
+  const modal = document.getElementById('terminalPortuariaModal');
+  const closeBtn = document.getElementById('closeCarouselModal');
+  const slideContainer = document.getElementById('carouselSlide');
+  const prevBtn = document.getElementById('carouselPrev');
+  const nextBtn = document.getElementById('carouselNext');
+  const indicatorsContainer = document.getElementById('carouselIndicators');
+
+  let currentIndex = 0;
+  const galeria = apiData.terminalPortuaria.galeria;
+
+  function renderSlide(index) {
+    const item = galeria[index];
+    let content = '';
+
+    if (item.type === 'video') {
+      content = `
+        <div class="relative w-full h-full group">
+          <video id="carouselVideo" class="w-full h-full object-cover cursor-pointer" poster="${item.poster || ''}" preload="metadata" playsinline>
+            <source src="${item.src}" type="video/mp4">
+          </video>
+
+          <!-- Barra de controles inferior -->
+          <div id="videoControls" class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-4 pt-10 transition-all opacity-0 group-hover:opacity-100">
+
+            <!-- Barra de progreso -->
+            <div class="relative w-full h-1.5 bg-white/30 rounded-full mb-4 cursor-pointer group/progress" id="progressContainer">
+              <div id="progressBar" class="absolute top-0 left-0 h-full bg-white rounded-full transition-all" style="width: 0%"></div>
+              <div id="progressHandle" class="absolute top-1/2 -translate-y-1/2 w-4 h-4 bg-white rounded-full shadow-lg opacity-0 group-hover/progress:opacity-100 transition-all" style="left: 0%"></div>
+            </div>
+
+            <!-- Controles -->
+            <div class="flex items-center justify-between gap-4">
+
+              <!-- Grupo izquierdo: controles de reproducción -->
+              <div class="flex items-center gap-2">
+                <!-- Retroceder 10s -->
+                <button id="rewindBtn" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full p-2 transition-all hover:scale-110" title="Retroceder 10s">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+                  </svg>
+                </button>
+
+                <!-- Play/Pause -->
+                <button id="playPauseBtn" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full p-3 transition-all hover:scale-110">
+                  <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="white" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  <svg id="pauseIcon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hidden" fill="white" viewBox="0 0 24 24">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                  </svg>
+                </button>
+
+                <!-- Adelantar 10s -->
+                <button id="forwardBtn" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full p-2 transition-all hover:scale-110" title="Adelantar 10s">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
+                  </svg>
+                </button>
+
+                <!-- Tiempo -->
+                <div class="text-white text-sm font-medium ml-2 tabular-nums">
+                  <span id="currentTime">0:00</span>
+                  <span class="text-white/50 mx-1">/</span>
+                  <span id="duration">0:00</span>
+                </div>
+              </div>
+
+              <!-- Grupo derecho: volumen y fullscreen -->
+              <div class="flex items-center gap-2">
+                <button id="muteBtn" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full p-2 transition-all hover:scale-110">
+                  <svg id="volumeIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                  </svg>
+                  <svg id="muteIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                  </svg>
+                </button>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1" class="w-20 h-1 bg-white/30 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-3 [&::-webkit-slider-thumb]:h-3 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:cursor-pointer">
+
+                <!-- Fullscreen -->
+                <button id="fullscreenBtn" class="bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 rounded-full p-2 transition-all hover:scale-110 ml-1" title="Pantalla completa">
+                  <svg id="expandIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                  </svg>
+                  <svg id="compressIcon" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+    } else {
+      content = `
+        <div class="relative w-full h-full flex items-center justify-center p-4">
+          <img src="${item.src}" alt="Imagen ${index + 1}" class="max-w-full max-h-full object-contain rounded-lg">
+        </div>
+      `;
+    }
+
+    slideContainer.innerHTML = content;
+    updateIndicators(index);
+
+    // Configurar controles de video si existe
+    const video = document.getElementById('carouselVideo');
+    if (video) {
+      const playPauseBtn = document.getElementById('playPauseBtn');
+      const playIcon = document.getElementById('playIcon');
+      const pauseIcon = document.getElementById('pauseIcon');
+      const rewindBtn = document.getElementById('rewindBtn');
+      const forwardBtn = document.getElementById('forwardBtn');
+      const progressContainer = document.getElementById('progressContainer');
+      const progressBar = document.getElementById('progressBar');
+      const progressHandle = document.getElementById('progressHandle');
+      const currentTimeEl = document.getElementById('currentTime');
+      const durationEl = document.getElementById('duration');
+      const muteBtn = document.getElementById('muteBtn');
+      const volumeIcon = document.getElementById('volumeIcon');
+      const muteIcon = document.getElementById('muteIcon');
+      const volumeSlider = document.getElementById('volumeSlider');
+      const videoControls = document.getElementById('videoControls');
+
+      // Formatear tiempo
+      function formatTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return mins + ':' + secs.toString().padStart(2, '0');
+      }
+
+      // Actualizar UI de play/pause
+      function updatePlayPauseUI(isPlaying) {
+        if (isPlaying) {
+          playIcon.classList.add('hidden');
+          pauseIcon.classList.remove('hidden');
+        } else {
+          playIcon.classList.remove('hidden');
+          pauseIcon.classList.add('hidden');
+        }
+      }
+
+      // Toggle play/pause
+      function togglePlay() {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      }
+
+      // Event listeners para play/pause
+      playPauseBtn.addEventListener('click', togglePlay);
+      video.addEventListener('click', togglePlay);
+
+      video.addEventListener('play', () => updatePlayPauseUI(true));
+      video.addEventListener('pause', () => updatePlayPauseUI(false));
+      video.addEventListener('ended', () => updatePlayPauseUI(false));
+
+      // Cargar duración
+      video.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(video.duration);
+      });
+
+      // Actualizar progreso
+      video.addEventListener('timeupdate', () => {
+        const percent = (video.currentTime / video.duration) * 100;
+        progressBar.style.width = percent + '%';
+        progressHandle.style.left = percent + '%';
+        currentTimeEl.textContent = formatTime(video.currentTime);
+      });
+
+      // Click y drag en barra de progreso para seek
+      let isDragging = false;
+
+      function seekToPosition(e) {
+        const rect = progressContainer.getBoundingClientRect();
+        const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+        video.currentTime = percent * video.duration;
+      }
+
+      progressContainer.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        seekToPosition(e);
+      });
+
+      document.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+          seekToPosition(e);
+        }
+      });
+
+      document.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+
+      progressContainer.addEventListener('click', seekToPosition);
+
+      // Retroceder 10s
+      rewindBtn.addEventListener('click', () => {
+        video.currentTime = Math.max(0, video.currentTime - 10);
+      });
+
+      // Adelantar 10s
+      forwardBtn.addEventListener('click', () => {
+        video.currentTime = Math.min(video.duration, video.currentTime + 10);
+      });
+
+      // Función para actualizar el visual del slider de volumen
+      function updateVolumeSliderVisual(value) {
+        const percent = value * 100;
+        volumeSlider.style.setProperty('--volume-percent', percent + '%');
+      }
+
+      // Mute toggle
+      muteBtn.addEventListener('click', () => {
+        video.muted = !video.muted;
+        if (video.muted) {
+          volumeIcon.classList.add('hidden');
+          muteIcon.classList.remove('hidden');
+          volumeSlider.value = 0;
+          updateVolumeSliderVisual(0);
+        } else {
+          volumeIcon.classList.remove('hidden');
+          muteIcon.classList.add('hidden');
+          volumeSlider.value = video.volume;
+          updateVolumeSliderVisual(video.volume);
+        }
+      });
+
+      // Control de volumen
+      volumeSlider.addEventListener('input', (e) => {
+        video.volume = e.target.value;
+        video.muted = e.target.value == 0;
+        updateVolumeSliderVisual(e.target.value);
+        if (video.muted) {
+          volumeIcon.classList.add('hidden');
+          muteIcon.classList.remove('hidden');
+        } else {
+          volumeIcon.classList.remove('hidden');
+          muteIcon.classList.add('hidden');
+        }
+      });
+
+      // Inicializar visual del volumen
+      updateVolumeSliderVisual(1);
+
+      // Fullscreen toggle
+      const fullscreenBtn = document.getElementById('fullscreenBtn');
+      const expandIcon = document.getElementById('expandIcon');
+      const compressIcon = document.getElementById('compressIcon');
+
+      function updateFullscreenUI(isFullscreen) {
+        if (isFullscreen) {
+          expandIcon.classList.add('hidden');
+          compressIcon.classList.remove('hidden');
+        } else {
+          expandIcon.classList.remove('hidden');
+          compressIcon.classList.add('hidden');
+        }
+      }
+
+      fullscreenBtn.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          // Entrar en fullscreen
+          const videoContainer = video.parentElement;
+          if (videoContainer.requestFullscreen) {
+            videoContainer.requestFullscreen();
+          } else if (videoContainer.webkitRequestFullscreen) {
+            videoContainer.webkitRequestFullscreen();
+          } else if (videoContainer.msRequestFullscreen) {
+            videoContainer.msRequestFullscreen();
+          }
+        } else {
+          // Salir de fullscreen
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+        }
+      });
+
+      // Escuchar cambios de fullscreen
+      document.addEventListener('fullscreenchange', () => {
+        updateFullscreenUI(!!document.fullscreenElement);
+      });
+      document.addEventListener('webkitfullscreenchange', () => {
+        updateFullscreenUI(!!document.webkitFullscreenElement);
+      });
+
+      // Mostrar controles al mover el mouse cuando está reproduciendo
+      let controlsTimeout;
+      video.parentElement.addEventListener('mousemove', () => {
+        videoControls.classList.remove('opacity-0');
+        videoControls.classList.add('opacity-100');
+        clearTimeout(controlsTimeout);
+        if (!video.paused) {
+          controlsTimeout = setTimeout(() => {
+            videoControls.classList.add('opacity-0');
+            videoControls.classList.remove('opacity-100');
+          }, 2500);
+        }
+      });
+
+      // Atajos de teclado cuando el modal está abierto
+      const handleKeyboard = (e) => {
+        if (modal.classList.contains('hidden')) return;
+        if (galeria[currentIndex].type !== 'video') return;
+
+        switch(e.key) {
+          case ' ':
+            e.preventDefault();
+            togglePlay();
+            break;
+          case 'ArrowLeft':
+            if (e.shiftKey) {
+              video.currentTime = Math.max(0, video.currentTime - 10);
+            }
+            break;
+          case 'ArrowRight':
+            if (e.shiftKey) {
+              video.currentTime = Math.min(video.duration, video.currentTime + 10);
+            }
+            break;
+          case 'm':
+            muteBtn.click();
+            break;
+          case 'f':
+            fullscreenBtn.click();
+            break;
+        }
+      };
+      document.addEventListener('keydown', handleKeyboard);
+    }
+  }
+
+  function updateIndicators(activeIndex) {
+    indicatorsContainer.innerHTML = galeria.map((_, i) => `
+      <button class="carousel-indicator w-2.5 h-2.5 rounded-full transition-all ${i === activeIndex ? 'bg-primary w-8' : 'bg-slate-300 hover:bg-slate-400'}" data-index="${i}"></button>
+    `).join('');
+
+    document.querySelectorAll('.carousel-indicator').forEach(indicator => {
+      indicator.addEventListener('click', () => {
+        const index = parseInt(indicator.dataset.index);
+        goToSlide(index);
+      });
+    });
+  }
+
+  function goToSlide(index) {
+    const currentVideo = slideContainer.querySelector('video');
+    if (currentVideo) {
+      currentVideo.pause();
+    }
+
+    currentIndex = index;
+    renderSlide(currentIndex);
+  }
+
+  function nextSlide() {
+    const nextIndex = (currentIndex + 1) % galeria.length;
+    goToSlide(nextIndex);
+  }
+
+  function prevSlide() {
+    const prevIndex = (currentIndex - 1 + galeria.length) % galeria.length;
+    goToSlide(prevIndex);
+  }
+
+  prevBtn.addEventListener('click', prevSlide);
+  nextBtn.addEventListener('click', nextSlide);
+
+  function closeModal() {
+    const video = slideContainer.querySelector('video');
+    if (video) {
+      video.pause();
+    }
+
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+      closeModal();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('hidden')) {
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'ArrowRight') nextSlide();
+    }
+  });
+
+  window.openTerminalPortuariaModal = function() {
+    currentIndex = 0;
+    renderSlide(currentIndex);
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  };
+}
+
+
+// ==========================================
 // INICIALIZACIÓN
 // ==========================================
 
@@ -560,6 +1088,7 @@ function initApp() {
   initSmoothScroll();
   initCarouselNavigation();
   initModal();
+  initCarouselModal();
   initVideoPlayers();
   initBackToTop();
   initMobileMenu();
