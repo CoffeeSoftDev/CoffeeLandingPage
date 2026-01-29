@@ -4,7 +4,7 @@
 const apiData = {
   // Sección "Quiénes somos"
   quienesSomos: {
-    titulo: `¿A qué nos dedicamos en <span class='font-bold'>Agrinol</span>?`,
+    titulo: `¿A qué nos dedicamos?`,
     descripcion: `Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo y bienestar regional.
     Detonando Puerto Chiapas en un polo de desarrollo y bienestar sostenible.`,
     imagen: `https://huubie.com.mx/video/barquito.png`,
@@ -223,8 +223,8 @@ const apiData = {
         url: "https://www.google.com/maps/place/Capsula+CC/@14.9131086,-92.2544204,89m/data=!3m1!1e3!4m6!3m5!1s0x858e0f24609096f3:0xfb9517e5666ed8a8!8m2!3d14.9129978!4d-92.2544324!16s%2Fg%2F11fp3pwhf9?hl=es-ES&entry=ttu"
       },
       telefono: {
-        texto: "+52 962 184 0551",
-        url: "https://api.whatsapp.com/send/?phone=%2B529621840551&text&type=phone_number&app_absent=0"
+        texto: "+52 962 460 0000",
+        url: "https://api.whatsapp.com/send/?phone=%2B529624600000&text&type=phone_number&app_absent=0"
       },
       email: {
         texto: "presidencia@agrinol.mx",
