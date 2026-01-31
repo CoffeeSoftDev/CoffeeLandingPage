@@ -2,18 +2,23 @@
 // DATOS SIMULADOS DE LA API
 // ==========================================
 const apiData = {
+  // Haciendo partícipe a la sociedad civil y al Gobierno de este proyecto en beneficio del interés nacional
+  // con el apoyo de las autoridades,
+  //  invitando a la sociedad civil a ser copartícipe de este proyecto en beneficio del interés nacional.<br><br>
+  //   Agrinol busca desarrollar el potencial del estado de Chiapas, haciendo partícipe a la sociedad civil y
+  //    al Gobierno de este proyecto en beneficio del interés nacional
   // Sección "Quiénes somos"
+  // En Agrinol tenemos como misión desarrollar el potencial del Estado de Chiapas implementando proyectos de sectores importantes como el sector agrícola, agroindustrial, infraestructura y comunicaciones, innovación y tecnología, entre otros. 
+  //     Haciendo partícipe a la sociedad civil y al Gobierno de estos proyectos en beneficio del interés nacional.
   quienesSomos: {
     titulo: `¿A qué nos dedicamos?`,
-    descripcion: `Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo y bienestar regional.
-    Detonando Puerto Chiapas en un polo de desarrollo y bienestar sostenible.`,
+    descripcion: `Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo y bienestar de Chiapas.`,
     imagen: `https://huubie.com.mx/video/barquito.png`,
-    contenido: `Tenemos como misión desarrollar el potencial de puerto chiapas con el concurso de las autoridades,
-     invitando a la sociedad civil a ser copartícipe de este proyecto en beneficio del interés nacional.<br><br>
-     Con la visión y gestión del ing. Carlos Alberto Vila Serrano,
-      conocedor del entorno de negocios del sector público y privado, con la firma: AGRINOL SAPI DE CV, 
-      Queremos desarrollar el potencial de Puerto Chiapas, haciendo partícipe a la sociedad civil y
-       al Gobierno de este proyecto en beneficio del interés nacional`,
+    contenido: `
+
+      En Agrinol impulsamos el desarrollo sostenible de Chiapas mediante la implementación de proyectos estratégicos en los sectores agrícola, agroindustrial, infraestructura, comunicaciones, innovación y tecnología.
+Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto positivo, fortalecer la economía regional y contribuir al bienestar del país.
+    `,
     mision: {
       titulo: `Misión`,
       texto: `Gestionar e implementar proyectos sustentables del desarrollo y bienestar.`
@@ -205,30 +210,116 @@ const apiData = {
   portafolio: {
     titulo: "Portafolio",
     descripcion: "Nos especializamos en la gestión y desarrollo de proyectos de alto impacto que impulsan la economía regional y nacional. Nuestra trayectoria se define por la transformación de visiones en realidades tangibles.",
+    clasificaciones: [
+      { id: 1, name: "🌿 Sector Agroindustrial y Sustentabilidad" },
+      { id: 2, name: "🏗️ Infraestructura y Comunicaciones" },
+      { id: 3, name: "🚆 Movilidad y Transporte Urbano" },
+      { id: 4, name: "💻 Innovación y Tecnología de Alto Desempeño" },
+      { id: 5, name: "📍 Proyectos en Gestión y Desarrollo Estratégico" }
+    ],
     proyectos: [
       {
-        nombre: "Proyecto KUXTAL (Podebi Tapachula I y II)",
-        descripcion: "Terminal portuaria de última generación",
-        imagen: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-        destacado: true
+        id: 1,
+        name: "Planta de Bioetanol (Sustentabilidad Energética)",
+        description: "Desarrollo de infraestructura avanzada para la producción de biocombustible a partir de sorgo y caña de azúcar.",
+        class_id: 1,
+        media: [
+          { type: "video", url: "https://www.agrinol.mx/vid/gespro.mp4" },
+          { type: "image", url: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800" }
+        ]
       },
       {
-        nombre: "Proyecto FFCC Centro América (Costa Pacífico)",
-        descripcion: "",
-        imagen: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-        destacado: false
+        id: 2,
+        name: "Planta de Fertilizantes",
+        description: "Proyecto enfocado en el fortalecimiento de la soberanía agrícola mediante la producción local de insumos esenciales.",
+        class_id: 1,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800" }
+        ]
       },
       {
-        nombre: "Proyecto 3",
-        descripcion: "Infraestructura industrial",
-        imagen: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
-        destacado: false
+        id: 3,
+        name: "Salas de Empaque para Insectos Benéficos",
+        description: "[CASO DE ÉXITO] Construcción y equipamiento integral de instalaciones especializadas para el control biológico de plagas.",
+        class_id: 1,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800" }
+        ]
       },
       {
-        nombre: "Proyecto 4",
-        descripcion: "Desarrollo sustentable regional",
-        imagen: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80",
-        destacado: true
+        id: 4,
+        name: "Rehabilitación de la Línea K del Ferrocarril",
+        description: "[CASO DE ÉXITO] Gestión histórica y culminación exitosa de la rehabilitación del tramo Ixtepec, Oaxaca a Ciudad Hidalgo, Chiapas, incluyendo el ramal estratégico hacia Puerto Chiapas.",
+        class_id: 2,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1527684651001-731c474bbb5a?w=800" }
+        ]
+      },
+      {
+        id: 5,
+        name: "Caminos Rurales \"Saca Cosechas\"",
+        description: "Implementación de rutas logísticas para optimizar el transporte de productos desde el campo hacia los centros de distribución.",
+        class_id: 2,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800" }
+        ]
+      },
+      {
+        id: 6,
+        name: "Terminal Portuaria Remota",
+        description: "Proyecto de inversión y conectividad vinculado al corredor interoceánico del Istmo de Tehuantepec.",
+        class_id: 2,
+        media: [
+          { type: "video", url: "./assets/img/project-terminal-portuaria/proyecto1.mp4" },
+          { type: "image", url: "./assets/img/project-terminal-portuaria/EV2.jpg" },
+          { type: "image", url: "./assets/img/project-terminal-portuaria/EV4.jpg" },
+          { type: "image", url: "./assets/img/project-terminal-portuaria/EV7.jpeg" }
+        ]
+      },
+      {
+        id: 7,
+        name: "Tren Ligero Tapachula - Puerto Chiapas",
+        description: "Proyecto de transporte masivo diseñado para conectar de manera eficiente el núcleo urbano con la zona portuaria.",
+        class_id: 3,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800" }
+        ]
+      },
+      {
+        id: 8,
+        name: "Transporte y Terminales de Corto Recorrido",
+        description: "Optimización de la movilidad regional mediante infraestructura de transferencia de pasajeros y carga.",
+        class_id: 3,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800" }
+        ]
+      },
+      {
+        id: 9,
+        name: "Laboratorio Regional de Supercómputo",
+        description: "Desarrollo de un centro tecnológico de \"Súper Cómputo\" para el procesamiento de datos y apoyo a la investigación de alto nivel.",
+        class_id: 4,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" }
+        ]
+      },
+      {
+        id: 10,
+        name: "Corredor Interoceánico y Polos de Desarrollo",
+        description: "Actualmente, nuestra organización lidera la gestión para la consolidación de los Polos de Desarrollo 1 y 2 en las regiones de Tapachula y Ciudad Hidalgo, Chiapas.",
+        class_id: 5,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" }
+        ]
       }
     ]
   },
@@ -280,25 +371,25 @@ function renderQuienesSomos() {
     <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-4 md:space-y-6">
       <div class="text-center mt-4 md:mt-10 mb-6 md:mb-10">
         <h2 class="text-2xl md:text-4xl text-primary font-heading font-semibold mt-4 md:mt-6 mb-4 md:mb-6">${data.titulo}</h2>
-        <p class="text-sm md:text-base text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
+        <p class="text-sm md:text-lg text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
       </div>
       <div class="flex flex-col md:flex-row items-stretch gap-4 md:gap-6">
         <div class="relative w-full md:w-2/5 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden min-h-[200px] md:min-h-[260px]">
           <img src="${data.imagen}" alt="Puerto" class="absolute inset-0 w-full h-full object-cover">
         </div>
-        <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 text-justify">
+        <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-lg text-slate-700 text-justify ">
           <p>${data.contenido}</p>
         </div>
       </div>
       <div class="flex flex-col md:flex-row items-stretch gap-4 md:gap-6">
         <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 text-justify flex flex-col justify-center">
-          <div class="mb-6 md:mb-10">
+          <div class="mb-6 md:mb-3">
             <h3 class="text-xl md:text-2xl font-heading font-semibold text-primary">${data.mision.titulo}</h3>
-            <p>${data.mision.texto}</p>
+            <p class='text-sm md:text-lg'>${data.mision.texto}</p>
           </div>
           <div>
             <h3 class="text-xl md:text-2xl font-heading font-semibold text-primary">${data.vision.titulo}</h3>
-            <p>${data.vision.texto}</p>
+            <p class='text-sm md:text-lg'>${data.vision.texto}</p>
           </div>
         </div>
         <div class="relative w-full md:w-2/5 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden min-h-[200px] md:min-h-[260px]">
@@ -487,63 +578,63 @@ function renderAsociados() {
 }
 
 function renderProyectos() {
-  // const section = document.getElementById('proyectos');
-  // if (!section) return;
+  const section = document.getElementById('proyectos');
+  if (!section) return;
 
-  // const data = apiData.proyectos;
+  const data = apiData.proyectos;
 
-  // const proyectosHTML = data.items.map(p => {
-  //   const isTerminalPortuaria = p.nombre === "Terminal Portuaria Remota";
-  //   const nombreHTML = isTerminalPortuaria 
-  //     ? `<p class="font-semibold">${p.nombre}. <a href="#" onclick="openTerminalPortuariaModal(); return false;" class="text-primary hover:text-cyan-600 underline decoration-2 underline-offset-2 transition-colors ml-1">Ver galería →</a></p>`
-  //     : `<p class="font-semibold">${p.nombre}.</p>`;
+  const proyectosHTML = data.items.map(p => {
+    const isTerminalPortuaria = p.nombre === "Terminal Portuaria Remota";
+    const nombreHTML = isTerminalPortuaria
+      ? `<p class="font-semibold">${p.nombre}. <a href="#" onclick="openTerminalPortuariaModal(); return false;" class="text-primary hover:text-cyan-600 underline decoration-2 underline-offset-2 transition-colors ml-1">Ver galería →</a></p>`
+      : `<p class="font-semibold">${p.nombre}.</p>`;
 
-  //   return `
-  //     <div class="mb-6">
-  //       ${nombreHTML}
-  //       <ul class="list-disc list-inside space-y-1">
-  //         ${p.detalles.map(d => `<li>${d}</li>`).join('')}
-  //       </ul>
-  //     </div>
-  //   `;
-  // }).join('');
+    return `
+      <div class="mb-6">
+        ${nombreHTML}
+        <ul class="list-disc list-inside space-y-1">
+          ${p.detalles.map(d => `<li>${d}</li>`).join('')}
+        </ul>
+      </div>
+    `;
+  }).join('');
 
-  // const videosHTML = data.videos.map((v, i) => {
-  //   const isLarge = v.size === 'large';
-  //   return `
-  //     <div class="relative rounded-3xl shadow-lg overflow-hidden ${isLarge ? 'col-span-1 md:col-span-2 h-48 md:h-64' : 'col-span-1 h-48 md:h-32'} video-container">
-  //       <video class="w-full h-full object-cover" poster="${v.poster}" preload="metadata">
-  //         <source src="${v.src}" type="video/mp4">
-  //       </video>
-  //       <div class="control-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300">
-  //         <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-  //           <div class="w-14 h-14 md:${isLarge ? 'w-16 md:h-16' : 'w-10 md:h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-  //             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-1 md:${isLarge ? 'h-8 md:w-8 ml-1' : 'h-5 md:w-5 ml-0.5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
-  //               <path d="M8 5v14l11-7z"/>
-  //             </svg>
-  //           </div>
-  //         </button>
-  //         <button class="pause-btn hidden absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-  //           <div class="w-14 h-14 md:${isLarge ? 'w-16 md:h-16' : 'w-10 md:h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-  //             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:${isLarge ? 'h-8 md:w-8' : 'h-5 md:w-5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
-  //               <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-  //             </svg>
-  //           </div>
-  //         </button>
-  //       </div>
-  //     </div>
-  //   `;
-  // }).join('');
+  const videosHTML = data.videos.map((v, i) => {
+    const isLarge = v.size === 'large';
+    return `
+      <div class="relative rounded-3xl shadow-lg overflow-hidden ${isLarge ? 'col-span-1 md:col-span-2 h-48 md:h-64' : 'col-span-1 h-48 md:h-32'} video-container">
+        <video class="w-full h-full object-cover" poster="${v.poster}" preload="metadata">
+          <source src="${v.src}" type="video/mp4">
+        </video>
+        <div class="control-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300">
+          <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 md:${isLarge ? 'w-16 md:h-16' : 'w-10 md:h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-1 md:${isLarge ? 'h-8 md:w-8 ml-1' : 'h-5 md:w-5 ml-0.5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </div>
+          </button>
+          <button class="pause-btn hidden absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
+            <div class="w-14 h-14 md:${isLarge ? 'w-16 md:h-16' : 'w-10 md:h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:${isLarge ? 'h-8 md:w-8' : 'h-5 md:w-5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+              </svg>
+            </div>
+          </button>
+        </div>
+      </div>
+    `;
+  }).join('');
 
-  // section.innerHTML = `
-  //   <div class="max-w-6xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-8 items-center">
-  //     <div class="space-y-4">
-  //       <h2 class="text-3xl md:text-4xl font-heading font-semibold leading-tight text-primary mb-6">${data.titulo}</h2>
-  //       <div class="text-slate-700 text-sm md:text-base space-y-1">${proyectosHTML}</div>
-  //     </div>
-  //     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8 md:pt-16">${videosHTML}</div>
-  //   </div>
-  // `;
+  section.innerHTML = `
+    <div class="max-w-6xl mx-auto px-4 md:px-6 grid lg:grid-cols-2 gap-8 items-center">
+      <div class="space-y-4">
+        <h2 class="text-3xl md:text-4xl font-heading font-semibold leading-tight text-primary mb-6">${data.titulo}</h2>
+        <div class="text-slate-700 text-sm md:text-base space-y-1">${proyectosHTML}</div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pt-8 md:pt-16">${videosHTML}</div>
+    </div>
+  `;
 }
 
 function renderPortafolio() {
@@ -552,23 +643,127 @@ function renderPortafolio() {
 
   const data = apiData.portafolio;
 
-  const proyectosHTML = data.proyectos.map(p => `
-    <div class="${p.destacado ? 'md:col-span-2' : ''} bg-white rounded-3xl overflow-hidden shadow-lg">
-      <img src="${p.imagen}" class="w-full ${p.destacado ? 'h-48 md:h-72' : 'h-48 md:h-64'} object-cover" alt="${p.nombre}">
-      <div class="p-4">
-        <p class="font-semibold text-sm uppercase tracking-wide">${p.nombre}</p>
-        <p class="text-slate-600 text-sm">${p.descripcion}</p>
+  // Generate category filter buttons
+  const categoriasHTML = `
+    <button class="portafolio-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-primary text-white" data-category="all">
+      Todos
+    </button>
+    ${data.clasificaciones.map(c => `
+      <button class="portafolio-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:border-primary hover:bg-primary hover:text-white" data-category="${c.id}">
+        ${c.name}
+      </button>
+    `).join('')}
+  `;
+
+  // Generate project cards with carousels
+  const proyectosHTML = data.proyectos.map(p => {
+    const mediaItems = p.media || [{ type: 'image', url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800' }];
+
+    return `
+      <div class="portafolio-card flex flex-col" data-category="${p.class_id}">
+        <h3 class="text-lg md:text-xl font-semibold text-slate-800 mb-1">${p.name}</h3>
+        <p class="text-xs uppercase tracking-widest text-primary font-medium mb-3">Galería de Proyecto</p>
+
+        <!-- Media Carousel -->
+        <div class="portafolio-carousel relative aspect-video bg-[#0A2540] rounded-xl overflow-hidden group" data-project-id="${p.id}">
+          <!-- Media Container -->
+          <div class="carousel-media-container w-full h-full">
+            ${mediaItems.map((m, idx) => `
+              <div class="carousel-slide ${idx === 0 ? 'active' : 'hidden'}" data-index="${idx}">
+                ${m.type === 'video' ? `
+                  <div class="relative w-full h-full">
+                    <video class="carousel-video w-full h-full object-cover" preload="metadata" playsinline>
+                      <source src="${m.url}" type="video/mp4">
+                    </video>
+                    <!-- Video Controls -->
+                    <div class="video-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="flex items-center gap-2 text-white">
+                        <button class="video-rewind p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+                          </svg>
+                        </button>
+                        <button class="video-play-pause p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg class="play-icon h-4 w-4" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                          <svg class="pause-icon h-4 w-4 hidden" fill="white" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        </button>
+                        <button class="video-forward p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
+                          </svg>
+                        </button>
+                        <span class="video-time text-xs ml-1">0:00 / 0:00</span>
+                        <div class="flex-1"></div>
+                        <button class="video-mute p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg class="volume-icon h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                          </svg>
+                          <svg class="mute-icon h-4 w-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                          </svg>
+                        </button>
+                        <input type="range" class="video-volume w-16 h-1 bg-white/30 rounded-full appearance-none cursor-pointer" min="0" max="1" step="0.1" value="1">
+                        <button class="video-fullscreen p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ` : `
+                  <img src="${m.url}" alt="${p.name}" class="w-full h-full object-cover">
+                `}
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Navigation Arrows -->
+          ${mediaItems.length > 1 ? `
+            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 text-white hover:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 text-white hover:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          ` : ''}
+        </div>
+
+        <!-- Pagination Dots -->
+        ${mediaItems.length > 1 ? `
+          <div class="carousel-dots flex justify-center gap-2 mt-3">
+            ${mediaItems.map((_, idx) => `
+              <button class="carousel-dot w-2 h-2 rounded-full transition-colors ${idx === 0 ? 'bg-primary' : 'bg-slate-300 hover:bg-slate-400'}" data-index="${idx}"></button>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        <!-- Description -->
+        <p class="text-sm text-slate-600 mt-4 leading-relaxed text-justify">${p.description}</p>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 
   section.innerHTML = `
-    <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-4 md:space-y-8">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-6 md:space-y-8">
       <div class="text-center mb-6 md:mb-10 mt-4 md:mt-10">
-        <h2 class="text-2xl md:text-3xl font-heading font-semibold">${data.titulo}</h2>
-          <p class="text-sm md:text-base text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
+        <h2 class="text-2xl md:text-4xl font-heading font-semibold">${data.titulo}</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-0 md:px-20">${proyectosHTML}</div>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap justify-center gap-2 md:gap-3">
+        ${categoriasHTML}
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="portafolio-grid grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 px-0 md:px-8">
+        ${proyectosHTML}
+      </div>
     </div>
   `;
 }
@@ -1095,6 +1290,230 @@ function initCarouselModal() {
 
 
 // ==========================================
+// PORTAFOLIO - Carousels e Filtros
+// ==========================================
+
+function initPortafolioCarousels() {
+  // Category filter functionality
+  const filterButtons = document.querySelectorAll('.portafolio-filter');
+  const projectCards = document.querySelectorAll('.portafolio-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active state
+      filterButtons.forEach(b => {
+        b.classList.remove('active', 'bg-primary', 'text-white');
+        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+      });
+      btn.classList.add('active', 'bg-primary', 'text-white');
+      btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+
+      const category = btn.dataset.category;
+
+      // Filter projects
+      projectCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden');
+          card.style.animation = 'fadeIn 0.3s ease-out';
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Initialize carousels
+  const carousels = document.querySelectorAll('.portafolio-carousel');
+
+  carousels.forEach(carousel => {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const dotsContainer = carousel.closest('.portafolio-card').querySelector('.carousel-dots');
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
+
+    if (slides.length <= 1) return;
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      // Pause any playing videos
+      slides.forEach(slide => {
+        const video = slide.querySelector('video');
+        if (video) video.pause();
+      });
+
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.add('hidden');
+        slide.classList.remove('active');
+      });
+
+      // Show current slide
+      slides[index].classList.remove('hidden');
+      slides[index].classList.add('active');
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.add('bg-primary');
+          dot.classList.remove('bg-slate-300');
+        } else {
+          dot.classList.remove('bg-primary');
+          dot.classList.add('bg-slate-300');
+        }
+      });
+
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      const next = (currentIndex + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      const prev = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    // Button events
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+    // Dot events
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+
+    // Initialize video controls for this carousel
+    slides.forEach(slide => {
+      const video = slide.querySelector('.carousel-video');
+      if (!video) return;
+
+      const controls = slide.querySelector('.video-controls');
+      const playPauseBtn = slide.querySelector('.video-play-pause');
+      const playIcon = slide.querySelector('.play-icon');
+      const pauseIcon = slide.querySelector('.pause-icon');
+      const rewindBtn = slide.querySelector('.video-rewind');
+      const forwardBtn = slide.querySelector('.video-forward');
+      const muteBtn = slide.querySelector('.video-mute');
+      const volumeIcon = slide.querySelector('.volume-icon');
+      const muteIcon = slide.querySelector('.mute-icon');
+      const volumeSlider = slide.querySelector('.video-volume');
+      const fullscreenBtn = slide.querySelector('.video-fullscreen');
+      const timeDisplay = slide.querySelector('.video-time');
+
+      function formatTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return mins + ':' + secs.toString().padStart(2, '0');
+      }
+
+      function updatePlayPauseUI(isPlaying) {
+        if (isPlaying) {
+          playIcon.classList.add('hidden');
+          pauseIcon.classList.remove('hidden');
+        } else {
+          playIcon.classList.remove('hidden');
+          pauseIcon.classList.add('hidden');
+        }
+      }
+
+      // Play/Pause
+      playPauseBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+
+      video.addEventListener('play', () => updatePlayPauseUI(true));
+      video.addEventListener('pause', () => updatePlayPauseUI(false));
+      video.addEventListener('ended', () => updatePlayPauseUI(false));
+
+      // Time update
+      video.addEventListener('loadedmetadata', () => {
+        if (timeDisplay) {
+          timeDisplay.textContent = `0:00 / ${formatTime(video.duration)}`;
+        }
+      });
+
+      video.addEventListener('timeupdate', () => {
+        if (timeDisplay) {
+          timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+        }
+      });
+
+      // Rewind/Forward
+      rewindBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.currentTime = Math.max(0, video.currentTime - 10);
+      });
+
+      forwardBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.currentTime = Math.min(video.duration, video.currentTime + 10);
+      });
+
+      // Mute
+      muteBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+        if (video.muted) {
+          volumeIcon.classList.add('hidden');
+          muteIcon.classList.remove('hidden');
+          volumeSlider.value = 0;
+        } else {
+          volumeIcon.classList.remove('hidden');
+          muteIcon.classList.add('hidden');
+          volumeSlider.value = video.volume;
+        }
+      });
+
+      // Volume slider
+      volumeSlider?.addEventListener('input', (e) => {
+        e.stopPropagation();
+        video.volume = e.target.value;
+        video.muted = e.target.value == 0;
+        if (video.muted) {
+          volumeIcon.classList.add('hidden');
+          muteIcon.classList.remove('hidden');
+        } else {
+          volumeIcon.classList.remove('hidden');
+          muteIcon.classList.add('hidden');
+        }
+      });
+
+      // Fullscreen
+      fullscreenBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!document.fullscreenElement) {
+          const container = slide.querySelector('.relative');
+          if (container?.requestFullscreen) {
+            container.requestFullscreen();
+          }
+        } else {
+          document.exitFullscreen();
+        }
+      });
+
+      // Click on video to toggle play
+      video.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    });
+  });
+}
+
+
+// ==========================================
 // INICIALIZACIÓN
 // ==========================================
 
@@ -1114,6 +1533,7 @@ function initApp() {
   initModal();
   initCarouselModal();
   initVideoPlayers();
+  initPortafolioCarousels();
   initBackToTop();
   initMobileMenu();
 
