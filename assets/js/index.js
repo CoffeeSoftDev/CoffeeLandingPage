@@ -31,7 +31,10 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
   },
 
   // Sección "Equipo" - Fuente única de datos para organigrama y carrusel
+  // row: nivel jerárquico (1=CEO, 2=Directores, 3=Líderes de proyecto, 4=Subordinados)
+  // associatedWith: id del miembro al que reporta/está asociado (para dibujar líneas de conexión)
   equipo: [
+    // ROW 1: CEO
     {
       id: 1,
       name: `Carlos Alberto Vila Serrano`,
@@ -40,6 +43,18 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       description: `Ingeniero civil y empresario con amplia trayectoria en el desarrollo de proyectos regionales de alto impacto. Es fundador y director de AGRINOL, SAPI de C.V., empresa enfocada en la estructuración, gestión e implementación de proyectos estratégicos que impulsan el crecimiento económico y social del sureste de México. A lo largo de su carrera ha liderado iniciativas en infraestructura, agroindustria, logística y conectividad regional, articulando la participación del sector privado, organizaciones sociales y los distintos niveles de gobierno.<br><br>Ha encabezado proyectos de alcance nacional como la Terminal Portuaria Remota en Puerto Chiapas y los Polos de Desarrollo para el Bienestar (PODEBIs) Tapachula I y II, consolidándose como una figura clave en la planeación y ejecución de proyectos que transforman territorios y fortalecen el desarrollo regional.`,
       row: 1
     },
+    // Asistente del CEO (lado derecho)
+    {
+      id: 14,
+      name: `Alicia M Glez Torra`,
+      position: `Subceo`,
+      image: ``,
+      description: ``,
+      row: 1,
+      linkedTo: 1,
+      side: `right`
+    },
+    // ROW 2: Directores
     {
       id: 2,
       name: `Roberto Rocha`,
@@ -56,6 +71,28 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       description: ``,
       row: 2
     },
+    // Asociados de Directores (row 2)
+    {
+      id: 15,
+      name: `Alberto Pineda Tuells`,
+      position: `Análisis y Gestión`,
+      image: `./assets/img/pineda.jpg`,
+      description: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`,
+      row: 2,
+      linkedTo: 2,
+      side: `left`
+    },
+    {
+      id: 17,
+      name: `Héctor López M`,
+      position: `Asistente`,
+      image: ``,
+      description: ``,
+      row: 2,
+      linkedTo: 3,
+      side: `right`
+    },
+    // ROW 3: Líderes del Proyecto (bajo "LIDER DEL PROYECTO")
     {
       id: 4,
       name: `Javier GTZ Reynoso`,
@@ -120,13 +157,15 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       description: ``,
       row: 3
     },
+    // ROW 4: Subordinados de los Líderes del Proyecto
     {
       id: 12,
       name: `José Luis Díaz Covarrubias`,
       position: `Planes de desarrollo`,
       image: `./assets/img/jose_luis_diaz.png`,
       description: `Ejecutivo y consultor especializado en administración portuaria, con más de cuatro décadas de experiencia en la operación, planeación y desarrollo de puertos, terminales marítimas y proyectos de infraestructura logística en México.<br><br>A lo largo de su trayectoria ha ocupado posiciones de alta dirección en el sistema portuario nacional, incluyendo la Gerencia de Operaciones de la Administración Portuaria Integral de Altamira y la Subdirección Administrativa de una de las principales terminales multipropósito del país. Actualmente asesora proyectos estratégicos en diseño portuario, concesiones, operación, licitaciones y desarrollo de nuevos puertos, integrando una visión técnica, financiera y operativa orientada a resultados, seguridad y sostenibilidad.`,
-      row: 3
+      row: 4,
+      associatedWith: 4
     },
     {
       id: 13,
@@ -134,23 +173,26 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       position: `Universidades existentes`,
       image: `./assets/img/miguel_cid_del_prado.png`,
       description: `Doctor en Ingeniería Aplicada y especialista en Ingeniería en Gestión Empresarial, con una sólida trayectoria en planeación estratégica, desarrollo de proyectos y economía social y solidaria. Actualmente se desempeña como Coordinador de la Especialidad en Economía Social y Solidaria en el Instituto Tecnológico de Tuxtla Gutiérrez, donde impulsa modelos de emprendimiento con enfoque sostenible y de impacto social.<br><br>Ha participado como asesor en estrategias de desarrollo económico local, auditor líder de sistemas de gestión de calidad y docente en áreas clave como planes de negocio, ingeniería económica y gestión de la producción. Su experiencia combina rigor académico, aplicación práctica y transferencia de tecnología, contribuyendo al fortalecimiento de proyectos productivos, innovación social y formación de talento orientado al desarrollo regional sostenible.`,
-      row: 3
+      row: 4,
+      associatedWith: 6
     },
     {
-      id: 14,
-      name: `Alicia M Glez Torra`,
-      position: `Subceo`,
+      id: 18,
+      name: `Alicia M. Glez Torra`,
+      position: `Análisis y Gestión`,
       image: ``,
       description: ``,
-      row: 3
+      row: 4,
+      associatedWith: 6
     },
     {
-      id: 15,
-      name: `Alberto Pineda Tuells`,
+      id: 19,
+      name: `Alberto Pineda T.`,
       position: `Análisis y Gestión`,
       image: `./assets/img/pineda.jpg`,
-      description: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`,
-      row: 3
+      description: ``,
+      row: 4,
+      associatedWith: 7
     },
     {
       id: 16,
@@ -158,7 +200,8 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       position: `Cluster Agroalimentario`,
       image: `./assets/img/rafael_nava.jpg`,
       description: `Empresario agroindustrial y presidente de NAVA Corp., con una trayectoria construida desde la tercera generación familiar dedicada a la producción y comercialización agroalimentaria en Chiapas. Lidera un ecosistema empresarial integrado que abarca producción, transformación, logística y exportación de productos agrícolas de alto valor.<br><br>A lo largo de su carrera ha impulsado modelos productivos enfocados en trazabilidad, innovación, sostenibilidad y expansión de mercados, trabajando con cultivos estratégicos como plátano, cacao del Soconusco, café de altura y mango Ataulfo. Además, participa activamente en organismos clave del sector, desde donde contribuye al fortalecimiento y profesionalización de la agroindustria regional, con una visión de impacto nacional e internacional.`,
-      row: 3
+      row: 4,
+      associatedWith: 7
     }
   ],
 
@@ -208,7 +251,7 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
 
   // Sección "Portafolio"
   portafolio: {
-    titulo: "Portafolio",
+    titulo: "Proyectos",
     descripcion: "Nos especializamos en la gestión y desarrollo de proyectos de alto impacto que impulsan la economía regional y nacional. Nuestra trayectoria se define por la transformación de visiones en realidades tangibles.",
     clasificaciones: [
       { id: 1, name: "🌿 Sector Agroindustrial y Sustentabilidad" },
@@ -407,10 +450,15 @@ function renderOrganigrama() {
   const data = apiData.organigrama;
   const equipo = apiData.equipo;
 
-  // Filtrar por row
-  const ceo = equipo.find(m => m.row === 1);
-  const directores = equipo.filter(m => m.row === 2);
-  const especialistas = equipo.filter(m => m.row === 3);
+  // Filtrar por row (sin associatedWith ni linkedTo para los principales de cada nivel)
+  const ceo = equipo.find(m => m.row === 1 && !m.associatedWith && !m.linkedTo);
+  const ceoAsociados = equipo.filter(m => m.row === 1 && m.associatedWith);
+  const ceoLinkedTo = equipo.filter(m => m.row === 1 && m.linkedTo);
+  const directores = equipo.filter(m => m.row === 2 && !m.associatedWith && !m.linkedTo);
+  const directoresAsociados = equipo.filter(m => m.row === 2 && m.associatedWith);
+  const directoresLinkedTo = equipo.filter(m => m.row === 2 && m.linkedTo);
+  const lideres = equipo.filter(m => m.row === 3 && !m.associatedWith && !m.linkedTo);
+  const subordinados = equipo.filter(m => m.row === 4);
 
   // Crear data attributes para el modal
   const createDataAttrs = (persona) => {
@@ -418,13 +466,25 @@ function renderOrganigrama() {
   };
 
   // Card template estilo organigrama corporativo
-  const createOrgCard = (persona, size = 'md') => {
+  // fixedCargoSize: si es true, usa tamaño fijo para la caja del cargo (para rows 3 y 4)
+  const createOrgCard = (persona, size = 'md', fixedCargoSize = false) => {
     const sizes = {
       lg: { img: 'w-24 h-24 md:w-28 md:h-28', border: 'border-[3px]', text: 'text-xs md:text-sm', subtext: 'text-[10px] md:text-xs', minW: 'min-w-[140px] md:min-w-[180px]', icon: 'w-12 h-12 md:w-14 md:h-14' },
       md: { img: 'w-20 h-20 md:w-24 md:h-24', border: 'border-[3px]', text: 'text-[10px] md:text-xs', subtext: 'text-[9px] md:text-[10px]', minW: 'min-w-[120px] md:min-w-[160px]', icon: 'w-10 h-10 md:w-12 md:h-12' },
-      sm: { img: 'w-16 h-16 md:w-20 md:h-20', border: 'border-2', text: 'text-[9px] md:text-[10px]', subtext: 'text-[8px] md:text-[9px]', minW: 'min-w-[100px] md:min-w-[130px]', icon: 'w-8 h-8 md:w-10 md:h-10' }
+      sm: { img: 'w-16 h-16 md:w-20 md:h-20', border: 'border-2', text: 'text-[9px] md:text-[10px]', subtext: 'text-[8px] md:text-[9px]', minW: 'min-w-[100px] md:min-w-[130px]', icon: 'w-8 h-8 md:w-10 md:h-10' },
+      xs: { img: 'w-14 h-14 md:w-16 md:h-16', border: 'border-2', text: 'text-[8px] md:text-[9px]', subtext: 'text-[7px] md:text-[8px]', minW: 'min-w-[90px] md:min-w-[110px]', icon: 'w-6 h-6 md:w-8 md:h-8' }
     };
     const s = sizes[size];
+    
+    // Clases para la caja del cargo: tamaño fijo para rows 3 y 4
+    const cargoClasses = fixedCargoSize 
+      ? 'w-[100px] md:w-[130px] h-[50px] md:h-[50px] flex items-center justify-center' 
+      : s.minW;
+    
+    // Clases para la caja del nombre: mismo ancho que cargo, alto 40px para rows 3 y 4
+    const nameClasses = fixedCargoSize 
+      ? 'w-[100px] md:w-[130px] h-[40px] md:h-[40px] flex items-center justify-center' 
+      : s.minW;
 
     // Verificar si existe imagen
     const hasImage = persona.image && persona.image.trim() !== '';
@@ -437,20 +497,100 @@ function renderOrganigrama() {
 
     return `
       <div class="org-card flex flex-col items-center organigrama-card cursor-pointer hover:scale-105 transition-transform" ${createDataAttrs(persona)}>
-        <div class="relative ${s.img} rounded-full overflow-hidden ${s.border} border-[#1a5fb4]">
+        <div class="relative ${s.img} rounded-full overflow-hidden ${s.border} border-[#034B84]">
           ${imageContent}
         </div>
         <!-- Nombre en recuadro blanco con borde azul -->
-        <div class="org-name bg-white border-2 border-[#1a5fb4] px-2 py-1 md:px-3 md:py-1.5 mt-2 ${s.minW}">
-          <h4 class="font-bold ${s.text} text-[#1a5fb4] text-center leading-tight">${persona.name}</h4>
+        <div class="org-name bg-white border-2 border-[#034B84] px-2 py-1 md:px-3 md:py-1.5 mt-2 ${nameClasses}">
+          <h4 class="font-bold ${s.text} text-[#034B84] text-center leading-tight">${persona.name}</h4>
         </div>
         <!-- Cargo en recuadro azul sólido -->
-        <div class="org-cargo bg-[#1a5fb4] px-2 py-1 md:px-3 md:py-1.5 ${s.minW}">
+        <div class="org-cargo bg-[#034B84] px-2 py-1 md:px-3 md:py-1.5 ${cargoClasses}">
           <p class="${s.subtext} text-white text-center font-semibold uppercase">${persona.position}</p>
         </div>
       </div>
     `;
   };
+
+  // Función para crear director con sus asociados laterales (associatedWith = línea sólida, linkedTo = línea punteada)
+  const createDirectorWithAssociates = (director, asociados, linkedTos) => {
+    const asociadoIzq = asociados.find(a => a.associatedWith === director.id && a.side === 'left');
+    const asociadoDer = asociados.find(a => a.associatedWith === director.id && a.side === 'right');
+    const linkedIzq = linkedTos.find(a => a.linkedTo === director.id && a.side === 'left');
+    const linkedDer = linkedTos.find(a => a.linkedTo === director.id && a.side === 'right');
+    
+    return `
+      <div class="flex items-center gap-2 md:gap-4">
+        ${asociadoIzq ? `
+          <div class="flex items-center">
+            ${createOrgCard(asociadoIzq, 'xs')}
+            <div class="hidden md:block w-4 md:w-8 h-[2px] bg-[#034B84]"></div>
+          </div>
+        ` : ''}
+        ${linkedIzq ? `
+          <div class="flex items-start">
+            ${createOrgCard(linkedIzq, 'xs')}
+            <div class="hidden md:flex items-center w-4 md:w-8 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+          </div>
+        ` : ''}
+        <div class="flex flex-col items-center">
+          <div class="hidden md:block w-[2px] h-4 bg-[#034B84] -mt-4"></div>
+          ${createOrgCard(director, 'md')}
+        </div>
+        ${asociadoDer ? `
+          <div class="flex items-center">
+            <div class="hidden md:block w-4 md:w-8 h-[2px] bg-[#034B84]"></div>
+            ${createOrgCard(asociadoDer, 'xs')}
+          </div>
+        ` : ''}
+        ${linkedDer ? `
+          <div class="flex items-start">
+            <div class="hidden md:flex items-center w-4 md:w-8 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+            ${createOrgCard(linkedDer, 'xs')}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  };
+
+  // Función para crear líder con sus subordinados (row 4)
+  const createLiderWithSubordinados = (lider, subs) => {
+    const misSubordinados = subs.filter(s => s.associatedWith === lider.id);
+    
+    if (misSubordinados.length === 0) {
+      return `
+        <div class="flex flex-col items-center">
+          <div class="hidden md:block w-[2px] h-4 bg-[#034B84] -mt-4 mb-2"></div>
+          ${createOrgCard(lider, 'sm', true)}
+        </div>
+      `;
+    }
+
+    return `
+      <div class="flex flex-col items-center">
+        <div class="hidden md:block w-[2px] h-4 bg-[#034B84] -mt-4 mb-2"></div>
+        ${createOrgCard(lider, 'sm', true)}
+        <!-- Línea vertical hacia subordinados -->
+        <div class="hidden md:block w-[2px] h-4 bg-[#034B84] mt-2"></div>
+        <!-- Subordinados -->
+        <div class="flex flex-wrap justify-center gap-2 mt-2">
+          ${misSubordinados.map(sub => `
+            <div class="flex flex-col items-center">
+              ${createOrgCard(sub, 'xs', true)}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  };
+
+  // Obtener asociado del CEO (lado derecho) - associatedWith usa línea sólida
+  const ceoAsociadoDer = ceoAsociados.find(a => a.side === 'right');
+  const ceoAsociadoIzq = ceoAsociados.find(a => a.side === 'left');
+  
+  // Obtener linkedTo del CEO - usa línea punteada
+  const ceoLinkedDer = ceoLinkedTo.find(a => a.linkedTo === ceo?.id && a.side === 'right');
+  const ceoLinkedIzq = ceoLinkedTo.find(a => a.linkedTo === ceo?.id && a.side === 'left');
 
   section.innerHTML = `
     <div class="max-w-7xl mx-auto px-4 md:px-6 space-y-6 md:space-y-10">
@@ -462,52 +602,70 @@ function renderOrganigrama() {
       <!-- Organigrama Corporativo -->
       <div class="relative bg-gradient-to-b from-white to-slate-50 rounded-2xl p-6 md:p-10 shadow-xl border border-slate-200 overflow-hidden">
 
-        <!-- Nivel 1: CEO -->
-        <div class="org-level-ceo flex justify-center mb-4">
-          ${ceo ? createOrgCard(ceo, 'lg') : ''}
+        <!-- Nivel 1: CEO con asociado lateral -->
+        <div class="org-level-ceo flex justify-center items-center mb-4">
+          ${ceo ? `
+            <div class="flex items-center gap-4 md:gap-8">
+              ${ceoAsociadoIzq ? `
+                <div class="flex items-center">
+                  ${createOrgCard(ceoAsociadoIzq, 'xs')}
+                  <div class="hidden md:block w-8 md:w-12 h-[2px] bg-[#034B84]"></div>
+                </div>
+              ` : ''}
+              ${ceoLinkedIzq ? `
+                <div class="flex items-start">
+                  ${createOrgCard(ceoLinkedIzq, 'xs')}
+                  <div class="hidden md:flex items-center w-8 md:w-12 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+                </div>
+              ` : ''}
+              ${createOrgCard(ceo, 'lg')}
+              ${ceoAsociadoDer ? `
+                <div class="flex items-center">
+                  <div class="hidden md:block w-8 md:w-12 h-[2px] bg-[#034B84]"></div>
+                  ${createOrgCard(ceoAsociadoDer, 'xs')}
+                </div>
+              ` : ''}
+              ${ceoLinkedDer ? `
+                <div class="flex items-start">
+                  <div class="hidden md:flex items-center w-8 md:w-12 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+                  ${createOrgCard(ceoLinkedDer, 'xs')}
+                </div>
+              ` : ''}
+            </div>
+          ` : ''}
         </div>
 
         <!-- Línea vertical del CEO -->
-        <div class="org-connector-vertical w-[2px] h-8 md:h-10 bg-[#1a5fb4] mx-auto"></div>
+        <div class="org-connector-vertical w-[2px] h-8 md:h-10 bg-[#034B84] mx-auto"></div>
 
-        <!-- Nivel 2: Directores -->
+        <!-- Nivel 2: Directores con asociados laterales -->
         <div class="org-level-directores relative">
           <!-- Línea horizontal que conecta directores -->
-          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[2px] bg-[#1a5fb4]"></div>
+          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[2px] bg-[#034B84]"></div>
 
           <!-- Contenedor de directores con líneas verticales -->
-          <div class="flex justify-center gap-8 md:gap-24 lg:gap-32 pt-0 md:pt-4">
-            ${directores.map(d => `
-              <div class="flex flex-col items-center">
-                <div class="hidden md:block w-[2px] h-4 bg-[#1a5fb4] -mt-4"></div>
-                ${createOrgCard(d, 'md')}
-              </div>
-            `).join('')}
+          <div class="flex justify-center gap-4 md:gap-16 lg:gap-24 pt-0 md:pt-4 flex-wrap">
+            ${directores.map(d => createDirectorWithAssociates(d, directoresAsociados, directoresLinkedTo)).join('')}
           </div>
         </div>
 
-        <!-- Línea vertical a especialistas -->
-        <div class="org-connector-vertical w-[2px] h-6 md:h-8 bg-[#1a5fb4] mx-auto mt-4"></div>
+        <!-- Línea vertical a líderes -->
+        <div class="org-connector-vertical w-[2px] h-6 md:h-8 bg-[#034B84] mx-auto mt-4"></div>
 
         <!-- Etiqueta "Lider del Proyecto" -->
         <div class="flex justify-center my-4">
-          <div class="bg-[#1a5fb4] text-white px-6 py-2 font-bold text-sm md:text-base tracking-wider uppercase">
+          <div class="bg-[#034B84] text-white px-6 py-2 font-bold text-sm md:text-base tracking-wider uppercase">
             Lider del Proyecto
           </div>
         </div>
 
-        <!-- Línea horizontal para especialistas -->
-        <div class="hidden md:block w-[95%] h-[2px] bg-[#1a5fb4] mx-auto mb-4"></div>
+        <!-- Línea horizontal para líderes -->
+        <div class="hidden md:block w-[95%] h-[2px] bg-[#034B84] mx-auto mb-4"></div>
 
-        <!-- Nivel 3: Especialistas -->
-        <div class="org-level-especialistas relative">
+        <!-- Nivel 3: Líderes del Proyecto con sus subordinados (row 4) -->
+        <div class="org-level-lideres relative">
           <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6">
-            ${especialistas.map(e => `
-              <div class="flex flex-col items-center">
-                <div class="hidden md:block w-[2px] h-4 bg-[#1a5fb4] -mt-4 mb-2"></div>
-                ${createOrgCard(e, 'sm')}
-              </div>
-            `).join('')}
+            ${lideres.map(l => createLiderWithSubordinados(l, subordinados)).join('')}
           </div>
         </div>
 
