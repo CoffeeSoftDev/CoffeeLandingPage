@@ -4,6 +4,18 @@ body {
 }
 :root { font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; }
 
+/* FadeIn Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 .fade-section {
     opacity: 0;
@@ -385,5 +397,125 @@ video {
 
     #currentTime, #duration {
         font-size: 0.7rem;
+    }
+}
+
+/* ==========================================
+   PORTAFOLIO SECTION
+   ========================================== */
+
+/* Category Filter Buttons */
+.portafolio-filter {
+    transition: all 0.2s ease;
+}
+
+.portafolio-filter:hover {
+    transform: translateY(-1px);
+}
+
+.portafolio-filter.active {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+/* Portafolio Card */
+.portafolio-card {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.portafolio-card.hidden {
+    display: none;
+}
+
+/* Portafolio Carousel */
+.portafolio-carousel {
+    position: relative;
+}
+
+.portafolio-carousel .carousel-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.portafolio-carousel .carousel-slide.active {
+    position: relative;
+}
+
+.portafolio-carousel .carousel-slide img,
+.portafolio-carousel .carousel-slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Carousel Navigation */
+.portafolio-carousel .carousel-prev,
+.portafolio-carousel .carousel-next {
+    z-index: 10;
+}
+
+/* Carousel Dots */
+.carousel-dots .carousel-dot {
+    transition: all 0.2s ease;
+}
+
+.carousel-dots .carousel-dot:hover {
+    transform: scale(1.2);
+}
+
+/* Video Controls in Portafolio */
+.portafolio-carousel .video-controls {
+    z-index: 5;
+}
+
+.portafolio-carousel video {
+    pointer-events: auto;
+    cursor: pointer;
+}
+
+/* Volume slider for portafolio */
+.portafolio-carousel .video-volume {
+    -webkit-appearance: none;
+    appearance: none;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.portafolio-carousel .video-volume::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.portafolio-carousel .video-volume::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+}
+
+/* Responsive adjustments for portafolio */
+@media (max-width: 768px) {
+    .portafolio-grid {
+        gap: 2rem;
+    }
+
+    .portafolio-carousel .video-controls {
+        padding: 0.5rem;
+    }
+
+    .portafolio-carousel .video-controls .video-volume {
+        width: 2.5rem;
+    }
+
+    .portafolio-carousel .video-time {
+        font-size: 0.65rem;
     }
 }

@@ -2,18 +2,23 @@
 // DATOS SIMULADOS DE LA API
 // ==========================================
 const apiData = {
+  // Haciendo partícipe a la sociedad civil y al Gobierno de este proyecto en beneficio del interés nacional
+  // con el apoyo de las autoridades,
+  //  invitando a la sociedad civil a ser copartícipe de este proyecto en beneficio del interés nacional.<br><br>
+  //   Agrinol busca desarrollar el potencial del estado de Chiapas, haciendo partícipe a la sociedad civil y
+  //    al Gobierno de este proyecto en beneficio del interés nacional
   // Sección "Quiénes somos"
+  // En Agrinol tenemos como misión desarrollar el potencial del Estado de Chiapas implementando proyectos de sectores importantes como el sector agrícola, agroindustrial, infraestructura y comunicaciones, innovación y tecnología, entre otros. 
+  //     Haciendo partícipe a la sociedad civil y al Gobierno de estos proyectos en beneficio del interés nacional.
   quienesSomos: {
     titulo: `¿A qué nos dedicamos?`,
-    descripcion: `Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo y bienestar regional.
-    Detonando Puerto Chiapas en un polo de desarrollo y bienestar sostenible.`,
+    descripcion: `Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo y bienestar de Chiapas.`,
     imagen: `https://huubie.com.mx/video/barquito.png`,
-    contenido: `Tenemos como misión desarrollar el potencial de puerto chiapas con el concurso de las autoridades,
-     invitando a la sociedad civil a ser copartícipe de este proyecto en beneficio del interés nacional.<br><br>
-     Con la visión y gestión del ing. Carlos Alberto Vila Serrano,
-      conocedor del entorno de negocios del sector público y privado, con la firma: AGRINOL SAPI DE CV, 
-      Queremos desarrollar el potencial de Puerto Chiapas, haciendo partícipe a la sociedad civil y
-       al Gobierno de este proyecto en beneficio del interés nacional`,
+    contenido: `
+
+      En Agrinol impulsamos el desarrollo sostenible de Chiapas mediante la implementación de proyectos estratégicos en los sectores agrícola, agroindustrial, infraestructura, comunicaciones, innovación y tecnología.
+Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto positivo, fortalecer la economía regional y contribuir al bienestar del país.
+    `,
     mision: {
       titulo: `Misión`,
       texto: `Gestionar e implementar proyectos sustentables del desarrollo y bienestar.`
@@ -25,128 +30,191 @@ const apiData = {
     imagenMisionVision: `https://huubie.com.mx/video/barquito.png`
   },
 
-  // Sección "Organigrama"
+  // Sección "Equipo" - Fuente única de datos para organigrama y carrusel
+  // row: nivel jerárquico (1=CEO, 2=Directores, 3=Líderes de proyecto, 4=Subordinados)
+  // associatedWith: id del miembro al que reporta/está asociado (para dibujar líneas de conexión)
+  equipo: [
+    // ROW 1: CEO
+    {
+      id: 1,
+      name: `Carlos Alberto Vila Serrano`,
+      position: `CEO`,
+      image: `./assets/img/carlos_vila.png`,
+      description: `Ingeniero civil y empresario con amplia trayectoria en el desarrollo de proyectos regionales de alto impacto. Es fundador y director de AGRINOL, SAPI de C.V., empresa enfocada en la estructuración, gestión e implementación de proyectos estratégicos que impulsan el crecimiento económico y social del sureste de México. A lo largo de su carrera ha liderado iniciativas en infraestructura, agroindustria, logística y conectividad regional, articulando la participación del sector privado, organizaciones sociales y los distintos niveles de gobierno.<br><br>Ha encabezado proyectos de alcance nacional como la Terminal Portuaria Remota en Puerto Chiapas y los Polos de Desarrollo para el Bienestar (PODEBIs) Tapachula I y II, consolidándose como una figura clave en la planeación y ejecución de proyectos que transforman territorios y fortalecen el desarrollo regional.`,
+      row: 1
+    },
+    // Asistente del CEO (lado derecho)
+    {
+      id: 14,
+      name: `Alicia M Glez Torra`,
+      position: `Subceo`,
+      image: ``,
+      description: ``,
+      row: 1,
+      linkedTo: 1,
+      side: `right`
+    },
+    // ROW 2: Directores
+    {
+      id: 2,
+      name: `Roberto Rocha`,
+      position: `Industria y negocios`,
+      image: ``,
+      description: ``,
+      row: 2
+    },
+    {
+      id: 3,
+      name: `Héctor López Gutiérrez`,
+      position: `Desarrollo Tecnológico`,
+      image: `./assets/img/hector_lopez_gutierrez.png`,
+      description: ``,
+      row: 2
+    },
+    // Asociados de Directores (row 2)
+    {
+      id: 15,
+      name: `Alberto Pineda Tuells`,
+      position: `Análisis y Gestión`,
+      image: `./assets/img/pineda.jpg`,
+      description: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`,
+      row: 2,
+      linkedTo: 2,
+      side: `left`
+    },
+    {
+      id: 17,
+      name: `Héctor López M`,
+      position: `Asistente`,
+      image: ``,
+      description: ``,
+      row: 2,
+      linkedTo: 3,
+      side: `right`
+    },
+    // ROW 3: Líderes del Proyecto (bajo "LIDER DEL PROYECTO")
+    {
+      id: 4,
+      name: `Javier GTZ Reynoso`,
+      position: `Proyectos y presupuesto`,
+      image: ``,
+      description: ``,
+      row: 3
+    },
+    {
+      id: 5,
+      name: `José Ignacio Irigoyen Palacios`,
+      position: `Análisis financiero`,
+      image: `./assets/img/jose_i_irigoyen_p1.png`,
+      description: `Líder financiero con más de 20 años de experiencia en capital privado, venture capital y fusiones y adquisiciones. Es cofundador de Sentinel Capital Fund, donde encabeza la estructuración financiera, recaudación de capital y relaciones con inversionistas. Actualmente también se desempeña como Presidente de TX America Cinemas y Director de Finanzas (CFO) en VITAL y HolaStaff.<br><br>A lo largo de su trayectoria ha acompañado a empresas en procesos de crecimiento, expansión internacional y exit, aportando una visión estratégica enfocada en maximizar rendimientos ajustados al riesgo. Ha sido reconocido como Premio Nacional del Emprendedor, conferencista en Harvard Business School y miembro de Endeavor y del Salón de la Fama de EY Entrepreneur Of The Year™, consolidándose como una referencia en el ecosistema financiero y de inversión.`,
+      row: 3
+    },
+    {
+      id: 6,
+      name: `Jorge O. Castañeda`,
+      position: `Universidad corporativa`,
+      image: `./assets/img/jorge_o_castaneda.png`,
+      description: `CEO global del Tony Buzan Group & Academy y una de las voces más influyentes a nivel internacional en pensamiento estratégico, innovación y liderazgo organizacional. Su trabajo se centra en el diseño de modelos que impulsan el crecimiento económico sostenible, integrando visión empresarial, gobernanza y desarrollo de talento.<br><br>Es creador del Mapeo Sistémico de Causas Raíz, metodología aplicada en gobiernos y empresas para comprender ecosistemas complejos y acelerar la toma de decisiones estratégicas. Ha desarrollado modelos propios de liderazgo e innovación utilizados en proyectos de gran escala que requieren alineación entre actores públicos y privados.<br><br>Académico, autor y coautor de diversas obras junto a Tony Buzan, el Dr. Castañeda combina rigor intelectual con aplicación práctica, aportando valor en iniciativas de transformación organizacional, atracción de inversión y desarrollo industrial de largo plazo.`,
+      row: 3
+    },
+    {
+      id: 7,
+      name: `Alfredo Cerdio S`,
+      position: `Proyecto agroindustrial`,
+      image: ``,
+      description: ``,
+      row: 3
+    },
+    {
+      id: 8,
+      name: `Carlos Winkler Schroeder`,
+      position: `Promoción industrial y negocios`,
+      image: `./assets/img/carlos_winkler_s1.png`,
+      description: `Consultor empresarial y emprendedor con más de 20 años de experiencia en el desarrollo de negocios, estrategia comercial e inversión. Es fundador y director de VITAL Consultoría, firma desde la cual acompaña a empresas en procesos de profesionalización, crecimiento y atracción de capital, ayudándolas a construir modelos de negocio sólidos y escalables.<br><br>A lo largo de su trayectoria ha impulsado y liderado proyectos de alto impacto en sectores como tecnología, entretenimiento, agronegocios y energía. Destaca como creador de HolaStaff, plataforma tecnológica de reclutamiento y capital humano, así como inversionista y fundador de TX América Cinemas, cadena de cines en Estados Unidos enfocada en el mercado latino.<br><br>Su visión estratégica, liderazgo y capacidad para identificar oportunidades lo han posicionado como un aliado clave en proyectos empresariales innovadores y de largo alcance.`,
+      row: 3
+    },
+    {
+      id: 9,
+      name: `Claudia Velasco`,
+      position: `Difusión y medios`,
+      image: ``,
+      description: ``,
+      row: 3
+    },
+    {
+      id: 10,
+      name: `Jorge Romo G`,
+      position: `Digitalización`,
+      image: `./assets/img/jorge_romo.jpg`,
+      description: ``,
+      row: 3
+    },
+    {
+      id: 11,
+      name: `Jean Francois Encinas`,
+      position: `Desarrollador de negocios`,
+      image: `./assets/img/jean_francois_encinas.png`,
+      description: ``,
+      row: 3
+    },
+    // ROW 4: Subordinados de los Líderes del Proyecto
+    {
+      id: 12,
+      name: `José Luis Díaz Covarrubias`,
+      position: `Planes de desarrollo`,
+      image: `./assets/img/jose_luis_diaz.png`,
+      description: `Ejecutivo y consultor especializado en administración portuaria, con más de cuatro décadas de experiencia en la operación, planeación y desarrollo de puertos, terminales marítimas y proyectos de infraestructura logística en México.<br><br>A lo largo de su trayectoria ha ocupado posiciones de alta dirección en el sistema portuario nacional, incluyendo la Gerencia de Operaciones de la Administración Portuaria Integral de Altamira y la Subdirección Administrativa de una de las principales terminales multipropósito del país. Actualmente asesora proyectos estratégicos en diseño portuario, concesiones, operación, licitaciones y desarrollo de nuevos puertos, integrando una visión técnica, financiera y operativa orientada a resultados, seguridad y sostenibilidad.`,
+      row: 4,
+      associatedWith: 4
+    },
+    {
+      id: 13,
+      name: `Miguel Cid del Prado Martínez`,
+      position: `Universidades existentes`,
+      image: `./assets/img/miguel_cid_del_prado.png`,
+      description: `Doctor en Ingeniería Aplicada y especialista en Ingeniería en Gestión Empresarial, con una sólida trayectoria en planeación estratégica, desarrollo de proyectos y economía social y solidaria. Actualmente se desempeña como Coordinador de la Especialidad en Economía Social y Solidaria en el Instituto Tecnológico de Tuxtla Gutiérrez, donde impulsa modelos de emprendimiento con enfoque sostenible y de impacto social.<br><br>Ha participado como asesor en estrategias de desarrollo económico local, auditor líder de sistemas de gestión de calidad y docente en áreas clave como planes de negocio, ingeniería económica y gestión de la producción. Su experiencia combina rigor académico, aplicación práctica y transferencia de tecnología, contribuyendo al fortalecimiento de proyectos productivos, innovación social y formación de talento orientado al desarrollo regional sostenible.`,
+      row: 4,
+      associatedWith: 6
+    },
+    {
+      id: 18,
+      name: `Alicia M. Glez Torra`,
+      position: `Análisis y Gestión`,
+      image: ``,
+      description: ``,
+      row: 4,
+      associatedWith: 6
+    },
+    {
+      id: 19,
+      name: `Alberto Pineda T.`,
+      position: `Análisis y Gestión`,
+      image: `./assets/img/pineda.jpg`,
+      description: ``,
+      row: 4,
+      associatedWith: 7
+    },
+    {
+      id: 16,
+      name: `Rafael Alfredo Nava Ricaño`,
+      position: `Cluster Agroalimentario`,
+      image: `./assets/img/rafael_nava.jpg`,
+      description: `Empresario agroindustrial y presidente de NAVA Corp., con una trayectoria construida desde la tercera generación familiar dedicada a la producción y comercialización agroalimentaria en Chiapas. Lidera un ecosistema empresarial integrado que abarca producción, transformación, logística y exportación de productos agrícolas de alto valor.<br><br>A lo largo de su carrera ha impulsado modelos productivos enfocados en trazabilidad, innovación, sostenibilidad y expansión de mercados, trabajando con cultivos estratégicos como plátano, cacao del Soconusco, café de altura y mango Ataulfo. Además, participa activamente en organismos clave del sector, desde donde contribuye al fortalecimiento y profesionalización de la agroindustria regional, con una visión de impacto nacional e internacional.`,
+      row: 4,
+      associatedWith: 7
+    }
+  ],
+
+  // Sección "Organigrama" - Configuración de visualización
   organigrama: {
     titulo: `Estructura Organizacional`,
-    descripcion: `Nuestro equipo está conformado por líderes estratégicos con amplia experiencia en sus áreas de especialización.`,
-    estructura: {
-      ceo: {
-        nombre: `Carlos Alberto Vila Serrano`,
-        cargo: `Director General`,
-        imagen: `./assets/img/carlos_vila.png`
-      },
-      directores: [
-        {
-          nombre: `Alberto Pineda Tuells`,
-          cargo: `Finanzas y Desarrollo Económico`,
-          imagen: `./assets/img/jean_francois_encinas.png`
-        },
-        {
-          nombre: `Dr. Jorge Castañeda`,
-          cargo: `Innovación y Liderazgo Estratégico`,
-          imagen: `./assets/img/jorge_o_castaneda.png`
-        }
-      ],
-      especialistas: [
-        {
-          nombre: `Miguel Cid del Prado Martínez`,
-          cargo: `Planeación Estratégica`,
-          imagen: `./assets/img/miguel_cid_del_prado.png`
-        },
-        {
-          nombre: `José Luis Díaz Covarrubias Hanún`,
-          cargo: `Infraestructura Portuaria`,
-          imagen: `./assets/img/jose_luis_diaz.png`
-        },
-        {
-          nombre: `Carlos Winkler Schroeder`,
-          cargo: `Desarrollo de Negocios`,
-          imagen: `./assets/img/carlos_winkler_s1.png`
-        },
-        {
-          nombre: `Rafael Alfredo Nava Ricaño`,
-          cargo: `Agroindustria`,
-          imagen: `./assets/img/hector_lopez_gutierrez.png`
-        },
-        {
-          nombre: `José Ignacio Irigoyen Palacios`,
-          cargo: `Capital Privado`,
-          imagen: `./assets/img/jose_i_irigoyen_p1.png`
-        },
-        {
-          nombre: `Camilo Antonio Ángel Urdaneta`,
-          cargo: `Banca de Inversión`,
-          imagen: `./assets/img/camilo_angel_u.png`
-        }
-      ]
-    }
+    descripcion: `Nuestro equipo está conformado por líderes estratégicos con amplia experiencia en sus áreas de especialización.`
   },
 
-  // Sección "Asociados"
+  // Sección "Asociados" - Configuración de visualización
   asociados: {
     titulo: `Asociados`,
-    descripcion: `Conformamos un equipo estratégico integrado por profesionales altamente comprometidos que aportan
-     conocimientos especializados para el éxito de cada proyecto.`,
-    miembros: [
-
-      {
-        nombre: `Miguel Cid del Prado Martínez`,
-        rol: `Planeación Estratégica y Economía Social`,
-        imagen: `./assets/img/miguel_cid_del_prado.png`,
-        bio: `Doctor en Ingeniería Aplicada y especialista en Ingeniería en Gestión Empresarial, con una sólida trayectoria en planeación estratégica, desarrollo de proyectos y economía social y solidaria. Actualmente se desempeña como Coordinador de la Especialidad en Economía Social y Solidaria en el Instituto Tecnológico de Tuxtla Gutiérrez, donde impulsa modelos de emprendimiento con enfoque sostenible y de impacto social.<br><br>Ha participado como asesor en estrategias de desarrollo económico local, auditor líder de sistemas de gestión de calidad y docente en áreas clave como planes de negocio, ingeniería económica y gestión de la producción. Su experiencia combina rigor académico, aplicación práctica y transferencia de tecnología, contribuyendo al fortalecimiento de proyectos productivos, innovación social y formación de talento orientado al desarrollo regional sostenible.`
-      },
-      {
-        nombre: `Carlos Alberto Vila Serrano`,
-        rol: `Director General`,
-        specialDesign: true,
-        imagen: `./assets/img/carlos_vila.png`,
-        bio: `Ingeniero civil y empresario con amplia trayectoria en el desarrollo de proyectos regionales de alto impacto. Es fundador y director de AGRINOL, SAPI de C.V., empresa enfocada en la estructuración, gestión e implementación de proyectos estratégicos que impulsan el crecimiento económico y social del sureste de México.
-        A lo largo de su carrera ha liderado iniciativas en infraestructura, agroindustria, logística y conectividad regional, articulando la participación del sector privado, organizaciones sociales y los distintos niveles de gobierno.<br><br>Ha encabezado proyectos de alcance nacional como la Terminal Portuaria Remota en Puerto Chiapas y los Polos de Desarrollo para el Bienestar (PODEBIs) Tapachula I y II, consolidándose como una figura clave en la planeación y ejecución de proyectos que transforman territorios y fortalecen el desarrollo regional.
-        `
-      },
-      {
-        nombre: `Alberto Pineda Tuells`,
-        rol: `Finanzas y Desarrollo Económico`,
-        imagen: `./assets/img/jean_francois_encinas.png`,
-        bio: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`
-      },
-      {
-        nombre: `José Luis Díaz Covarrubias Hanún`,
-        rol: `Infraestructura Portuaria y Logística`,
-        imagen: `./assets/img/jose_luis_diaz.png`,
-        bio: `Ejecutivo y consultor especializado en administración portuaria, con más de cuatro décadas de experiencia en la operación, planeación y desarrollo de puertos, terminales marítimas y proyectos de infraestructura logística en México.<br><br>A lo largo de su trayectoria ha ocupado posiciones de alta dirección en el sistema portuario nacional, incluyendo la Gerencia de Operaciones de la Administración Portuaria Integral de Altamira y la Subdirección Administrativa de una de las principales terminales multipropósito del país. Actualmente asesora proyectos estratégicos en diseño portuario, concesiones, operación, licitaciones y desarrollo de nuevos puertos, integrando una visión técnica, financiera y operativa orientada a resultados, seguridad y sostenibilidad.`
-      },
-      {
-        nombre: `Carlos Winkler Schroeder`,
-        rol: `Desarrollo de Negocios e Inversión`,
-        imagen: `./assets/img/carlos_winkler_s1.png`,
-        bio: `Consultor empresarial y emprendedor con más de 20 años de experiencia en el desarrollo de negocios, estrategia comercial e inversión. Es fundador y director de VITAL Consultoría, firma desde la cual acompaña a empresas en procesos de profesionalización, crecimiento y atracción de capital, ayudándolas a construir modelos de negocio sólidos y escalables.<br><br>A lo largo de su trayectoria ha impulsado y liderado proyectos de alto impacto en sectores como tecnología, entretenimiento, agronegocios y energía. Destaca como creador de HolaStaff, plataforma tecnológica de reclutamiento y capital humano, así como inversionista y fundador de TX América Cinemas, cadena de cines en Estados Unidos enfocada en el mercado latino.<br><br>Su visión estratégica, liderazgo y capacidad para identificar oportunidades lo han posicionado como un aliado clave en proyectos empresariales innovadores y de largo alcance.`
-      },
-      {
-        nombre: `Rafael Alfredo Nava Ricaño`,
-        rol: `Agroindustria`,
-        imagen: `./assets/img/hector_lopez_gutierrez.png`,
-        bio: `Empresario agroindustrial y presidente de NAVA Corp., con una trayectoria construida desde la tercera generación familiar dedicada a la producción y comercialización agroalimentaria en Chiapas. Lidera un ecosistema empresarial integrado que abarca producción, transformación, logística y exportación de productos agrícolas de alto valor.<br><br>A lo largo de su carrera ha impulsado modelos productivos enfocados en trazabilidad, innovación, sostenibilidad y expansión de mercados, trabajando con cultivos estratégicos como plátano, cacao del Soconusco, café de altura y mango Ataulfo. Además, participa activamente en organismos clave del sector, desde donde contribuye al fortalecimiento y profesionalización de la agroindustria regional, con una visión de impacto nacional e internacional.`
-      },
-      {
-        nombre: `Dr. Jorge Castañeda`,
-        rol: `Innovación y Liderazgo Estratégico`,
-        imagen: `./assets/img/jorge_o_castaneda.png`,
-        bio: `CEO global del Tony Buzan Group & Academy y una de las voces más influyentes a nivel internacional en pensamiento estratégico, innovación y liderazgo organizacional. Su trabajo se centra en el diseño de modelos que impulsan el crecimiento económico sostenible, integrando visión empresarial, gobernanza y desarrollo de talento.<br><br>Es creador del Mapeo Sistémico de Causas Raíz, metodología aplicada en gobiernos y empresas para comprender ecosistemas complejos y acelerar la toma de decisiones estratégicas. Ha desarrollado modelos propios de liderazgo e innovación utilizados en proyectos de gran escala que requieren alineación entre actores públicos y privados.<br><br>Académico, autor y coautor de diversas obras junto a Tony Buzan, el Dr. Castañeda combina rigor intelectual con aplicación práctica, aportando valor en iniciativas de transformación organizacional, atracción de inversión y desarrollo industrial de largo plazo.`
-      },
-      {
-        nombre: `José Ignacio Irigoyen Palacios`,
-        rol: `Capital Privado y Finanzas`,
-        imagen: `./assets/img/jose_i_irigoyen_p1.png`,
-        bio: `Líder financiero con más de 20 años de experiencia en capital privado, venture capital y fusiones y adquisiciones. Es cofundador de Sentinel Capital Fund, donde encabeza la estructuración financiera, recaudación de capital y relaciones con inversionistas. Actualmente también se desempeña como Presidente de TX America Cinemas y Director de Finanzas (CFO) en VITAL y HolaStaff.<br><br>A lo largo de su trayectoria ha acompañado a empresas en procesos de crecimiento, expansión internacional y exit, aportando una visión estratégica enfocada en maximizar rendimientos ajustados al riesgo. Ha sido reconocido como Premio Nacional del Emprendedor, conferencista en Harvard Business School y miembro de Endeavor y del Salón de la Fama de EY Entrepreneur Of The Year™, consolidándose como una referencia en el ecosistema financiero y de inversión.`
-      },
-      {
-        nombre: `Camilo Antonio Ángel Urdaneta`,
-        rol: `Banca de Inversión y Capital Privado`,
-        imagen: `./assets/img/camilo_angel_u.png`,
-        bio: `Financiero y banquero privado especializado en la administración de fondos de capital privado, con experiencia gestionando portafolios por más de US$1,000 millones. Cuenta con una maestría en Finanzas por Boston College y una trayectoria consolidada en banca de inversión y gestión patrimonial.<br><br>Es fundador de ComSustenta, firma enfocada en estructurar y administrar capital con una visión estratégica y sostenible. A lo largo de su carrera ha impulsado plataformas empresariales en energía e inclusión financiera, combinando disciplina financiera, visión de largo plazo y enfoque en impacto, posicionándose como un referente en la gestión de capital privado en México.`
-      }
-    ]
+    descripcion: `Conformamos un equipo estratégico integrado por profesionales altamente comprometidos que aportan conocimientos especializados para el éxito de cada proyecto.`
   },
 
   // Sección "Proyectos"
@@ -183,31 +251,118 @@ const apiData = {
 
   // Sección "Portafolio"
   portafolio: {
-    titulo: "Portafolio",
+    titulo: "Proyectos",
+    descripcion: "Nos especializamos en la gestión y desarrollo de proyectos de alto impacto que impulsan la economía regional y nacional. Nuestra trayectoria se define por la transformación de visiones en realidades tangibles.",
+    clasificaciones: [
+      { id: 1, name: "🌿 Sector Agroindustrial y Sustentabilidad" },
+      { id: 2, name: "🏗️ Infraestructura y Comunicaciones" },
+      { id: 3, name: "🚆 Movilidad y Transporte Urbano" },
+      { id: 4, name: "💻 Innovación y Tecnología de Alto Desempeño" },
+      { id: 5, name: "📍 Proyectos en Gestión y Desarrollo Estratégico" }
+    ],
     proyectos: [
       {
-        nombre: "Proyecto KUXTAL (Podebi Tapachula I y II)",
-        descripcion: "Terminal portuaria de última generación",
-        imagen: "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80",
-        destacado: true
+        id: 1,
+        name: "Planta de Bioetanol (Sustentabilidad Energética)",
+        description: "Desarrollo de infraestructura avanzada para la producción de biocombustible a partir de sorgo y caña de azúcar.",
+        class_id: 1,
+        media: [
+          { type: "video", url: "https://www.agrinol.mx/vid/gespro.mp4" },
+          { type: "image", url: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800" }
+        ]
       },
       {
-        nombre: "Proyecto FFCC Centro América (Costa Pacífico)",
-        descripcion: "",
-        imagen: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80",
-        destacado: false
+        id: 2,
+        name: "Planta de Fertilizantes",
+        description: "Proyecto enfocado en el fortalecimiento de la soberanía agrícola mediante la producción local de insumos esenciales.",
+        class_id: 1,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800" }
+        ]
       },
       {
-        nombre: "Proyecto 3",
-        descripcion: "Infraestructura industrial",
-        imagen: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=80",
-        destacado: false
+        id: 3,
+        name: "Salas de Empaque para Insectos Benéficos",
+        description: "[CASO DE ÉXITO] Construcción y equipamiento integral de instalaciones especializadas para el control biológico de plagas.",
+        class_id: 1,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800" }
+        ]
       },
       {
-        nombre: "Proyecto 4",
-        descripcion: "Desarrollo sustentable regional",
-        imagen: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=800&q=80",
-        destacado: true
+        id: 4,
+        name: "Rehabilitación de la Línea K del Ferrocarril",
+        description: "[CASO DE ÉXITO] Gestión histórica y culminación exitosa de la rehabilitación del tramo Ixtepec, Oaxaca a Ciudad Hidalgo, Chiapas, incluyendo el ramal estratégico hacia Puerto Chiapas.",
+        class_id: 2,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1527684651001-731c474bbb5a?w=800" }
+        ]
+      },
+      {
+        id: 5,
+        name: "Caminos Rurales \"Saca Cosechas\"",
+        description: "Implementación de rutas logísticas para optimizar el transporte de productos desde el campo hacia los centros de distribución.",
+        class_id: 2,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800" }
+        ]
+      },
+      {
+        id: 6,
+        name: "Terminal Portuaria Remota",
+        description: "Proyecto de inversión y conectividad vinculado al corredor interoceánico del Istmo de Tehuantepec.",
+        class_id: 2,
+        media: [
+          { type: "video", url: "./assets/img/project-terminal-portuaria/proyecto1.mp4" },
+          { type: "image", url: "./assets/img/project-terminal-portuaria/EV2.jpg" },
+          { type: "image", url: "./assets/img/project-terminal-portuaria/EV4.jpg" },
+          { type: "image", url: "./assets/img/project-terminal-portuaria/EV7.jpeg" }
+        ]
+      },
+      {
+        id: 7,
+        name: "Tren Ligero Tapachula - Puerto Chiapas",
+        description: "Proyecto de transporte masivo diseñado para conectar de manera eficiente el núcleo urbano con la zona portuaria.",
+        class_id: 3,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800" }
+        ]
+      },
+      {
+        id: 8,
+        name: "Transporte y Terminales de Corto Recorrido",
+        description: "Optimización de la movilidad regional mediante infraestructura de transferencia de pasajeros y carga.",
+        class_id: 3,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800" }
+        ]
+      },
+      {
+        id: 9,
+        name: "Laboratorio Regional de Supercómputo",
+        description: "Desarrollo de un centro tecnológico de \"Súper Cómputo\" para el procesamiento de datos y apoyo a la investigación de alto nivel.",
+        class_id: 4,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" }
+        ]
+      },
+      {
+        id: 10,
+        name: "Corredor Interoceánico y Polos de Desarrollo",
+        description: "Actualmente, nuestra organización lidera la gestión para la consolidación de los Polos de Desarrollo 1 y 2 en las regiones de Tapachula y Ciudad Hidalgo, Chiapas.",
+        class_id: 5,
+        media: [
+          { type: "image", url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" },
+          { type: "image", url: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" }
+        ]
       }
     ]
   },
@@ -259,25 +414,25 @@ function renderQuienesSomos() {
     <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-4 md:space-y-6">
       <div class="text-center mt-4 md:mt-10 mb-6 md:mb-10">
         <h2 class="text-2xl md:text-4xl text-primary font-heading font-semibold mt-4 md:mt-6 mb-4 md:mb-6">${data.titulo}</h2>
-        <p class="text-sm md:text-base text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
+        <p class="text-sm md:text-lg text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
       </div>
       <div class="flex flex-col md:flex-row items-stretch gap-4 md:gap-6">
         <div class="relative w-full md:w-2/5 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden min-h-[200px] md:min-h-[260px]">
           <img src="${data.imagen}" alt="Puerto" class="absolute inset-0 w-full h-full object-cover">
         </div>
-        <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 text-justify">
+        <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-lg text-slate-700 text-justify ">
           <p>${data.contenido}</p>
         </div>
       </div>
       <div class="flex flex-col md:flex-row items-stretch gap-4 md:gap-6">
         <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 text-justify flex flex-col justify-center">
-          <div class="mb-6 md:mb-10">
+          <div class="mb-6 md:mb-3">
             <h3 class="text-xl md:text-2xl font-heading font-semibold text-primary">${data.mision.titulo}</h3>
-            <p>${data.mision.texto}</p>
+            <p class='text-sm md:text-lg'>${data.mision.texto}</p>
           </div>
           <div>
             <h3 class="text-xl md:text-2xl font-heading font-semibold text-primary">${data.vision.titulo}</h3>
-            <p>${data.vision.texto}</p>
+            <p class='text-sm md:text-lg'>${data.vision.texto}</p>
           </div>
         </div>
         <div class="relative w-full md:w-2/5 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden min-h-[200px] md:min-h-[260px]">
@@ -293,43 +448,149 @@ function renderOrganigrama() {
   if (!section) return;
 
   const data = apiData.organigrama;
-  const { ceo, directores, especialistas } = data.estructura;
+  const equipo = apiData.equipo;
 
-  // Buscar información completa del CEO en la sección de asociados
-  const getMiembroData = (nombre) => {
-    return apiData.asociados.miembros.find(m => m.nombre === nombre);
+  // Filtrar por row (sin associatedWith ni linkedTo para los principales de cada nivel)
+  const ceo = equipo.find(m => m.row === 1 && !m.associatedWith && !m.linkedTo);
+  const ceoAsociados = equipo.filter(m => m.row === 1 && m.associatedWith);
+  const ceoLinkedTo = equipo.filter(m => m.row === 1 && m.linkedTo);
+  const directores = equipo.filter(m => m.row === 2 && !m.associatedWith && !m.linkedTo);
+  const directoresAsociados = equipo.filter(m => m.row === 2 && m.associatedWith);
+  const directoresLinkedTo = equipo.filter(m => m.row === 2 && m.linkedTo);
+  const lideres = equipo.filter(m => m.row === 3 && !m.associatedWith && !m.linkedTo);
+  const subordinados = equipo.filter(m => m.row === 4);
+
+  // Crear data attributes para el modal
+  const createDataAttrs = (persona) => {
+    return `data-name="${persona.name}" data-role="${persona.position}" data-img="${persona.image}" data-bio="${persona.description}"`;
   };
 
-  const ceoData = getMiembroData(ceo.nombre);
-  const ceoDataAttrs = ceoData
-    ? `data-name="${ceoData.nombre}" data-role="${ceoData.rol}" data-img="${ceoData.imagen}" data-bio="${ceoData.bio}"`
-    : '';
-
-  // Card template estilo organigrama corporativo (como en la imagen)
-  const createOrgCard = (persona, size = 'md', dataAttrs = '') => {
+  // Card template estilo organigrama corporativo
+  // fixedCargoSize: si es true, usa tamaño fijo para la caja del cargo (para rows 3 y 4)
+  const createOrgCard = (persona, size = 'md', fixedCargoSize = false) => {
     const sizes = {
-      lg: { img: 'w-24 h-24 md:w-28 md:h-28', border: 'border-[3px]', text: 'text-xs md:text-sm', subtext: 'text-[10px] md:text-xs', minW: 'min-w-[140px] md:min-w-[180px]' },
-      md: { img: 'w-20 h-20 md:w-24 md:h-24', border: 'border-[3px]', text: 'text-[10px] md:text-xs', subtext: 'text-[9px] md:text-[10px]', minW: 'min-w-[120px] md:min-w-[160px]' },
-      sm: { img: 'w-16 h-16 md:w-20 md:h-20', border: 'border-2', text: 'text-[9px] md:text-[10px]', subtext: 'text-[8px] md:text-[9px]', minW: 'min-w-[100px] md:min-w-[130px]' }
+      lg: { img: 'w-24 h-24 md:w-28 md:h-28', border: 'border-[3px]', text: 'text-xs md:text-sm', subtext: 'text-[10px] md:text-xs', minW: 'min-w-[140px] md:min-w-[180px]', icon: 'w-12 h-12 md:w-14 md:h-14' },
+      md: { img: 'w-20 h-20 md:w-24 md:h-24', border: 'border-[3px]', text: 'text-[10px] md:text-xs', subtext: 'text-[9px] md:text-[10px]', minW: 'min-w-[120px] md:min-w-[160px]', icon: 'w-10 h-10 md:w-12 md:h-12' },
+      sm: { img: 'w-16 h-16 md:w-20 md:h-20', border: 'border-2', text: 'text-[9px] md:text-[10px]', subtext: 'text-[8px] md:text-[9px]', minW: 'min-w-[100px] md:min-w-[130px]', icon: 'w-8 h-8 md:w-10 md:h-10' },
+      xs: { img: 'w-14 h-14 md:w-16 md:h-16', border: 'border-2', text: 'text-[8px] md:text-[9px]', subtext: 'text-[7px] md:text-[8px]', minW: 'min-w-[90px] md:min-w-[110px]', icon: 'w-6 h-6 md:w-8 md:h-8' }
     };
     const s = sizes[size];
+    
+    // Clases para la caja del cargo: tamaño fijo para rows 3 y 4
+    const cargoClasses = fixedCargoSize 
+      ? 'w-[100px] md:w-[130px] h-[50px] md:h-[50px] flex items-center justify-center' 
+      : s.minW;
+    
+    // Clases para la caja del nombre: mismo ancho que cargo, alto 40px para rows 3 y 4
+    const nameClasses = fixedCargoSize 
+      ? 'w-[100px] md:w-[130px] h-[40px] md:h-[40px] flex items-center justify-center' 
+      : s.minW;
+
+    // Verificar si existe imagen
+    const hasImage = persona.image && persona.image.trim() !== '';
+
+    const imageContent = hasImage
+      ? `<img src="${persona.image}" alt="${persona.name}" class="w-full h-full object-cover object-top">`
+      : `<div class="w-full h-full flex items-center justify-center bg-slate-100">
+           <i data-lucide="user" class="${s.icon} text-slate-400"></i>
+         </div>`;
 
     return `
-      <div class="org-card flex flex-col items-center organigrama-card cursor-pointer hover:scale-105 transition-transform" ${dataAttrs}>
-        <div class="relative ${s.img} rounded-full overflow-hidden ${s.border} border-[#1a5fb4]">
-          <img src="${persona.imagen}" alt="${persona.nombre}" class="w-full h-full object-cover object-top">
+      <div class="org-card flex flex-col items-center organigrama-card cursor-pointer hover:scale-105 transition-transform" ${createDataAttrs(persona)}>
+        <div class="relative ${s.img} rounded-full overflow-hidden ${s.border} border-[#034B84]">
+          ${imageContent}
         </div>
         <!-- Nombre en recuadro blanco con borde azul -->
-        <div class="org-name bg-white border-2 border-[#1a5fb4] px-2 py-1 md:px-3 md:py-1.5 mt-2 ${s.minW}">
-          <h4 class="font-bold ${s.text} text-[#1a5fb4] text-center leading-tight">${persona.nombre}</h4>
+        <div class="org-name bg-white border-2 border-[#034B84] px-2 py-1 md:px-3 md:py-1.5 mt-2 ${nameClasses}">
+          <h4 class="font-bold ${s.text} text-[#034B84] text-center leading-tight">${persona.name}</h4>
         </div>
         <!-- Cargo en recuadro azul sólido -->
-        <div class="org-cargo bg-[#1a5fb4] px-2 py-1 md:px-3 md:py-1.5 ${s.minW}">
-          <p class="${s.subtext} text-white text-center font-semibold uppercase">${persona.cargo}</p>
+        <div class="org-cargo bg-[#034B84] px-2 py-1 md:px-3 md:py-1.5 ${cargoClasses}">
+          <p class="${s.subtext} text-white text-center font-semibold uppercase">${persona.position}</p>
         </div>
       </div>
     `;
   };
+
+  // Función para crear director con sus asociados laterales (associatedWith = línea sólida, linkedTo = línea punteada)
+  const createDirectorWithAssociates = (director, asociados, linkedTos) => {
+    const asociadoIzq = asociados.find(a => a.associatedWith === director.id && a.side === 'left');
+    const asociadoDer = asociados.find(a => a.associatedWith === director.id && a.side === 'right');
+    const linkedIzq = linkedTos.find(a => a.linkedTo === director.id && a.side === 'left');
+    const linkedDer = linkedTos.find(a => a.linkedTo === director.id && a.side === 'right');
+    
+    return `
+      <div class="flex items-center gap-2 md:gap-4">
+        ${asociadoIzq ? `
+          <div class="flex items-center">
+            ${createOrgCard(asociadoIzq, 'xs')}
+            <div class="hidden md:block w-4 md:w-8 h-[2px] bg-[#034B84]"></div>
+          </div>
+        ` : ''}
+        ${linkedIzq ? `
+          <div class="flex items-start">
+            ${createOrgCard(linkedIzq, 'xs')}
+            <div class="hidden md:flex items-center w-4 md:w-8 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+          </div>
+        ` : ''}
+        <div class="flex flex-col items-center">
+          <div class="hidden md:block w-[2px] h-4 bg-[#034B84] -mt-4"></div>
+          ${createOrgCard(director, 'md')}
+        </div>
+        ${asociadoDer ? `
+          <div class="flex items-center">
+            <div class="hidden md:block w-4 md:w-8 h-[2px] bg-[#034B84]"></div>
+            ${createOrgCard(asociadoDer, 'xs')}
+          </div>
+        ` : ''}
+        ${linkedDer ? `
+          <div class="flex items-start">
+            <div class="hidden md:flex items-center w-4 md:w-8 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+            ${createOrgCard(linkedDer, 'xs')}
+          </div>
+        ` : ''}
+      </div>
+    `;
+  };
+
+  // Función para crear líder con sus subordinados (row 4)
+  const createLiderWithSubordinados = (lider, subs) => {
+    const misSubordinados = subs.filter(s => s.associatedWith === lider.id);
+    
+    if (misSubordinados.length === 0) {
+      return `
+        <div class="flex flex-col items-center">
+          <div class="hidden md:block w-[2px] h-4 bg-[#034B84] -mt-4 mb-2"></div>
+          ${createOrgCard(lider, 'sm', true)}
+        </div>
+      `;
+    }
+
+    return `
+      <div class="flex flex-col items-center">
+        <div class="hidden md:block w-[2px] h-4 bg-[#034B84] -mt-4 mb-2"></div>
+        ${createOrgCard(lider, 'sm', true)}
+        <!-- Línea vertical hacia subordinados -->
+        <div class="hidden md:block w-[2px] h-4 bg-[#034B84] mt-2"></div>
+        <!-- Subordinados -->
+        <div class="flex flex-wrap justify-center gap-2 mt-2">
+          ${misSubordinados.map(sub => `
+            <div class="flex flex-col items-center">
+              ${createOrgCard(sub, 'xs', true)}
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
+  };
+
+  // Obtener asociado del CEO (lado derecho) - associatedWith usa línea sólida
+  const ceoAsociadoDer = ceoAsociados.find(a => a.side === 'right');
+  const ceoAsociadoIzq = ceoAsociados.find(a => a.side === 'left');
+  
+  // Obtener linkedTo del CEO - usa línea punteada
+  const ceoLinkedDer = ceoLinkedTo.find(a => a.linkedTo === ceo?.id && a.side === 'right');
+  const ceoLinkedIzq = ceoLinkedTo.find(a => a.linkedTo === ceo?.id && a.side === 'left');
 
   section.innerHTML = `
     <div class="max-w-7xl mx-auto px-4 md:px-6 space-y-6 md:space-y-10">
@@ -341,78 +602,81 @@ function renderOrganigrama() {
       <!-- Organigrama Corporativo -->
       <div class="relative bg-gradient-to-b from-white to-slate-50 rounded-2xl p-6 md:p-10 shadow-xl border border-slate-200 overflow-hidden">
 
-        <!-- Nivel 1: CEO -->
-        <div class="org-level-ceo flex justify-center mb-4">
-          ${createOrgCard(ceo, 'lg', ceoDataAttrs)}
+        <!-- Nivel 1: CEO con asociado lateral -->
+        <div class="org-level-ceo flex justify-center items-center mb-4">
+          ${ceo ? `
+            <div class="flex items-center gap-4 md:gap-8">
+              ${ceoAsociadoIzq ? `
+                <div class="flex items-center">
+                  ${createOrgCard(ceoAsociadoIzq, 'xs')}
+                  <div class="hidden md:block w-8 md:w-12 h-[2px] bg-[#034B84]"></div>
+                </div>
+              ` : ''}
+              ${ceoLinkedIzq ? `
+                <div class="flex items-start">
+                  ${createOrgCard(ceoLinkedIzq, 'xs')}
+                  <div class="hidden md:flex items-center w-8 md:w-12 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+                </div>
+              ` : ''}
+              ${createOrgCard(ceo, 'lg')}
+              ${ceoAsociadoDer ? `
+                <div class="flex items-center">
+                  <div class="hidden md:block w-8 md:w-12 h-[2px] bg-[#034B84]"></div>
+                  ${createOrgCard(ceoAsociadoDer, 'xs')}
+                </div>
+              ` : ''}
+              ${ceoLinkedDer ? `
+                <div class="flex items-start">
+                  <div class="hidden md:flex items-center w-8 md:w-12 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+                  ${createOrgCard(ceoLinkedDer, 'xs')}
+                </div>
+              ` : ''}
+            </div>
+          ` : ''}
         </div>
 
         <!-- Línea vertical del CEO -->
-        <div class="org-connector-vertical w-[2px] h-8 md:h-10 bg-[#1a5fb4] mx-auto"></div>
+        <div class="org-connector-vertical w-[2px] h-8 md:h-10 bg-[#034B84] mx-auto"></div>
 
-        <!-- Nivel 2: Directores -->
+        <!-- Nivel 2: Directores con asociados laterales -->
         <div class="org-level-directores relative">
           <!-- Línea horizontal que conecta directores -->
-          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[2px] bg-[#1a5fb4]"></div>
+          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[2px] bg-[#034B84]"></div>
 
           <!-- Contenedor de directores con líneas verticales -->
-          <div class="flex justify-center gap-8 md:gap-24 lg:gap-32 pt-0 md:pt-4">
-            <div class="flex flex-col items-center">
-              <div class="hidden md:block w-[2px] h-4 bg-[#1a5fb4] -mt-4"></div>
-              ${directores[0] ? (() => {
-                const miembroData = getMiembroData(directores[0].nombre);
-                const dataAttrs = miembroData
-                  ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
-                  : '';
-                return createOrgCard(directores[0], 'md', dataAttrs);
-              })() : ''}
-            </div>
-            <div class="flex flex-col items-center">
-              <div class="hidden md:block w-[2px] h-4 bg-[#1a5fb4] -mt-4"></div>
-              ${directores[1] ? (() => {
-                const miembroData = getMiembroData(directores[1].nombre);
-                const dataAttrs = miembroData
-                  ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
-                  : '';
-                return createOrgCard(directores[1], 'md', dataAttrs);
-              })() : ''}
-            </div>
+          <div class="flex justify-center gap-4 md:gap-16 lg:gap-24 pt-0 md:pt-4 flex-wrap">
+            ${directores.map(d => createDirectorWithAssociates(d, directoresAsociados, directoresLinkedTo)).join('')}
           </div>
         </div>
 
-        <!-- Línea vertical a especialistas -->
-        <div class="org-connector-vertical w-[2px] h-6 md:h-8 bg-[#1a5fb4] mx-auto mt-4"></div>
+        <!-- Línea vertical a líderes -->
+        <div class="org-connector-vertical w-[2px] h-6 md:h-8 bg-[#034B84] mx-auto mt-4"></div>
 
         <!-- Etiqueta "Lider del Proyecto" -->
         <div class="flex justify-center my-4">
-          <div class="bg-[#1a5fb4] text-white px-6 py-2 font-bold text-sm md:text-base tracking-wider uppercase">
+          <div class="bg-[#034B84] text-white px-6 py-2 font-bold text-sm md:text-base tracking-wider uppercase">
             Lider del Proyecto
           </div>
         </div>
 
-        <!-- Línea horizontal para especialistas -->
-        <div class="hidden md:block w-[85%] h-[2px] bg-[#1a5fb4] mx-auto mb-4"></div>
+        <!-- Línea horizontal para líderes -->
+        <div class="hidden md:block w-[95%] h-[2px] bg-[#034B84] mx-auto mb-4"></div>
 
-        <!-- Nivel 3: Especialistas -->
-        <div class="org-level-especialistas relative">
-          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
-            ${especialistas.map(e => {
-              const miembroData = getMiembroData(e.nombre);
-              const dataAttrs = miembroData
-                ? `data-name="${miembroData.nombre}" data-role="${miembroData.rol}" data-img="${miembroData.imagen}" data-bio="${miembroData.bio}"`
-                : '';
-              return `
-                <div class="flex flex-col items-center">
-                  <div class="hidden md:block w-[2px] h-4 bg-[#1a5fb4] -mt-4 mb-2"></div>
-                  ${createOrgCard(e, 'sm', dataAttrs)}
-                </div>
-              `;
-            }).join('')}
+        <!-- Nivel 3: Líderes del Proyecto con sus subordinados (row 4) -->
+        <div class="org-level-lideres relative">
+          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6">
+            ${lideres.map(l => createLiderWithSubordinados(l, subordinados)).join('')}
           </div>
         </div>
 
       </div>
     </div>
   `;
+
+  // Renderizar íconos de Lucide después de agregar el contenido
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
 }
 
 function renderAsociados() {
@@ -420,17 +684,20 @@ function renderAsociados() {
   if (!section) return;
 
   const data = apiData.asociados;
-  const miembrosHTML = data.miembros.map(m => {
-    const isSpecial = m.specialDesign === true;
-    const nameColor = isSpecial ? '#1e40af' : '#000000';
+  const equipo = apiData.equipo;
+
+  // Mostrar todos los miembros del equipo en el carrusel
+  const miembrosHTML = equipo.map(m => {
+    const isCeo = m.row === 1;
+    const nameColor = isCeo ? '#1e40af' : '#000000';
     return `
-    <div class="brands_item-block cursor-pointer" data-name="${m.nombre}" data-role="${m.rol}" data-img="${m.imagen}" data-bio="${m.bio}">
+    <div class="brands_item-block cursor-pointer" data-name="${m.name}" data-role="${m.position}" data-img="${m.image}" data-bio="${m.description}">
       <div class="brands_item-logo-wrap">
-        <img src="${m.imagen}" loading="lazy" alt="${m.nombre}" class="brands_item-logo">
+        ${m.image ? `<img src="${m.image}" loading="lazy" alt="${m.name}" class="brands_item-logo">` : `<div class="brands_item-logo bg-slate-100 flex items-center justify-center"><i data-lucide="user" class="w-16 h-16 text-slate-400"></i></div>`}
       </div>
       <div class="brands_item-texts">
-        <h4 class="brands_item-name" style="color: ${nameColor}">${m.nombre}</h4>
-        <p class="brands_item-desc">${m.rol}</p>
+        <h4 class="brands_item-name" style="color: ${nameColor}">${m.name}</h4>
+        <p class="brands_item-desc">${m.position}</p>
       </div>
     </div>
   `}).join('');
@@ -461,6 +728,11 @@ function renderAsociados() {
       </div>
     </div>
   `;
+
+  // Renderizar íconos de Lucide si hay placeholders
+  if (typeof lucide !== 'undefined') {
+    lucide.createIcons();
+  }
 }
 
 function renderProyectos() {
@@ -471,7 +743,7 @@ function renderProyectos() {
 
   const proyectosHTML = data.items.map(p => {
     const isTerminalPortuaria = p.nombre === "Terminal Portuaria Remota";
-    const nombreHTML = isTerminalPortuaria 
+    const nombreHTML = isTerminalPortuaria
       ? `<p class="font-semibold">${p.nombre}. <a href="#" onclick="openTerminalPortuariaModal(); return false;" class="text-primary hover:text-cyan-600 underline decoration-2 underline-offset-2 transition-colors ml-1">Ver galería →</a></p>`
       : `<p class="font-semibold">${p.nombre}.</p>`;
 
@@ -529,22 +801,127 @@ function renderPortafolio() {
 
   const data = apiData.portafolio;
 
-  const proyectosHTML = data.proyectos.map(p => `
-    <div class="${p.destacado ? 'md:col-span-2' : ''} bg-white rounded-3xl overflow-hidden shadow-lg">
-      <img src="${p.imagen}" class="w-full ${p.destacado ? 'h-48 md:h-72' : 'h-48 md:h-64'} object-cover" alt="${p.nombre}">
-      <div class="p-4">
-        <p class="font-semibold text-sm uppercase tracking-wide">${p.nombre}</p>
-        <p class="text-slate-600 text-sm">${p.descripcion}</p>
+  // Generate category filter buttons
+  const categoriasHTML = `
+    <button class="portafolio-filter active px-4 py-2 rounded-full text-sm font-medium transition-all bg-primary text-white" data-category="all">
+      Todos
+    </button>
+    ${data.clasificaciones.map(c => `
+      <button class="portafolio-filter px-4 py-2 rounded-full text-sm font-medium transition-all bg-white text-slate-700 border border-slate-200 hover:border-primary hover:bg-primary hover:text-white" data-category="${c.id}">
+        ${c.name}
+      </button>
+    `).join('')}
+  `;
+
+  // Generate project cards with carousels
+  const proyectosHTML = data.proyectos.map(p => {
+    const mediaItems = p.media || [{ type: 'image', url: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800' }];
+
+    return `
+      <div class="portafolio-card flex flex-col" data-category="${p.class_id}">
+        <h3 class="text-lg md:text-xl font-semibold text-slate-800 mb-1">${p.name}</h3>
+        <p class="text-xs uppercase tracking-widest text-primary font-medium mb-3">Galería de Proyecto</p>
+
+        <!-- Media Carousel -->
+        <div class="portafolio-carousel relative aspect-video bg-[#0A2540] rounded-xl overflow-hidden group" data-project-id="${p.id}">
+          <!-- Media Container -->
+          <div class="carousel-media-container w-full h-full">
+            ${mediaItems.map((m, idx) => `
+              <div class="carousel-slide ${idx === 0 ? 'active' : 'hidden'}" data-index="${idx}">
+                ${m.type === 'video' ? `
+                  <div class="relative w-full h-full">
+                    <video class="carousel-video w-full h-full object-cover" preload="metadata" playsinline>
+                      <source src="${m.url}" type="video/mp4">
+                    </video>
+                    <!-- Video Controls -->
+                    <div class="video-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <div class="flex items-center gap-2 text-white">
+                        <button class="video-rewind p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+                          </svg>
+                        </button>
+                        <button class="video-play-pause p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg class="play-icon h-4 w-4" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                          <svg class="pause-icon h-4 w-4 hidden" fill="white" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+                        </button>
+                        <button class="video-forward p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
+                          </svg>
+                        </button>
+                        <span class="video-time text-xs ml-1">0:00 / 0:00</span>
+                        <div class="flex-1"></div>
+                        <button class="video-mute p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg class="volume-icon h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                          </svg>
+                          <svg class="mute-icon h-4 w-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                          </svg>
+                        </button>
+                        <input type="range" class="video-volume w-16 h-1 bg-white/30 rounded-full appearance-none cursor-pointer" min="0" max="1" step="0.1" value="1">
+                        <button class="video-fullscreen p-1.5 hover:bg-white/20 rounded-full transition-colors">
+                          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                          </svg>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                ` : `
+                  <img src="${m.url}" alt="${p.name}" class="w-full h-full object-cover">
+                `}
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Navigation Arrows -->
+          ${mediaItems.length > 1 ? `
+            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 text-white hover:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 text-white hover:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          ` : ''}
+        </div>
+
+        <!-- Pagination Dots -->
+        ${mediaItems.length > 1 ? `
+          <div class="carousel-dots flex justify-center gap-2 mt-3">
+            ${mediaItems.map((_, idx) => `
+              <button class="carousel-dot w-2 h-2 rounded-full transition-colors ${idx === 0 ? 'bg-primary' : 'bg-slate-300 hover:bg-slate-400'}" data-index="${idx}"></button>
+            `).join('')}
+          </div>
+        ` : ''}
+
+        <!-- Description -->
+        <p class="text-sm text-slate-600 mt-4 leading-relaxed text-justify">${p.description}</p>
       </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 
   section.innerHTML = `
-    <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-4 md:space-y-8">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-6 md:space-y-8">
       <div class="text-center mb-6 md:mb-10 mt-4 md:mt-10">
-        <h2 class="text-2xl md:text-3xl font-heading font-semibold">${data.titulo}</h2>
+        <h2 class="text-2xl md:text-4xl font-heading font-semibold">${data.titulo}</h2>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 px-0 md:px-20">${proyectosHTML}</div>
+
+      <!-- Category Filters -->
+      <div class="flex flex-wrap justify-center gap-2 md:gap-3">
+        ${categoriasHTML}
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="portafolio-grid grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 px-0 md:px-8">
+        ${proyectosHTML}
+      </div>
     </div>
   `;
 }
@@ -968,7 +1345,7 @@ function initCarouselModal() {
         if (modal.classList.contains('hidden')) return;
         if (galeria[currentIndex].type !== 'video') return;
 
-        switch(e.key) {
+        switch (e.key) {
           case ' ':
             e.preventDefault();
             togglePlay();
@@ -1060,13 +1437,237 @@ function initCarouselModal() {
     }
   });
 
-  window.openTerminalPortuariaModal = function() {
+  window.openTerminalPortuariaModal = function () {
     currentIndex = 0;
     renderSlide(currentIndex);
     modal.classList.remove('hidden');
     modal.classList.add('flex');
     document.body.style.overflow = 'hidden';
   };
+}
+
+
+// ==========================================
+// PORTAFOLIO - Carousels e Filtros
+// ==========================================
+
+function initPortafolioCarousels() {
+  // Category filter functionality
+  const filterButtons = document.querySelectorAll('.portafolio-filter');
+  const projectCards = document.querySelectorAll('.portafolio-card');
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      // Update active state
+      filterButtons.forEach(b => {
+        b.classList.remove('active', 'bg-primary', 'text-white');
+        b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+      });
+      btn.classList.add('active', 'bg-primary', 'text-white');
+      btn.classList.remove('bg-white', 'text-slate-700', 'border', 'border-slate-200');
+
+      const category = btn.dataset.category;
+
+      // Filter projects
+      projectCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+          card.classList.remove('hidden');
+          card.style.animation = 'fadeIn 0.3s ease-out';
+        } else {
+          card.classList.add('hidden');
+        }
+      });
+    });
+  });
+
+  // Initialize carousels
+  const carousels = document.querySelectorAll('.portafolio-carousel');
+
+  carousels.forEach(carousel => {
+    const slides = carousel.querySelectorAll('.carousel-slide');
+    const prevBtn = carousel.querySelector('.carousel-prev');
+    const nextBtn = carousel.querySelector('.carousel-next');
+    const dotsContainer = carousel.closest('.portafolio-card').querySelector('.carousel-dots');
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
+
+    if (slides.length <= 1) return;
+
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      // Pause any playing videos
+      slides.forEach(slide => {
+        const video = slide.querySelector('video');
+        if (video) video.pause();
+      });
+
+      // Hide all slides
+      slides.forEach(slide => {
+        slide.classList.add('hidden');
+        slide.classList.remove('active');
+      });
+
+      // Show current slide
+      slides[index].classList.remove('hidden');
+      slides[index].classList.add('active');
+
+      // Update dots
+      dots.forEach((dot, i) => {
+        if (i === index) {
+          dot.classList.add('bg-primary');
+          dot.classList.remove('bg-slate-300');
+        } else {
+          dot.classList.remove('bg-primary');
+          dot.classList.add('bg-slate-300');
+        }
+      });
+
+      currentIndex = index;
+    }
+
+    function nextSlide() {
+      const next = (currentIndex + 1) % slides.length;
+      showSlide(next);
+    }
+
+    function prevSlide() {
+      const prev = (currentIndex - 1 + slides.length) % slides.length;
+      showSlide(prev);
+    }
+
+    // Button events
+    if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+    if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+
+    // Dot events
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => showSlide(index));
+    });
+
+    // Initialize video controls for this carousel
+    slides.forEach(slide => {
+      const video = slide.querySelector('.carousel-video');
+      if (!video) return;
+
+      const controls = slide.querySelector('.video-controls');
+      const playPauseBtn = slide.querySelector('.video-play-pause');
+      const playIcon = slide.querySelector('.play-icon');
+      const pauseIcon = slide.querySelector('.pause-icon');
+      const rewindBtn = slide.querySelector('.video-rewind');
+      const forwardBtn = slide.querySelector('.video-forward');
+      const muteBtn = slide.querySelector('.video-mute');
+      const volumeIcon = slide.querySelector('.volume-icon');
+      const muteIcon = slide.querySelector('.mute-icon');
+      const volumeSlider = slide.querySelector('.video-volume');
+      const fullscreenBtn = slide.querySelector('.video-fullscreen');
+      const timeDisplay = slide.querySelector('.video-time');
+
+      function formatTime(seconds) {
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return mins + ':' + secs.toString().padStart(2, '0');
+      }
+
+      function updatePlayPauseUI(isPlaying) {
+        if (isPlaying) {
+          playIcon.classList.add('hidden');
+          pauseIcon.classList.remove('hidden');
+        } else {
+          playIcon.classList.remove('hidden');
+          pauseIcon.classList.add('hidden');
+        }
+      }
+
+      // Play/Pause
+      playPauseBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+
+      video.addEventListener('play', () => updatePlayPauseUI(true));
+      video.addEventListener('pause', () => updatePlayPauseUI(false));
+      video.addEventListener('ended', () => updatePlayPauseUI(false));
+
+      // Time update
+      video.addEventListener('loadedmetadata', () => {
+        if (timeDisplay) {
+          timeDisplay.textContent = `0:00 / ${formatTime(video.duration)}`;
+        }
+      });
+
+      video.addEventListener('timeupdate', () => {
+        if (timeDisplay) {
+          timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+        }
+      });
+
+      // Rewind/Forward
+      rewindBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.currentTime = Math.max(0, video.currentTime - 10);
+      });
+
+      forwardBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.currentTime = Math.min(video.duration, video.currentTime + 10);
+      });
+
+      // Mute
+      muteBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+        if (video.muted) {
+          volumeIcon.classList.add('hidden');
+          muteIcon.classList.remove('hidden');
+          volumeSlider.value = 0;
+        } else {
+          volumeIcon.classList.remove('hidden');
+          muteIcon.classList.add('hidden');
+          volumeSlider.value = video.volume;
+        }
+      });
+
+      // Volume slider
+      volumeSlider?.addEventListener('input', (e) => {
+        e.stopPropagation();
+        video.volume = e.target.value;
+        video.muted = e.target.value == 0;
+        if (video.muted) {
+          volumeIcon.classList.add('hidden');
+          muteIcon.classList.remove('hidden');
+        } else {
+          volumeIcon.classList.remove('hidden');
+          muteIcon.classList.add('hidden');
+        }
+      });
+
+      // Fullscreen
+      fullscreenBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (!document.fullscreenElement) {
+          const container = slide.querySelector('.relative');
+          if (container?.requestFullscreen) {
+            container.requestFullscreen();
+          }
+        } else {
+          document.exitFullscreen();
+        }
+      });
+
+      // Click on video to toggle play
+      video.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+    });
+  });
 }
 
 
@@ -1090,6 +1691,7 @@ function initApp() {
   initModal();
   initCarouselModal();
   initVideoPlayers();
+  initPortafolioCarousels();
   initBackToTop();
   initMobileMenu();
 
@@ -1119,7 +1721,7 @@ function initMobileMenu() {
 
   menuBtn.addEventListener('click', openMenu);
   menuOverlay?.addEventListener('click', closeMenu);
-  
+
   menuLinks.forEach(link => {
     link.addEventListener('click', closeMenu);
   });
@@ -1172,92 +1774,92 @@ function initCarouselNavigation() {
   const prevBtn = document.querySelector('.brands_nav-prev');
   const nextBtn = document.querySelector('.brands_nav-next');
   const container = document.querySelector('.brands_carousel-container');
-  
+
   if (!wrapper || !list || !prevBtn || !nextBtn) return;
-  
+
   const itemWidth = 256; // 15rem + gap
   const animationDuration = 30; // segundos
   let isManualMode = false;
   let currentPosition = 0;
-  
+
   function getCurrentAnimationProgress() {
     const computedStyle = window.getComputedStyle(list);
     const matrix = new DOMMatrix(computedStyle.transform);
     return matrix.m41 || 0;
   }
-  
+
   function enterManualMode() {
     if (isManualMode) return;
     isManualMode = true;
-    
+
     // Capturar posición actual de la animación
     currentPosition = getCurrentAnimationProgress();
-    
+
     // Detener animación y fijar posición
     list.style.animation = 'none';
     list.style.transform = `translateX(${currentPosition}px)`;
   }
-  
+
   function resumeAnimation() {
     if (!isManualMode) return;
     isManualMode = false;
-    
+
     // Calcular delay para continuar desde la posición actual
     const totalWidth = list.scrollWidth / 2;
     const progress = Math.abs(currentPosition) / totalWidth;
     const delay = -(progress * animationDuration);
-    
+
     // Restaurar animación desde donde quedó
     list.style.transition = '';
     list.style.transform = '';
     list.style.animation = `scroll-left ${animationDuration}s linear infinite`;
     list.style.animationDelay = `${delay}s`;
   }
-  
+
   function scrollCarousel(direction) {
     enterManualMode();
-    
+
     // Calcular nueva posición
     const scrollAmount = direction === 'next' ? -itemWidth : itemWidth;
     const totalWidth = list.scrollWidth / 2;
     let newPosition = currentPosition + scrollAmount;
-    
+
     // Normalizar posición para el loop
     if (newPosition < -totalWidth) newPosition += totalWidth;
     if (newPosition > 0) newPosition -= totalWidth;
-    
+
     // Animar al nuevo punto
     list.style.transition = 'transform 0.4s ease';
     list.style.transform = `translateX(${newPosition}px)`;
-    
+
     // Actualizar posición actual
     currentPosition = newPosition;
-    
+
     // Quitar transición después de completar
     setTimeout(() => {
       list.style.transition = '';
     }, 400);
   }
-  
+
   prevBtn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     scrollCarousel('prev');
   });
-  
+
   nextBtn.addEventListener('click', (e) => {
     e.preventDefault();
     e.stopPropagation();
     scrollCarousel('next');
   });
-  
+
   // Reanudar animación al hacer clic fuera del carrusel
   document.addEventListener('click', (e) => {
     if (!container.contains(e.target)) {
       resumeAnimation();
     }
   });
-  
+
   // Pausar al pasar mouse sobre las cards
   const cards = wrapper.querySelectorAll('.brands_item-block');
   cards.forEach(card => {
