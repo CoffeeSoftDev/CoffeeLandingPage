@@ -13,7 +13,7 @@ const apiData = {
   quienesSomos: {
     titulo: `¿A qué nos dedicamos?`,
     descripcion: `Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo y bienestar de Chiapas.`,
-    imagen: `https://huubie.com.mx/video/barquito.png`,
+    imagen: `./assets/img/agrinol-1.jpeg`,
     contenido: `
 
       En Agrinol impulsamos el desarrollo sostenible de Chiapas mediante la implementación de proyectos estratégicos en los sectores agrícola, agroindustrial, infraestructura, comunicaciones, innovación y tecnología.
@@ -288,8 +288,9 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
         description: "[CASO DE ÉXITO] Construcción y equipamiento integral de instalaciones especializadas para el control biológico de plagas.",
         class_id: 1,
         media: [
-          { type: "image", url: "https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=800" },
-          { type: "image", url: "https://images.unsplash.com/photo-1530836369250-ef72a3f5cda8?w=800" }
+          { type: "image", url: "./assets/img/sala-empaque/sala-empaque-01.jpeg" },
+          { type: "image", url: "./assets/img/sala-empaque/sala-empaque-02.jpeg" },
+          { type: "image", url: "./assets/img/sala-empaque/sala-empaque-03.jpeg" }
         ]
       },
       {
@@ -298,8 +299,10 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
         description: "[CASO DE ÉXITO] Gestión histórica y culminación exitosa de la rehabilitación del tramo Ixtepec, Oaxaca a Ciudad Hidalgo, Chiapas, incluyendo el ramal estratégico hacia Puerto Chiapas.",
         class_id: 2,
         media: [
-          { type: "image", url: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800" },
-          { type: "image", url: "https://images.unsplash.com/photo-1527684651001-731c474bbb5a?w=800" }
+          { type: "image", url: "./assets/img/linea-k/linea-k-1.jpg" },
+          { type: "image", url: "./assets/img/linea-k/linea-k-2.jpg" },
+          { type: "image", url: "./assets/img/linea-k/linea-k-3.jpg" },
+          { type: "image", url: "./assets/img/linea-k/linea-k-4.jpg" }
         ]
       },
       {
@@ -318,7 +321,7 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
         description: "Proyecto de inversión y conectividad vinculado al corredor interoceánico del Istmo de Tehuantepec.",
         class_id: 2,
         media: [
-          { type: "video", url: "./assets/img/project-terminal-portuaria/proyecto1.mp4" },
+          { type: "video", url: "https://www.youtube.com/embed/JKmrL99Zaic" },
           { type: "image", url: "./assets/img/project-terminal-portuaria/EV2.jpg" },
           { type: "image", url: "./assets/img/project-terminal-portuaria/EV4.jpg" },
           { type: "image", url: "./assets/img/project-terminal-portuaria/EV7.jpeg" }
@@ -603,35 +606,38 @@ function renderOrganigrama() {
       <div class="relative bg-gradient-to-b from-white to-slate-50 rounded-2xl p-6 md:p-10 shadow-xl border border-slate-200 overflow-hidden">
 
         <!-- Nivel 1: CEO con asociado lateral -->
-        <div class="org-level-ceo flex justify-center items-center mb-4">
+        <div class="org-level-ceo relative flex justify-center items-center mb-4">
           ${ceo ? `
-            <div class="flex items-center gap-4 md:gap-8">
-              ${ceoAsociadoIzq ? `
-                <div class="flex items-center">
-                  ${createOrgCard(ceoAsociadoIzq, 'xs')}
-                  <div class="hidden md:block w-8 md:w-12 h-[2px] bg-[#034B84]"></div>
-                </div>
-              ` : ''}
-              ${ceoLinkedIzq ? `
-                <div class="flex items-start">
-                  ${createOrgCard(ceoLinkedIzq, 'xs')}
-                  <div class="hidden md:flex items-center w-8 md:w-12 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
-                </div>
-              ` : ''}
+            <!-- CEO centrado absolutamente -->
+            <div class="flex justify-center w-full">
               ${createOrgCard(ceo, 'lg')}
-              ${ceoAsociadoDer ? `
-                <div class="flex items-center">
-                  <div class="hidden md:block w-8 md:w-12 h-[2px] bg-[#034B84]"></div>
-                  ${createOrgCard(ceoAsociadoDer, 'xs')}
-                </div>
-              ` : ''}
-              ${ceoLinkedDer ? `
-                <div class="flex items-start">
-                  <div class="hidden md:flex items-center w-8 md:w-12 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
-                  ${createOrgCard(ceoLinkedDer, 'xs')}
-                </div>
-              ` : ''}
             </div>
+            
+            <!-- Asociados laterales con posicionamiento absoluto -->
+            ${ceoAsociadoIzq ? `
+              <div class="absolute left-[5%] md:left-[25%] top-1/2 -translate-y-1/2 flex items-center gap-2">
+                ${createOrgCard(ceoAsociadoIzq, 'xs')}
+                <div class="hidden md:block w-5 h-[2px] bg-[#034B84]"></div>
+              </div>
+            ` : ''}
+            ${ceoLinkedIzq ? `
+              <div class="absolute left-[5%] md:left-[25%] top-1/2 -translate-y-1/2 flex items-start gap-2">
+                ${createOrgCard(ceoLinkedIzq, 'xs')}
+                <div class="hidden md:flex items-center w-5 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+              </div>
+            ` : ''}
+            ${ceoAsociadoDer ? `
+              <div class="absolute right-[5%] md:right-[25%] top-1/2 -translate-y-1/2 flex items-center gap-2">
+                <div class="hidden md:block w-5 h-[2px] bg-[#034B84]"></div>
+                ${createOrgCard(ceoAsociadoDer, 'xs')}
+              </div>
+            ` : ''}
+            ${ceoLinkedDer ? `
+              <div class="absolute right-[5%] md:right-[25%] top-1/2 -translate-y-1/2 flex items-start gap-2">
+                <div class="hidden md:flex items-center w-5 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+                ${createOrgCard(ceoLinkedDer, 'xs')}
+              </div>
+            ` : ''}
           ` : ''}
         </div>
 
@@ -759,26 +765,91 @@ function renderProyectos() {
 
   const videosHTML = data.videos.map((v, i) => {
     const isLarge = v.size === 'large';
+    const videoId = `proyecto-video-${i}`;
+
     return `
-      <div class="relative rounded-3xl shadow-lg overflow-hidden ${isLarge ? 'col-span-1 md:col-span-2 h-48 md:h-64' : 'col-span-1 h-48 md:h-32'} video-container">
-        <video class="w-full h-full object-cover" poster="${v.poster}" preload="metadata">
+      <div class="relative rounded-3xl shadow-lg overflow-hidden ${isLarge ? 'col-span-1 md:col-span-2 h-48 md:h-64' : 'col-span-1 h-48 md:h-32'} proyecto-video-container group" data-video-type="local">
+        <video id="${videoId}" class="proyecto-video w-full h-full object-cover" poster="${v.poster}" preload="metadata" playsinline>
           <source src="${v.src}" type="video/mp4">
         </video>
-        <div class="control-overlay absolute inset-0 flex items-center justify-center transition-opacity duration-300">
-          <button class="play-btn absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-            <div class="w-14 h-14 md:${isLarge ? 'w-16 md:h-16' : 'w-10 md:h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-1 md:${isLarge ? 'h-8 md:w-8 ml-1' : 'h-5 md:w-5 ml-0.5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
+
+        <!-- Botón expandir imagen (esquina superior derecha) -->
+        <button class="proyecto-expand-poster absolute top-3 right-3 z-20 bg-black/50 hover:bg-black/70 rounded-full p-2 transition-all opacity-0 group-hover:opacity-100" title="Ver imagen completa" data-poster="${v.poster}">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7" />
+          </svg>
+        </button>
+
+        <!-- Overlay de play central (visible cuando está pausado) -->
+        <div class="proyecto-play-overlay absolute inset-0 flex items-center justify-center bg-black/30 transition-opacity cursor-pointer">
+          <div class="w-14 h-14 ${isLarge ? 'md:w-16 md:h-16' : 'md:w-12 md:h-12'} bg-white/90 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 ml-1 ${isLarge ? 'md:h-8 md:w-8' : 'md:h-6 md:w-6'} text-primary" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M8 5v14l11-7z"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Barra de controles inferior -->
+        <div class="proyecto-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-2 ${isLarge ? 'md:p-3' : 'md:p-2'} opacity-0 group-hover:opacity-100 transition-opacity">
+
+          <!-- Barra de progreso -->
+          <div class="proyecto-progress-container relative w-full h-1 bg-white/30 rounded-full mb-2 cursor-pointer group/progress">
+            <div class="proyecto-progress-bar absolute top-0 left-0 h-full bg-white rounded-full transition-all" style="width: 0%"></div>
+            <div class="proyecto-progress-handle absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg opacity-0 group-hover/progress:opacity-100 transition-all" style="left: 0%"></div>
+          </div>
+
+          <!-- Controles -->
+          <div class="flex items-center justify-between gap-1 ${isLarge ? 'md:gap-2' : ''}">
+            <!-- Grupo izquierdo -->
+            <div class="flex items-center gap-1">
+              <!-- Retroceder -->
+              <button class="proyecto-rewind bg-white/10 hover:bg-white/20 rounded-full p-1 ${isLarge ? 'md:p-1.5' : ''} transition-all" title="Retroceder 10s">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ${isLarge ? 'md:h-4 md:w-4' : ''} text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0019 16V8a1 1 0 00-1.6-.8l-5.333 4zM4.066 11.2a1 1 0 000 1.6l5.334 4A1 1 0 0011 16V8a1 1 0 00-1.6-.8l-5.334 4z" />
+                </svg>
+              </button>
+
+              <!-- Play/Pause -->
+              <button class="proyecto-play-pause bg-white/10 hover:bg-white/20 rounded-full p-1.5 ${isLarge ? 'md:p-2' : ''} transition-all">
+                <svg class="proyecto-play-icon h-3 w-3 ${isLarge ? 'md:h-4 md:w-4' : ''}" fill="white" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                <svg class="proyecto-pause-icon h-3 w-3 ${isLarge ? 'md:h-4 md:w-4' : ''} hidden" fill="white" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+              </button>
+
+              <!-- Adelantar -->
+              <button class="proyecto-forward bg-white/10 hover:bg-white/20 rounded-full p-1 ${isLarge ? 'md:p-1.5' : ''} transition-all" title="Adelantar 10s">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 ${isLarge ? 'md:h-4 md:w-4' : ''} text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4zM19.933 12.8a1 1 0 000-1.6l-5.333-4A1 1 0 0013 8v8a1 1 0 001.6.8l5.333-4z" />
+                </svg>
+              </button>
+
+              <!-- Tiempo -->
+              <span class="proyecto-time text-white text-xs ${isLarge ? '' : 'hidden md:inline'} ml-1 tabular-nums">0:00 / 0:00</span>
             </div>
-          </button>
-          <button class="pause-btn hidden absolute inset-0 flex items-center justify-center bg-black/30 hover:bg-black/40 transition-colors">
-            <div class="w-14 h-14 md:${isLarge ? 'w-16 md:h-16' : 'w-10 md:h-10'} bg-white/90 rounded-full flex items-center justify-center shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 md:${isLarge ? 'h-8 md:w-8' : 'h-5 md:w-5'} text-primary" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-              </svg>
+
+            <!-- Grupo derecho -->
+            <div class="flex items-center gap-1">
+              <!-- Mute -->
+              <button class="proyecto-mute bg-white/10 hover:bg-white/20 rounded-full p-1 ${isLarge ? 'md:p-1.5' : ''} transition-all">
+                <svg class="proyecto-volume-icon h-3 w-3 ${isLarge ? 'md:h-4 md:w-4' : ''}" fill="none" stroke="white" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+                <svg class="proyecto-mute-icon h-3 w-3 ${isLarge ? 'md:h-4 md:w-4' : ''} hidden" fill="none" stroke="white" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                </svg>
+              </button>
+
+              <!-- Volumen slider (solo en large) -->
+              ${isLarge ? `<input type="range" class="proyecto-volume-slider w-12 md:w-16 h-1 bg-white/30 rounded-full appearance-none cursor-pointer [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:w-2 [&::-webkit-slider-thumb]:h-2 [&::-webkit-slider-thumb]:bg-white [&::-webkit-slider-thumb]:rounded-full" min="0" max="1" step="0.1" value="1">` : ''}
+
+              <!-- Fullscreen -->
+              <button class="proyecto-fullscreen bg-white/10 hover:bg-white/20 rounded-full p-1 ${isLarge ? 'md:p-1.5' : ''} transition-all" title="Pantalla completa">
+                <svg class="proyecto-expand-icon h-3 w-3 ${isLarge ? 'md:h-4 md:w-4' : ''}" fill="none" stroke="white" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                </svg>
+              </button>
             </div>
-          </button>
+          </div>
         </div>
       </div>
     `;
@@ -829,12 +900,32 @@ function renderPortafolio() {
             ${mediaItems.map((m, idx) => `
               <div class="carousel-slide ${idx === 0 ? 'active' : 'hidden'}" data-index="${idx}">
                 ${m.type === 'video' ? `
-                  <div class="relative w-full h-full">
-                    <video class="carousel-video w-full h-full object-cover" preload="metadata" playsinline>
-                      <source src="${m.url}" type="video/mp4">
-                    </video>
+                  <div class="relative w-full h-full portafolio-video-wrapper" data-video-url="${m.url}" data-is-youtube="${m.url.includes('youtube.com') || m.url.includes('youtu.be') ? 'true' : 'false'}">
+                    ${m.url.includes('youtube.com') || m.url.includes('youtu.be') ? `
+                      <div class="portafolio-youtube-container w-full h-full relative">
+                        <img src="https://img.youtube.com/vi/${m.url.includes('/embed/') ? m.url.split('/embed/')[1]?.split('?')[0] : m.url.includes('v=') ? m.url.split('v=')[1]?.split('&')[0] : m.url.split('youtu.be/')[1]?.split('?')[0]}/maxresdefault.jpg" class="portafolio-youtube-poster w-full h-full object-cover" alt="Video thumbnail">
+                        <div class="portafolio-youtube-player hidden absolute inset-0" data-youtube-id="${m.url.includes('/embed/') ? m.url.split('/embed/')[1]?.split('?')[0] : m.url.includes('v=') ? m.url.split('v=')[1]?.split('&')[0] : m.url.split('youtu.be/')[1]?.split('?')[0]}"></div>
+                        <!-- Play overlay para YouTube -->
+                        <div class="portafolio-play-overlay absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer">
+                          <div class="w-16 h-16 bg-white/90 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 ml-1 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                              <path d="M8 5v14l11-7z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </div>
+                    ` : `
+                      <video class="carousel-video w-full h-full object-cover" preload="metadata" playsinline>
+                        <source src="${m.url}" type="video/mp4">
+                      </video>
+                    `}
                     <!-- Video Controls -->
                     <div class="video-controls absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-3 opacity-0 group-hover:opacity-100 transition-opacity">
+                      <!-- Barra de progreso -->
+                      <div class="video-progress-container relative w-full h-1.5 bg-white/30 rounded-full mb-3 cursor-pointer group/progress">
+                        <div class="video-progress-bar absolute top-0 left-0 h-full bg-white rounded-full transition-all" style="width: 0%"></div>
+                        <div class="video-progress-handle absolute top-1/2 -translate-y-1/2 w-3 h-3 bg-white rounded-full shadow-lg opacity-0 group-hover/progress:opacity-100 transition-all" style="left: 0%"></div>
+                      </div>
                       <div class="flex items-center gap-2 text-white">
                         <button class="video-rewind p-1.5 hover:bg-white/20 rounded-full transition-colors">
                           <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1458,7 +1549,6 @@ function initPortafolioCarousels() {
 
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
-      // Update active state
       filterButtons.forEach(b => {
         b.classList.remove('active', 'bg-primary', 'text-white');
         b.classList.add('bg-white', 'text-slate-700', 'border', 'border-slate-200');
@@ -1468,7 +1558,6 @@ function initPortafolioCarousels() {
 
       const category = btn.dataset.category;
 
-      // Filter projects
       projectCards.forEach(card => {
         if (category === 'all' || card.dataset.category === category) {
           card.classList.remove('hidden');
@@ -1480,7 +1569,6 @@ function initPortafolioCarousels() {
     });
   });
 
-  // Initialize carousels
   const carousels = document.querySelectorAll('.portafolio-carousel');
 
   carousels.forEach(carousel => {
@@ -1495,23 +1583,19 @@ function initPortafolioCarousels() {
     let currentIndex = 0;
 
     function showSlide(index) {
-      // Pause any playing videos
       slides.forEach(slide => {
         const video = slide.querySelector('video');
         if (video) video.pause();
       });
 
-      // Hide all slides
       slides.forEach(slide => {
         slide.classList.add('hidden');
         slide.classList.remove('active');
       });
 
-      // Show current slide
       slides[index].classList.remove('hidden');
       slides[index].classList.add('active');
 
-      // Update dots
       dots.forEach((dot, i) => {
         if (i === index) {
           dot.classList.add('bg-primary');
@@ -1535,20 +1619,18 @@ function initPortafolioCarousels() {
       showSlide(prev);
     }
 
-    // Button events
     if (prevBtn) prevBtn.addEventListener('click', prevSlide);
     if (nextBtn) nextBtn.addEventListener('click', nextSlide);
 
-    // Dot events
     dots.forEach((dot, index) => {
       dot.addEventListener('click', () => showSlide(index));
     });
 
-    // Initialize video controls for this carousel
     slides.forEach(slide => {
-      const video = slide.querySelector('.carousel-video');
-      if (!video) return;
+      const videoWrapper = slide.querySelector('.portafolio-video-wrapper');
+      if (!videoWrapper) return;
 
+      const isYouTube = videoWrapper.dataset.isYoutube === 'true';
       const controls = slide.querySelector('.video-controls');
       const playPauseBtn = slide.querySelector('.video-play-pause');
       const playIcon = slide.querySelector('.play-icon');
@@ -1561,6 +1643,9 @@ function initPortafolioCarousels() {
       const volumeSlider = slide.querySelector('.video-volume');
       const fullscreenBtn = slide.querySelector('.video-fullscreen');
       const timeDisplay = slide.querySelector('.video-time');
+      const progressContainer = slide.querySelector('.video-progress-container');
+      const progressBar = slide.querySelector('.video-progress-bar');
+      const progressHandle = slide.querySelector('.video-progress-handle');
 
       function formatTime(seconds) {
         const mins = Math.floor(seconds / 60);
@@ -1578,94 +1663,259 @@ function initPortafolioCarousels() {
         }
       }
 
-      // Play/Pause
-      playPauseBtn?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (video.paused) {
-          video.play();
-        } else {
-          video.pause();
+      if (isYouTube) {
+        const youtubeContainer = videoWrapper.querySelector('.portafolio-youtube-container');
+        const poster = youtubeContainer.querySelector('.portafolio-youtube-poster');
+        const playerContainer = youtubeContainer.querySelector('.portafolio-youtube-player');
+        const playOverlay = youtubeContainer.querySelector('.portafolio-play-overlay');
+        const youtubeId = playerContainer.dataset.youtubeId;
+        let youtubePlayer = null;
+        let playerInitialized = false;
+
+        function initYouTubePlayer() {
+          if (playerInitialized || typeof YT === 'undefined' || !YT.Player) return;
+          playerInitialized = true;
+
+          playerContainer.classList.remove('hidden');
+          playerContainer.id = `yt-player-${Date.now()}`;
+
+          youtubePlayer = new YT.Player(playerContainer.id, {
+            videoId: youtubeId,
+            playerVars: { controls: 0, modestbranding: 1, rel: 0, showinfo: 0, playsinline: 1, autoplay: 1, iv_load_policy: 3, disablekb: 1, fs: 0, origin: window.location.origin },
+            events: {
+              onReady: () => {
+                poster.classList.add('hidden');
+                playOverlay.classList.add('hidden');
+                youtubePlayer.playVideo();
+
+                playPauseBtn?.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  if (youtubePlayer.getPlayerState() === 1) {
+                    youtubePlayer.pauseVideo();
+                  } else {
+                    youtubePlayer.playVideo();
+                  }
+                });
+
+                rewindBtn?.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  youtubePlayer.seekTo(Math.max(0, youtubePlayer.getCurrentTime() - 10), true);
+                });
+
+                forwardBtn?.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  youtubePlayer.seekTo(Math.min(youtubePlayer.getDuration(), youtubePlayer.getCurrentTime() + 10), true);
+                });
+
+                muteBtn?.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  if (youtubePlayer.isMuted()) {
+                    youtubePlayer.unMute();
+                    volumeIcon.classList.remove('hidden');
+                    muteIcon.classList.add('hidden');
+                    if (volumeSlider) volumeSlider.value = youtubePlayer.getVolume() / 100;
+                  } else {
+                    youtubePlayer.mute();
+                    volumeIcon.classList.add('hidden');
+                    muteIcon.classList.remove('hidden');
+                    if (volumeSlider) volumeSlider.value = 0;
+                  }
+                });
+
+                volumeSlider?.addEventListener('input', (e) => {
+                  e.stopPropagation();
+                  const vol = e.target.value * 100;
+                  youtubePlayer.setVolume(vol);
+                  if (vol === 0) {
+                    youtubePlayer.mute();
+                    volumeIcon.classList.add('hidden');
+                    muteIcon.classList.remove('hidden');
+                  } else {
+                    youtubePlayer.unMute();
+                    volumeIcon.classList.remove('hidden');
+                    muteIcon.classList.add('hidden');
+                  }
+                });
+
+                fullscreenBtn?.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  if (videoWrapper.requestFullscreen) videoWrapper.requestFullscreen();
+                  else if (videoWrapper.webkitRequestFullscreen) videoWrapper.webkitRequestFullscreen();
+                });
+
+                // Barra de progreso - click para seek
+                progressContainer?.addEventListener('click', (e) => {
+                  e.stopPropagation();
+                  const rect = progressContainer.getBoundingClientRect();
+                  const percent = (e.clientX - rect.left) / rect.width;
+                  const duration = youtubePlayer.getDuration();
+                  if (duration) {
+                    youtubePlayer.seekTo(percent * duration, true);
+                  }
+                });
+
+                // Actualizar progreso y tiempo
+                setInterval(() => {
+                  if (youtubePlayer && youtubePlayer.getCurrentTime && youtubePlayer.getDuration) {
+                    const current = youtubePlayer.getCurrentTime();
+                    const duration = youtubePlayer.getDuration();
+                    if (duration) {
+                      const percent = (current / duration) * 100;
+                      if (progressBar) progressBar.style.width = percent + '%';
+                      if (progressHandle) progressHandle.style.left = percent + '%';
+                      if (timeDisplay) timeDisplay.textContent = `${formatTime(current)} / ${formatTime(duration)}`;
+                    }
+                  }
+                }, 500);
+              },
+              onStateChange: (event) => {
+                updatePlayPauseUI(event.data === 1);
+                if (event.data === 1) {
+                  playOverlay.classList.add('hidden');
+                  poster.classList.add('hidden');
+                }
+                // Cuando el video termina (state 0), mostrar poster y ocultar player
+                if (event.data === 0) {
+                  poster.classList.remove('hidden');
+                  playOverlay.classList.remove('hidden');
+                  playerContainer.classList.add('hidden');
+                  playerInitialized = false;
+                  youtubePlayer.destroy();
+                  youtubePlayer = null;
+                }
+              }
+            }
+          });
         }
-      });
 
-      video.addEventListener('play', () => updatePlayPauseUI(true));
-      video.addEventListener('pause', () => updatePlayPauseUI(false));
-      video.addEventListener('ended', () => updatePlayPauseUI(false));
-
-      // Time update
-      video.addEventListener('loadedmetadata', () => {
-        if (timeDisplay) {
-          timeDisplay.textContent = `0:00 / ${formatTime(video.duration)}`;
-        }
-      });
-
-      video.addEventListener('timeupdate', () => {
-        if (timeDisplay) {
-          timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
-        }
-      });
-
-      // Rewind/Forward
-      rewindBtn?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        video.currentTime = Math.max(0, video.currentTime - 10);
-      });
-
-      forwardBtn?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        video.currentTime = Math.min(video.duration, video.currentTime + 10);
-      });
-
-      // Mute
-      muteBtn?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        video.muted = !video.muted;
-        if (video.muted) {
-          volumeIcon.classList.add('hidden');
-          muteIcon.classList.remove('hidden');
-          volumeSlider.value = 0;
-        } else {
-          volumeIcon.classList.remove('hidden');
-          muteIcon.classList.add('hidden');
-          volumeSlider.value = video.volume;
-        }
-      });
-
-      // Volume slider
-      volumeSlider?.addEventListener('input', (e) => {
-        e.stopPropagation();
-        video.volume = e.target.value;
-        video.muted = e.target.value == 0;
-        if (video.muted) {
-          volumeIcon.classList.add('hidden');
-          muteIcon.classList.remove('hidden');
-        } else {
-          volumeIcon.classList.remove('hidden');
-          muteIcon.classList.add('hidden');
-        }
-      });
-
-      // Fullscreen
-      fullscreenBtn?.addEventListener('click', (e) => {
-        e.stopPropagation();
-        if (!document.fullscreenElement) {
-          const container = slide.querySelector('.relative');
-          if (container?.requestFullscreen) {
-            container.requestFullscreen();
+        playOverlay?.addEventListener('click', () => {
+          if (!playerInitialized) {
+            initYouTubePlayer();
+          } else if (youtubePlayer) {
+            youtubePlayer.playVideo();
           }
-        } else {
-          document.exitFullscreen();
-        }
-      });
+        });
 
-      // Click on video to toggle play
-      video.addEventListener('click', () => {
-        if (video.paused) {
-          video.play();
-        } else {
-          video.pause();
+        poster?.addEventListener('click', () => {
+          if (!playerInitialized) {
+            initYouTubePlayer();
+          }
+        });
+
+      } else {
+        const video = videoWrapper.querySelector('video');
+        if (!video) return;
+
+        playPauseBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+
+        video.addEventListener('play', () => updatePlayPauseUI(true));
+        video.addEventListener('pause', () => updatePlayPauseUI(false));
+        video.addEventListener('ended', () => updatePlayPauseUI(false));
+
+        video.addEventListener('loadedmetadata', () => {
+          if (timeDisplay) {
+            timeDisplay.textContent = `0:00 / ${formatTime(video.duration)}`;
+          }
+        });
+
+        video.addEventListener('timeupdate', () => {
+          if (timeDisplay) {
+            timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+          }
+          // Actualizar barra de progreso
+          if (progressBar && progressHandle && video.duration) {
+            const percent = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = percent + '%';
+            progressHandle.style.left = percent + '%';
+          }
+        });
+
+        rewindBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          video.currentTime = Math.max(0, video.currentTime - 10);
+        });
+
+        forwardBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          video.currentTime = Math.min(video.duration, video.currentTime + 10);
+        });
+
+        muteBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          video.muted = !video.muted;
+          if (video.muted) {
+            volumeIcon.classList.add('hidden');
+            muteIcon.classList.remove('hidden');
+            if (volumeSlider) volumeSlider.value = 0;
+          } else {
+            volumeIcon.classList.remove('hidden');
+            muteIcon.classList.add('hidden');
+            if (volumeSlider) volumeSlider.value = video.volume;
+          }
+        });
+
+        volumeSlider?.addEventListener('input', (e) => {
+          e.stopPropagation();
+          video.volume = e.target.value;
+          video.muted = e.target.value == 0;
+          if (video.muted) {
+            volumeIcon.classList.add('hidden');
+            muteIcon.classList.remove('hidden');
+          } else {
+            volumeIcon.classList.remove('hidden');
+            muteIcon.classList.add('hidden');
+          }
+        });
+
+        fullscreenBtn?.addEventListener('click', (e) => {
+          e.stopPropagation();
+          if (!document.fullscreenElement) {
+            if (videoWrapper.requestFullscreen) {
+              videoWrapper.requestFullscreen();
+            }
+          } else {
+            document.exitFullscreen();
+          }
+        });
+
+        video.addEventListener('click', () => {
+          if (video.paused) {
+            video.play();
+          } else {
+            video.pause();
+          }
+        });
+
+        // Barra de progreso - click para seek
+        let isDragging = false;
+        
+        function seekToPosition(e) {
+          const rect = progressContainer.getBoundingClientRect();
+          const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+          video.currentTime = percent * video.duration;
         }
-      });
+
+        progressContainer?.addEventListener('mousedown', (e) => {
+          e.stopPropagation();
+          isDragging = true;
+          seekToPosition(e);
+        });
+
+        document.addEventListener('mousemove', (e) => {
+          if (isDragging) seekToPosition(e);
+        });
+
+        document.addEventListener('mouseup', () => {
+          isDragging = false;
+        });
+      }
     });
   });
 }
@@ -1690,7 +1940,7 @@ function initApp() {
   initCarouselNavigation();
   initModal();
   initCarouselModal();
-  initVideoPlayers();
+  initProyectosVideoControls();
   initPortafolioCarousels();
   initBackToTop();
   initMobileMenu();
@@ -1967,71 +2217,209 @@ function initModal() {
   });
 }
 
-function initVideoPlayers() {
-  document.querySelectorAll('.video-container').forEach(container => {
-    const video = container.querySelector('video');
-    const overlay = container.querySelector('.control-overlay');
-    const playBtn = container.querySelector('.play-btn');
-    const pauseBtn = container.querySelector('.pause-btn');
-    if (!video || !playBtn || !pauseBtn || !overlay) return;
+function initProyectosVideoControls() {
+  document.querySelectorAll('.proyecto-video-container').forEach(container => {
+    const videoElement = container.querySelector('.proyecto-video');
+    const playOverlay = container.querySelector('.proyecto-play-overlay');
+    const progressContainer = container.querySelector('.proyecto-progress-container');
+    const progressBar = container.querySelector('.proyecto-progress-bar');
+    const progressHandle = container.querySelector('.proyecto-progress-handle');
+    const rewindBtn = container.querySelector('.proyecto-rewind');
+    const playPauseBtn = container.querySelector('.proyecto-play-pause');
+    const forwardBtn = container.querySelector('.proyecto-forward');
+    const playIcon = container.querySelector('.proyecto-play-icon');
+    const pauseIcon = container.querySelector('.proyecto-pause-icon');
+    const timeDisplay = container.querySelector('.proyecto-time');
+    const muteBtn = container.querySelector('.proyecto-mute');
+    const volumeIcon = container.querySelector('.proyecto-volume-icon');
+    const muteIcon = container.querySelector('.proyecto-mute-icon');
+    const volumeSlider = container.querySelector('.proyecto-volume-slider');
+    const fullscreenBtn = container.querySelector('.proyecto-fullscreen');
+    const expandPosterBtn = container.querySelector('.proyecto-expand-poster');
 
-    // Helper: mostrar estado de play
-    function showPlayState() {
-      playBtn.classList.remove('hidden');
-      pauseBtn.classList.add('hidden');
-      overlay.classList.remove('playing');
+    if (!videoElement) return;
+
+    const video = videoElement;
+
+    // Evento para expandir poster
+    expandPosterBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const posterUrl = expandPosterBtn.dataset.poster;
+      if (posterUrl) {
+        openPosterModal(posterUrl);
+      }
+    });
+
+    function formatTime(seconds) {
+      const mins = Math.floor(seconds / 60);
+      const secs = Math.floor(seconds % 60);
+      return mins + ':' + secs.toString().padStart(2, '0');
     }
 
-    // Helper: mostrar estado de pause
-    function showPauseState() {
-      playBtn.classList.add('hidden');
-      pauseBtn.classList.remove('hidden');
-      overlay.classList.add('playing');
+    function updatePlayPauseUI(playing) {
+      if (playing) {
+        playIcon.classList.add('hidden');
+        pauseIcon.classList.remove('hidden');
+        playOverlay.classList.add('opacity-0', 'pointer-events-none');
+      } else {
+        playIcon.classList.remove('hidden');
+        pauseIcon.classList.add('hidden');
+        playOverlay.classList.remove('opacity-0', 'pointer-events-none');
+      }
     }
 
-    // Helper: pausar todos los otros videos
     function pauseOtherVideos() {
-      document.querySelectorAll('.video-container').forEach(otherContainer => {
-        if (otherContainer === container) return;
-        const otherVideo = otherContainer.querySelector('video');
-        const otherPlayBtn = otherContainer.querySelector('.play-btn');
-        const otherPauseBtn = otherContainer.querySelector('.pause-btn');
-        const otherOverlay = otherContainer.querySelector('.control-overlay');
+      document.querySelectorAll('.proyecto-video-container').forEach(other => {
+        if (other === container) return;
+        const otherVideo = other.querySelector('video.proyecto-video');
         if (otherVideo && !otherVideo.paused) {
           otherVideo.pause();
-          otherPlayBtn?.classList.remove('hidden');
-          otherPauseBtn?.classList.add('hidden');
-          otherOverlay?.classList.remove('playing');
         }
       });
     }
 
-    // Click en play
-    playBtn.addEventListener('click', () => {
+    playOverlay?.addEventListener('click', () => {
       pauseOtherVideos();
       video.play();
-      showPauseState();
     });
 
-    // Click en pause
-    pauseBtn.addEventListener('click', () => {
-      video.pause();
-      showPlayState();
-    });
-
-    // Click en video para pausar
-    video.addEventListener('click', () => {
-      if (!video.paused) {
+    playPauseBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (video.paused) {
+        pauseOtherVideos();
+        video.play();
+      } else {
         video.pause();
-        showPlayState();
       }
     });
 
-    // Video terminado
-    video.addEventListener('ended', () => {
-      showPlayState();
+    video.addEventListener('play', () => updatePlayPauseUI(true));
+    video.addEventListener('pause', () => updatePlayPauseUI(false));
+    video.addEventListener('ended', () => updatePlayPauseUI(false));
+
+    video.addEventListener('loadedmetadata', () => {
+      if (timeDisplay) timeDisplay.textContent = `0:00 / ${formatTime(video.duration)}`;
+    });
+
+    video.addEventListener('timeupdate', () => {
+      const percent = (video.currentTime / video.duration) * 100;
+      progressBar.style.width = percent + '%';
+      progressHandle.style.left = percent + '%';
+      if (timeDisplay) timeDisplay.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+    });
+
+    rewindBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      video.currentTime = Math.max(0, video.currentTime - 10);
+    });
+
+    forwardBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      video.currentTime = Math.min(video.duration, video.currentTime + 10);
+    });
+
+    muteBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      video.muted = !video.muted;
+      if (video.muted) {
+        volumeIcon.classList.add('hidden');
+        muteIcon.classList.remove('hidden');
+        if (volumeSlider) volumeSlider.value = 0;
+      } else {
+        volumeIcon.classList.remove('hidden');
+        muteIcon.classList.add('hidden');
+        if (volumeSlider) volumeSlider.value = video.volume;
+      }
+    });
+
+    volumeSlider?.addEventListener('input', (e) => {
+      e.stopPropagation();
+      video.volume = e.target.value;
+      video.muted = video.volume === 0;
+      if (video.muted) {
+        volumeIcon.classList.add('hidden');
+        muteIcon.classList.remove('hidden');
+      } else {
+        volumeIcon.classList.remove('hidden');
+        muteIcon.classList.add('hidden');
+      }
+    });
+
+    fullscreenBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (container.requestFullscreen) container.requestFullscreen();
+      else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
+      else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+    });
+
+    let isDragging = false;
+
+    function seekToPosition(e) {
+      const rect = progressContainer.getBoundingClientRect();
+      const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      video.currentTime = percent * video.duration;
+    }
+
+    progressContainer?.addEventListener('mousedown', (e) => {
+      e.stopPropagation();
+      isDragging = true;
+      seekToPosition(e);
+    });
+
+    document.addEventListener('mousemove', (e) => {
+      if (isDragging) seekToPosition(e);
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
     });
   });
+}
+
+// Modal para ver poster/imagen en grande
+function openPosterModal(posterUrl) {
+  // Crear modal si no existe
+  let modal = document.getElementById('posterModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'posterModal';
+    modal.className = 'fixed inset-0 z-50 hidden items-center justify-center bg-black/90 p-4';
+    modal.innerHTML = `
+      <button class="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors z-10" id="closePosterModal">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <img id="posterModalImage" src="" alt="Imagen ampliada" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
+    `;
+    document.body.appendChild(modal);
+
+    // Eventos para cerrar
+    document.getElementById('closePosterModal').addEventListener('click', closePosterModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closePosterModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        closePosterModal();
+      }
+    });
+  }
+
+  // Mostrar imagen
+  document.getElementById('posterModalImage').src = posterUrl;
+  modal.classList.remove('hidden');
+  modal.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function closePosterModal() {
+  const modal = document.getElementById('posterModal');
+  if (modal) {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
 }
 
 function initBackToTop() {

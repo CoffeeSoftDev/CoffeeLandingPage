@@ -10,6 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <link href="assets/img/favicon.ico" rel="icon">
+    
+    <!-- YouTube IFrame API -->
+    <script src="https://www.youtube.com/iframe_api"></script>
 
     <script>
         tailwind.config = {
@@ -36,7 +40,16 @@
 <body class="bg-white text-slate-800 font-body">
     <!-- Hero (estático - no cambia con datos de API) -->
     <section class="relative h-[70vh] md:h-[100vh] flex items-center justify-center overflow-hidden px-4 sm:px-6">
-        <video class="absolute inset-0 w-full h-full object-cover object-center" src="https://huubie.com.mx/video/prueba.mp4" autoplay muted loop playsinline></video>
+        <!-- YouTube Background Video -->
+        <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+            <iframe
+                class="absolute top-1/2 left-1/2 w-[177.77vh] min-w-full h-[56.25vw] min-h-full -translate-x-1/2 -translate-y-1/2"
+                src="https://www.youtube.com/embed/krzZyNP1UhU?autoplay=1&mute=1&loop=1&playlist=krzZyNP1UhU&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1&disablekb=1&fs=0&iv_load_policy=3"
+                frameborder="0"
+                allow="autoplay; encrypted-media"
+                allowfullscreen>
+            </iframe>
+        </div>
         <div class="absolute inset-0 bg-gradient-to-b from-black/45 via-black/20 to-black/50"></div>
 
         <header class="absolute top-8 sm:top-12 md:top-14 lg:top-16 xl:top-20 left-0 right-0 flex items-center justify-center px-6 sm:px-8 md:px-10">

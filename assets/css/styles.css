@@ -519,3 +519,126 @@ video {
         font-size: 0.65rem;
     }
 }
+
+
+/* ==========================================
+   YOUTUBE PLAYER CUSTOMIZATION
+   ========================================== */
+
+/* Ocultar logo de YouTube y watermark */
+.portafolio-youtube-player iframe,
+.proyecto-video-container iframe {
+    pointer-events: none;
+}
+
+/* Contenedor de YouTube para controles personalizados */
+.portafolio-youtube-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.portafolio-youtube-poster {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.portafolio-youtube-player {
+    position: absolute;
+    top: -60px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 120px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.portafolio-youtube-player iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    pointer-events: none;
+}
+
+.portafolio-play-overlay {
+    z-index: 3;
+    transition: opacity 0.3s ease;
+}
+
+/* Ocultar elementos de branding de YouTube via CSS */
+.portafolio-youtube-player .ytp-chrome-top,
+.portafolio-youtube-player .ytp-watermark,
+.portafolio-youtube-player .ytp-youtube-button,
+.portafolio-youtube-player .ytp-title,
+.portafolio-youtube-player .ytp-show-cards-title,
+.portafolio-youtube-player .ytp-endscreen-content,
+.portafolio-youtube-player .ytp-ce-element {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+/* Proyectos section - videos locales */
+.proyecto-video-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.proyecto-video-container video {
+    pointer-events: auto;
+}
+
+.proyecto-play-overlay {
+    z-index: 5;
+    transition: opacity 0.3s ease;
+}
+
+.proyecto-controls {
+    z-index: 10;
+}
+
+/* Video wrapper en portafolio */
+.portafolio-video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+/* Controles de video sobre YouTube */
+.portafolio-video-wrapper .video-controls {
+    z-index: 10;
+    pointer-events: auto;
+}
+
+
+/* Barra de progreso de video en portafolio */
+.video-progress-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.video-progress-container:hover .video-progress-bar {
+    height: 0.5rem;
+}
+
+.video-progress-container:hover {
+    height: 0.5rem;
+}
+
+.video-progress-bar {
+    transition: width 0.1s linear;
+}
+
+.video-progress-handle {
+    transition: opacity 0.2s ease;
+}
