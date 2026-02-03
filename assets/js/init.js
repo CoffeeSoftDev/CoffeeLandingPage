@@ -40,7 +40,7 @@ const apiData = {
       id: 14,
       name: `Alicia M Glez Torra`,
       position: ``,
-      image: ``,
+      image: `./assets/img/alicia_margarita.png`,
       description: ``,
       row: 1,
       linkedTo: 1,
@@ -67,21 +67,21 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       row: 2
     },
     // Asociados de Directores (row 2)
-    {
-      id: 15,
-      name: `Alberto Pineda Tuells`,
-      position: ``,
-      image: `./assets/img/pineda.jpg`,
-      description: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`,
-      row: 2,
-      linkedTo: 2,
-      side: `left`
-    },
+    // {
+    //   id: 15,
+    //   name: `Alberto Pineda Tuells`,
+    //   position: ``,
+    //   image: `./assets/img/pineda.jpg`,
+    //   description: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`,
+    //   row: 2,
+    //   linkedTo: 2,
+    //   side: `left`
+    // },
     {
       id: 17,
       name: `Héctor López M`,
       position: ``,
-      image: ``,
+      // image: `./assets/img/hector_lopez_gutierrez.png`,
       description: ``,
       row: 2,
       linkedTo: 3,
@@ -92,7 +92,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       id: 4,
       name: `Javier GTZ Reynoso`,
       position: `Proyectos y presupuesto`,
-      image: ``,
+      image: `./assets/img/javier_gutierrez.png`,
       description: ``,
       row: 3
     },
@@ -125,7 +125,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       id: 7,
       name: `Alfredo Cerdio S`,
       position: `Proyecto agroindustrial`,
-      image: ``,
+      image: `./assets/img/alfredo_cerdio.png`,
       description: ``,
       row: 3
     },
@@ -133,7 +133,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       id: 9,
       name: `Claudia Velasco`,
       position: `Difusión y medios`,
-      image: ``,
+      image: `./assets/img/claudia_velazco.png`,
       description: ``,
       row: 3
     },
@@ -170,6 +170,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       name: `Miguel Cid del Prado Martínez`,
       position: `Universidades existentes`,
       image: `./assets/img/miguel_cid_del_prado.png`,
+
       description: `Doctor en Ingeniería Aplicada y especialista en Ingeniería en Gestión Empresarial, con una sólida trayectoria en planeación estratégica, desarrollo de proyectos y economía social y solidaria. Actualmente se desempeña como Coordinador de la Especialidad en Economía Social y Solidaria en el Instituto Tecnológico de Tuxtla Gutiérrez, donde impulsa modelos de emprendimiento con enfoque sostenible y de impacto social.<br><br>Ha participado como asesor en estrategias de desarrollo económico local, auditor líder de sistemas de gestión de calidad y docente en áreas clave como planes de negocio, ingeniería económica y gestión de la producción. Su experiencia combina rigor académico, aplicación práctica y transferencia de tecnología, contribuyendo al fortalecimiento de proyectos productivos, innovación social y formación de talento orientado al desarrollo regional sostenible.`,
       row: 4,
       associatedWith: 6
@@ -178,7 +179,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       id: 18,
       name: `Alicia M. Glez Torra`,
       position: `Análisis y Gestión`,
-      image: ``,
+      image: `./assets/img/alicia_margarita.png`,
       description: ``,
       row: 4,
       associatedWith: 6
@@ -239,12 +240,13 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       }
     ],
     videos: [
-      { poster: "https://huubie.com.mx/video/palomas.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "large" },
-      { poster: "https://huubie.com.mx/video/computadora.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" },
-      { poster: "https://huubie.com.mx/video/pasto.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" },
-      { poster: "https://huubie.com.mx/video/pasto.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" },
-      { poster: "https://huubie.com.mx/video/computadora.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" },
-      { poster: "https://img.youtube.com/vi/E6vSyIbPjHA/maxresdefault.jpg", src: "https://www.youtube.com/watch?v=E6vSyIbPjHA", size: "small", title: "Bioetanol" },
+      { poster: "./assets/img/polos-de-desarrollo/corredor-interoceanico-01.jpg", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "large", title: "Corredor Interoceánico" },
+      { poster: "./assets/img/project-terminal-portuaria/EV2.jpg", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small", title: "Terminal Portuaria" },
+      { poster: "./assets/img/polos-de-desarrollo/polos-de-desarrollo-01.jpg", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small", title: "Polos de Desarrollo" },
+      { poster: "./assets/img/polos-de-desarrollo/corredor-interoceanico-02.jpg", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small", title: "Corredor Interoceánico" },
+      { poster: "./assets/img/linea-k/linea-k-1.jpg", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small", title: "Línea K" },
+      { poster: "./assets/img/bioetanol/bioetanol.jpeg", src: "https://www.youtube.com/watch?v=E6vSyIbPjHA", size: "small", title: "Bioetanol" },
+      { poster: "./assets/img/fertilizantes/Planta-de-Fertilizantes-1_.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small", title: "Planta de Fertilizantes" },
       { poster: "https://img.youtube.com/vi/EypHEKZDuf4/maxresdefault.jpg", src: "https://www.youtube.com/watch?v=EypHEKZDuf4", size: "small", title: "Camino Saca Cosecha" },
       { poster: "https://img.youtube.com/vi/IrMPztPHlPg/maxresdefault.jpg", src: "https://www.youtube.com/watch?v=IrMPztPHlPg", size: "small", title: "Supercomputo" }
     ]
@@ -369,12 +371,12 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
         media: [
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-01.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-02.jpg" },
-          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-03.jpg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-03.jpg", position: "top" },
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-04.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-01.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-02.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-03.jpeg" },
-          { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-04.jpeg" }
+          // { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-04.jpeg" }
         ]
       }
     ]
@@ -533,34 +535,46 @@ function renderOrganigrama() {
     const linkedIzq = linkedTos.find(a => a.linkedTo === director.id && a.side === 'left');
     const linkedDer = linkedTos.find(a => a.linkedTo === director.id && a.side === 'right');
     
+    // Si tiene asociados laterales, usar posicionamiento relativo para no afectar el centrado
+    const hasLeftAssociate = asociadoIzq || linkedIzq;
+    const hasRightAssociate = asociadoDer || linkedDer;
+    
     return `
-      <div class="flex items-center gap-2 md:gap-4">
-        ${asociadoIzq ? `
-          <div class="flex items-center">
-            ${createOrgCard(asociadoIzq, 'xs')}
-            <div class="hidden md:block w-4 md:w-8 h-[2px] bg-[#034B84]"></div>
-          </div>
-        ` : ''}
-        ${linkedIzq ? `
-          <div class="flex items-start">
-            ${createOrgCard(linkedIzq, 'xs')}
-            <div class="hidden md:flex items-center w-4 md:w-8 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+      <div class="relative flex items-center justify-center">
+        ${hasLeftAssociate ? `
+          <div class="hidden md:flex absolute right-full items-center mr-2 md:mr-4">
+            ${asociadoIzq ? `
+              <div class="flex items-center">
+                ${createOrgCard(asociadoIzq, 'xs')}
+                <div class="w-4 md:w-8 h-[2px] bg-[#034B84]"></div>
+              </div>
+            ` : ''}
+            ${linkedIzq ? `
+              <div class="flex items-start">
+                ${createOrgCard(linkedIzq, 'xs')}
+                <div class="flex items-center w-4 md:w-8 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+              </div>
+            ` : ''}
           </div>
         ` : ''}
         <div class="flex flex-col items-center">
           <div class="hidden md:block w-[2px] h-4 bg-[#034B84] -mt-4"></div>
           ${createOrgCard(director, 'md')}
         </div>
-        ${asociadoDer ? `
-          <div class="flex items-center">
-            <div class="hidden md:block w-4 md:w-8 h-[2px] bg-[#034B84]"></div>
-            ${createOrgCard(asociadoDer, 'xs')}
-          </div>
-        ` : ''}
-        ${linkedDer ? `
-          <div class="flex items-start">
-            <div class="hidden md:flex items-center w-4 md:w-8 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
-            ${createOrgCard(linkedDer, 'xs')}
+        ${hasRightAssociate ? `
+          <div class="hidden md:flex absolute left-full items-center ml-2 md:ml-4">
+            ${asociadoDer ? `
+              <div class="flex items-center">
+                <div class="w-4 md:w-8 h-[2px] bg-[#034B84]"></div>
+                ${createOrgCard(asociadoDer, 'xs')}
+              </div>
+            ` : ''}
+            ${linkedDer ? `
+              <div class="flex items-start">
+                <div class="flex items-center w-4 md:w-8 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+                ${createOrgCard(linkedDer, 'xs')}
+              </div>
+            ` : ''}
           </div>
         ` : ''}
       </div>
@@ -669,10 +683,10 @@ function renderOrganigrama() {
         <!-- Nivel 2: Directores con asociados laterales -->
         <div class="org-level-directores relative -mt-[2px]">
           <!-- Línea horizontal que conecta directores (solo entre los directores principales) -->
-          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[28%] h-[2px] bg-[#034B84]"></div>
+          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[200px] lg:w-[280px] h-[2px] bg-[#034B84]"></div>
 
           <!-- Contenedor de directores con líneas verticales -->
-          <div class="flex justify-center gap-4 md:gap-16 lg:gap-24 pt-0 md:pt-4 flex-wrap">
+          <div class="flex justify-center items-center gap-4 md:gap-[200px] lg:gap-[280px] pt-0 md:pt-4 flex-wrap">
             ${directores.map(d => createDirectorWithAssociates(d, directoresAsociados, directoresLinkedTo)).join('')}
           </div>
         </div>
@@ -687,13 +701,14 @@ function renderOrganigrama() {
           </div>
         </div>
 
-        <!-- Línea horizontal para líderes -->
-        <div class="hidden md:block w-[95%] h-[2px] bg-[#034B84] mx-auto mb-4"></div>
-
         <!-- Nivel 3: Líderes del Proyecto con sus subordinados (row 4) -->
-        <div class="org-level-lideres relative">
-          <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-6">
-            ${lideres.map(l => createLiderWithSubordinados(l, subordinados)).join('')}
+        <div class="org-level-lideres relative flex justify-center">
+          <div class="relative inline-flex flex-col items-center">
+            <!-- Línea horizontal adaptativa que conecta los líderes -->
+            <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 h-[2px] bg-[#034B84]" style="width: calc(100% - 130px);"></div>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-4 md:gap-4 pt-4">
+              ${lideres.map(l => createLiderWithSubordinados(l, subordinados)).join('')}
+            </div>
           </div>
         </div>
 
@@ -868,7 +883,7 @@ function renderPortafolio() {
                   </div>
                 ` : `
                   <div class="relative w-full h-full group/img">
-                    <img src="${m.url}" alt="${p.name}" class="w-full h-full object-cover">
+                    <img src="${m.url}" alt="${p.name}" class="w-full h-full ${m.position === 'top' ? 'object-cover object-top' : 'object-contain'}">
                     <!-- Expand Button -->
                     <button class="image-expand-btn absolute top-3 right-3 h-9 w-9 rounded-full bg-black/50 text-white hover:bg-black/70 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center z-10" data-img-url="${m.url}" data-img-alt="${p.name}">
                       <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -885,12 +900,12 @@ function renderPortafolio() {
 
           <!-- Navigation Arrows -->
           ${mediaItems.length > 1 ? `
-            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 text-white hover:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-transparent md:bg-black/40 text-gray-300 hover:text-gray-400 md:text-white md:hover:bg-black/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-black/40 text-white hover:bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-transparent md:bg-black/40 text-gray-300 hover:text-gray-400 md:text-white md:hover:bg-black/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
