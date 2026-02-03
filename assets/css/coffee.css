@@ -553,10 +553,10 @@ video {
 
 .portafolio-youtube-player {
     position: absolute;
-    top: -60px;
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% + 120px);
+    height: 100%;
     z-index: 1;
     pointer-events: none;
 }
@@ -641,4 +641,69 @@ video {
 
 .video-progress-handle {
     transition: opacity 0.2s ease;
+}
+
+
+/* ==========================================
+   FULLSCREEN VIDEO CONTROLS
+   ========================================== */
+
+/* Estilos para el botón de salir de fullscreen */
+.video-exit-fullscreen {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 100;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar botón de salir cuando está en fullscreen */
+.portafolio-video-wrapper:fullscreen .video-exit-fullscreen,
+.portafolio-video-wrapper:-webkit-full-screen .video-exit-fullscreen,
+.portafolio-video-wrapper:-moz-full-screen .video-exit-fullscreen {
+    display: flex !important;
+    opacity: 1;
+}
+
+/* Controles siempre visibles en fullscreen */
+.portafolio-video-wrapper:fullscreen .video-controls,
+.portafolio-video-wrapper:-webkit-full-screen .video-controls,
+.portafolio-video-wrapper:-moz-full-screen .video-controls {
+    opacity: 1 !important;
+}
+
+/* Hover en fullscreen para mostrar controles */
+.portafolio-video-wrapper:fullscreen:hover .video-controls,
+.portafolio-video-wrapper:-webkit-full-screen:hover .video-controls,
+.portafolio-video-wrapper:-moz-full-screen:hover .video-controls {
+    opacity: 1;
+}
+
+/* Estilos para fullscreen en el wrapper */
+.portafolio-video-wrapper:fullscreen,
+.portafolio-video-wrapper:-webkit-full-screen,
+.portafolio-video-wrapper:-moz-full-screen {
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portafolio-video-wrapper:fullscreen video,
+.portafolio-video-wrapper:-webkit-full-screen video,
+.portafolio-video-wrapper:-moz-full-screen video {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+}
+
+/* Clase para controles en modo fullscreen */
+.fullscreen-controls {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 100 !important;
 }

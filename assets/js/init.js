@@ -12,20 +12,12 @@ const apiData = {
   //     Haciendo partícipe a la sociedad civil y al Gobierno de estos proyectos en beneficio del interés nacional.
   quienesSomos: {
     titulo: `¿A qué nos dedicamos?`,
-    descripcion: `Nuestro grupo empresarial surge en 2019 para impulsar el desarrollo y bienestar de Chiapas.`,
+    descripcion: `Nacimos en 2019 como un grupo empresarial enfocado en diseñar y gestionar proyectos que transformen el potencial productivo de Chiapas en crecimiento real y sostenible.`,
     imagen: `./assets/img/agrinol-1.jpeg`,
-    contenido: `
-
-      En Agrinol impulsamos el desarrollo sostenible de Chiapas mediante la implementación de proyectos estratégicos en los sectores agrícola, agroindustrial, infraestructura, comunicaciones, innovación y tecnología.
-Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto positivo, fortalecer la economía regional y contribuir al bienestar del país.
-    `,
+    contenido: `En Agrinol diseñamos, estructuramos y gestionamos proyectos estratégicos en agroindustria, infraestructura e innovación.<br><br>Conectamos inversión, conocimiento técnico y colaboración público-privada para generar impacto económico, social y territorial en Chiapas.`,
     mision: {
-      titulo: `Misión`,
-      texto: `Gestionar e implementar proyectos sustentables del desarrollo y bienestar.`
-    },
-    vision: {
-      titulo: `Visión`,
-      texto: `Implementar el desarrollo y bienestar de Chiapas en forma sostenible.`
+      titulo: `Misión y Visión`,
+      texto: `Gestionar e implementar proyectos sustentables y sostenibles para impulsar el desarrollo y bienestar.`
     },
     imagenMisionVision: `https://huubie.com.mx/video/barquito.png`
   },
@@ -47,7 +39,7 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
     {
       id: 14,
       name: `Alicia M Glez Torra`,
-      position: `Subceo`,
+      position: ``,
       image: ``,
       description: ``,
       row: 1,
@@ -55,12 +47,15 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       side: `right`
     },
     // ROW 2: Directores
+    
     {
       id: 2,
       name: `Roberto Rocha`,
       position: `Industria y negocios`,
-      image: ``,
-      description: ``,
+      image: `./assets/img/roberto_rocha.png`,
+      description: `Roberto Rocha Macías
+Roberto Rocha Macías es un profesional mexicano con una sólida trayectoria en el sector de los agronegocios, especializado en el desarrollo, evaluación y gestión de proyectos agroindustriales. Ingeniero Agrónomo Zootecnista y MBA en Comercialización Estratégica, cuenta además con habilitación como Consultor Senior en Agronegocios por FIRA–Banco de México
+A lo largo de su carrera ha participado en áreas clave como banca agropecuaria, industria harinera, avícola, extractora y de alimentos, liderando procesos de compras, logística, importación de materias primas, dirección industrial y desarrollo de cadenas de valor. Ha colaborado con empresas e instituciones como FIRA, Minsa, PROPALMA y proyectos agroindustriales de alto impacto, combinando visión estratégica, experiencia operativa y enfoque en la integración productiva.`,
       row: 2
     },
     {
@@ -75,7 +70,7 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
     {
       id: 15,
       name: `Alberto Pineda Tuells`,
-      position: `Análisis y Gestión`,
+      position: ``,
       image: `./assets/img/pineda.jpg`,
       description: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`,
       row: 2,
@@ -85,7 +80,7 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
     {
       id: 17,
       name: `Héctor López M`,
-      position: `Asistente`,
+      position: ``,
       image: ``,
       description: ``,
       row: 2,
@@ -117,20 +112,21 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       description: `CEO global del Tony Buzan Group & Academy y una de las voces más influyentes a nivel internacional en pensamiento estratégico, innovación y liderazgo organizacional. Su trabajo se centra en el diseño de modelos que impulsan el crecimiento económico sostenible, integrando visión empresarial, gobernanza y desarrollo de talento.<br><br>Es creador del Mapeo Sistémico de Causas Raíz, metodología aplicada en gobiernos y empresas para comprender ecosistemas complejos y acelerar la toma de decisiones estratégicas. Ha desarrollado modelos propios de liderazgo e innovación utilizados en proyectos de gran escala que requieren alineación entre actores públicos y privados.<br><br>Académico, autor y coautor de diversas obras junto a Tony Buzan, el Dr. Castañeda combina rigor intelectual con aplicación práctica, aportando valor en iniciativas de transformación organizacional, atracción de inversión y desarrollo industrial de largo plazo.`,
       row: 3
     },
-    {
-      id: 7,
-      name: `Alfredo Cerdio S`,
-      position: `Proyecto agroindustrial`,
-      image: ``,
-      description: ``,
-      row: 3
-    },
+   
     {
       id: 8,
       name: `Carlos Winkler Schroeder`,
       position: `Promoción industrial y negocios`,
       image: `./assets/img/carlos_winkler_s1.png`,
       description: `Consultor empresarial y emprendedor con más de 20 años de experiencia en el desarrollo de negocios, estrategia comercial e inversión. Es fundador y director de VITAL Consultoría, firma desde la cual acompaña a empresas en procesos de profesionalización, crecimiento y atracción de capital, ayudándolas a construir modelos de negocio sólidos y escalables.<br><br>A lo largo de su trayectoria ha impulsado y liderado proyectos de alto impacto en sectores como tecnología, entretenimiento, agronegocios y energía. Destaca como creador de HolaStaff, plataforma tecnológica de reclutamiento y capital humano, así como inversionista y fundador de TX América Cinemas, cadena de cines en Estados Unidos enfocada en el mercado latino.<br><br>Su visión estratégica, liderazgo y capacidad para identificar oportunidades lo han posicionado como un aliado clave en proyectos empresariales innovadores y de largo alcance.`,
+      row: 3
+    },
+    {
+      id: 7,
+      name: `Alfredo Cerdio S`,
+      position: `Proyecto agroindustrial`,
+      image: ``,
+      description: ``,
       row: 3
     },
     {
@@ -141,6 +137,7 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       description: ``,
       row: 3
     },
+  
     {
       id: 10,
       name: `Jorge Romo G`,
@@ -149,6 +146,7 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       description: ``,
       row: 3
     },
+   
     {
       id: 11,
       name: `Jean Francois Encinas`,
@@ -245,7 +243,10 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
       { poster: "https://huubie.com.mx/video/computadora.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" },
       { poster: "https://huubie.com.mx/video/pasto.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" },
       { poster: "https://huubie.com.mx/video/pasto.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" },
-      { poster: "https://huubie.com.mx/video/computadora.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" }
+      { poster: "https://huubie.com.mx/video/computadora.png", src: "https://www.agrinol.mx/vid/gespro.mp4", size: "small" },
+      { poster: "https://img.youtube.com/vi/E6vSyIbPjHA/maxresdefault.jpg", src: "https://www.youtube.com/watch?v=E6vSyIbPjHA", size: "small", title: "Bioetanol" },
+      { poster: "https://img.youtube.com/vi/EypHEKZDuf4/maxresdefault.jpg", src: "https://www.youtube.com/watch?v=EypHEKZDuf4", size: "small", title: "Camino Saca Cosecha" },
+      { poster: "https://img.youtube.com/vi/IrMPztPHlPg/maxresdefault.jpg", src: "https://www.youtube.com/watch?v=IrMPztPHlPg", size: "small", title: "Supercomputo" }
     ]
   },
 
@@ -267,9 +268,10 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
         description: "Desarrollo de infraestructura avanzada para la producción de biocombustible a partir de sorgo y caña de azúcar.",
         class_id: 1,
         media: [
-          { type: "video", url: "https://www.agrinol.mx/vid/gespro.mp4" },
-          { type: "image", url: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=800" },
-          { type: "image", url: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800" }
+          { type: "video", url: "https://www.youtube.com/embed/E6vSyIbPjHA" },
+          // { type: "video", url: "https://www.agrinol.mx/vid/gespro.mp4" },
+          { type: "image", url: "./assets/img/bioetanol/bioetanol.jpeg" },
+          // { type: "image", url: "https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?w=800" }
         ]
       },
       {
@@ -311,8 +313,9 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
         description: "Implementación de rutas logísticas para optimizar el transporte de productos desde el campo hacia los centros de distribución.",
         class_id: 2,
         media: [
-          { type: "image", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
-          { type: "image", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800" }
+          { type: "video", url: "https://www.youtube.com/embed/EypHEKZDuf4" },
+          // { type: "image", url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+          // { type: "image", url: "https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=800" }
         ]
       },
       {
@@ -353,8 +356,9 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
         description: "Desarrollo de un centro tecnológico de \"Súper Cómputo\" para el procesamiento de datos y apoyo a la investigación de alto nivel.",
         class_id: 4,
         media: [
-          { type: "image", url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800" },
-          { type: "image", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" }
+          { type: "video", url: "https://www.youtube.com/embed/IrMPztPHlPg" },
+          // { type: "image", url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800" },
+          // { type: "image", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" }
         ]
       },
       {
@@ -363,8 +367,14 @@ Trabajamos de la mano con la sociedad civil y el Gobierno para generar impacto p
         description: "Actualmente, nuestra organización lidera la gestión para la consolidación de los Polos de Desarrollo 1 y 2 en las regiones de Tapachula y Ciudad Hidalgo, Chiapas.",
         class_id: 5,
         media: [
-          { type: "image", url: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800" },
-          { type: "image", url: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800" }
+          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-01.jpg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-02.jpg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-03.jpg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-04.jpg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-01.jpg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-02.jpg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-03.jpeg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-04.jpeg" }
         ]
       }
     ]
@@ -417,7 +427,7 @@ function renderQuienesSomos() {
     <div class="max-w-6xl mx-auto px-4 md:px-6 space-y-4 md:space-y-6">
       <div class="text-center mt-4 md:mt-10 mb-6 md:mb-10">
         <h2 class="text-2xl md:text-4xl text-primary font-heading font-semibold mt-4 md:mt-6 mb-4 md:mb-6">${data.titulo}</h2>
-        <p class="text-sm md:text-lg text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
+        <p class="text-sm md:text-lg text-slate-600 mt-2 md:mt-3 max-w-4xl mx-auto">${data.descripcion}</p>
       </div>
       <div class="flex flex-col md:flex-row items-stretch gap-4 md:gap-6">
         <div class="relative w-full md:w-2/5 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden min-h-[200px] md:min-h-[260px]">
@@ -429,13 +439,9 @@ function renderQuienesSomos() {
       </div>
       <div class="flex flex-col md:flex-row items-stretch gap-4 md:gap-6">
         <div class="bg-[#F8F7F2] rounded-2xl md:rounded-3xl p-4 md:p-6 w-full md:w-3/5 text-sm md:text-base text-slate-700 text-justify flex flex-col justify-center">
-          <div class="mb-6 md:mb-3">
+          <div>
             <h3 class="text-xl md:text-2xl font-heading font-semibold text-primary">${data.mision.titulo}</h3>
             <p class='text-sm md:text-lg'>${data.mision.texto}</p>
-          </div>
-          <div>
-            <h3 class="text-xl md:text-2xl font-heading font-semibold text-primary">${data.vision.titulo}</h3>
-            <p class='text-sm md:text-lg'>${data.vision.texto}</p>
           </div>
         </div>
         <div class="relative w-full md:w-2/5 rounded-2xl md:rounded-3xl shadow-lg overflow-hidden min-h-[200px] md:min-h-[260px]">
@@ -481,16 +487,19 @@ function renderOrganigrama() {
     
     // Clases para la caja del cargo: tamaño fijo para rows 3 y 4
     const cargoClasses = fixedCargoSize 
-      ? 'w-[100px] md:w-[130px] h-[50px] md:h-[50px] flex items-center justify-center' 
+      ? 'w-[100px] md:w-[130px] h-[40px] md:h-[40px] flex items-center justify-center' 
       : s.minW;
     
-    // Clases para la caja del nombre: mismo ancho que cargo, alto 40px para rows 3 y 4
+    // Clases para la caja del nombre: mismo ancho que cargo, alto 35px para rows 3 y 4
     const nameClasses = fixedCargoSize 
-      ? 'w-[100px] md:w-[130px] h-[40px] md:h-[40px] flex items-center justify-center' 
+      ? 'w-[100px] md:w-[130px] h-[35px] md:h-[35px] flex items-center justify-center' 
       : s.minW;
 
     // Verificar si existe imagen
     const hasImage = persona.image && persona.image.trim() !== '';
+    
+    // Verificar si existe position
+    const hasPosition = persona.position && persona.position.trim() !== '';
 
     const imageContent = hasImage
       ? `<img src="${persona.image}" alt="${persona.name}" class="w-full h-full object-cover object-top">`
@@ -507,10 +516,12 @@ function renderOrganigrama() {
         <div class="org-name bg-white border-2 border-[#034B84] px-2 py-1 md:px-3 md:py-1.5 mt-2 ${nameClasses}">
           <h4 class="font-bold ${s.text} text-[#034B84] text-center leading-tight">${persona.name}</h4>
         </div>
+        ${hasPosition ? `
         <!-- Cargo en recuadro azul sólido -->
         <div class="org-cargo bg-[#034B84] px-2 py-1 md:px-3 md:py-1.5 ${cargoClasses}">
           <p class="${s.subtext} text-white text-center font-semibold uppercase">${persona.position}</p>
         </div>
+        ` : ''}
       </div>
     `;
   };
@@ -556,7 +567,7 @@ function renderOrganigrama() {
     `;
   };
 
-  // Función para crear líder con sus subordinados (row 4)
+  // Función para crear líder con sus subordinados (row 4) - subordinados en la misma fila con líneas hacia arriba
   const createLiderWithSubordinados = (lider, subs) => {
     const misSubordinados = subs.filter(s => s.associatedWith === lider.id);
     
@@ -574,14 +585,25 @@ function renderOrganigrama() {
         <div class="hidden md:block w-[2px] h-4 bg-[#034B84] -mt-4 mb-2"></div>
         ${createOrgCard(lider, 'sm', true)}
         <!-- Línea vertical hacia subordinados -->
-        <div class="hidden md:block w-[2px] h-4 bg-[#034B84] mt-2"></div>
-        <!-- Subordinados -->
-        <div class="flex flex-wrap justify-center gap-2 mt-2">
-          ${misSubordinados.map(sub => `
-            <div class="flex flex-col items-center">
-              ${createOrgCard(sub, 'xs', true)}
-            </div>
-          `).join('')}
+        <div class="hidden md:block w-[2px] h-6 bg-[#034B84] mt-1"></div>
+        <!-- Contenedor de subordinados con línea horizontal -->
+        <div class="relative flex flex-col items-center w-full">
+          <!-- Subordinados en fila horizontal -->
+          <div class="flex justify-center gap-1 md:gap-4">
+            ${misSubordinados.map((sub, index) => `
+              <div class="flex flex-col items-center relative">
+                <!-- Línea vertical del subordinado -->
+                <div class="hidden md:block w-[2px] h-4 bg-[#034B84]"></div>
+                <!-- Línea horizontal hacia los lados (solo si hay más de 1 subordinado) -->
+                ${misSubordinados.length > 1 ? `
+                  ${index === 0 ? `<div class="hidden md:block absolute top-0 left-1/2 h-[2px] bg-[#034B84]" style="width: calc(50% + 2rem);"></div>` : ''}
+                  ${index === misSubordinados.length - 1 ? `<div class="hidden md:block absolute top-0 right-1/2 h-[2px] bg-[#034B84]" style="width: calc(50% + 2rem);"></div>` : ''}
+                  ${index > 0 && index < misSubordinados.length - 1 ? `<div class="hidden md:block absolute top-0 left-0 right-0 h-[2px] bg-[#034B84]"></div>` : ''}
+                ` : ''}
+                ${createOrgCard(sub, 'xs', true)}
+              </div>
+            `).join('')}
+          </div>
         </div>
       </div>
     `;
@@ -606,7 +628,7 @@ function renderOrganigrama() {
       <div class="relative bg-gradient-to-b from-white to-slate-50 rounded-2xl p-6 md:p-10 shadow-xl border border-slate-200 overflow-hidden">
 
         <!-- Nivel 1: CEO con asociado lateral -->
-        <div class="org-level-ceo relative flex justify-center items-center mb-4">
+        <div class="org-level-ceo relative flex justify-center items-center mb-0">
           ${ceo ? `
             <!-- CEO centrado absolutamente -->
             <div class="flex justify-center w-full">
@@ -634,20 +656,20 @@ function renderOrganigrama() {
             ` : ''}
             ${ceoLinkedDer ? `
               <div class="absolute right-[5%] md:right-[25%] top-1/2 -translate-y-1/2 flex items-start gap-2">
-                <div class="hidden md:flex items-center w-5 mt-[28px] md:mt-[32px]"><div class="w-full h-[3px] border-t-[3px] border-dashed border-[#034B84]"></div></div>
+                <div class="hidden md:flex items-center w-8 mt-[28px] md:mt-[32px]"><div class="w-full border-t-[3px] border-dashed border-[#034B84]"></div></div>
                 ${createOrgCard(ceoLinkedDer, 'xs')}
               </div>
             ` : ''}
           ` : ''}
         </div>
 
-        <!-- Línea vertical del CEO -->
-        <div class="org-connector-vertical w-[2px] h-8 md:h-10 bg-[#034B84] mx-auto"></div>
+        <!-- Línea vertical del CEO que conecta con la horizontal -->
+        <div class="org-connector-vertical w-[2px] h-12 md:h-16 bg-[#034B84] mx-auto"></div>
 
         <!-- Nivel 2: Directores con asociados laterales -->
-        <div class="org-level-directores relative">
-          <!-- Línea horizontal que conecta directores -->
-          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[50%] h-[2px] bg-[#034B84]"></div>
+        <div class="org-level-directores relative -mt-[2px]">
+          <!-- Línea horizontal que conecta directores (solo entre los directores principales) -->
+          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[28%] h-[2px] bg-[#034B84]"></div>
 
           <!-- Contenedor de directores con líneas verticales -->
           <div class="flex justify-center gap-4 md:gap-16 lg:gap-24 pt-0 md:pt-4 flex-wrap">
@@ -712,21 +734,21 @@ function renderAsociados() {
   const miembrosDuplicados = miembrosHTML + miembrosHTML;
 
   section.innerHTML = `
-    <div class="max-w-6xl mx-auto px-4 md:px-6 text-center space-y-4 md:space-y-6">
+    <div class="max-w-6xl mx-auto px-4 md:px-6 text-center space-y-4 md:space-y-6 flex flex-col justify-center h-full">
       <div class="text-center mt-4 md:mt-10 mb-6 md:mb-16">
         <h2 class="text-2xl md:text-4xl font-heading font-semibold mt-2 md:mt-6 mb-3 md:mb-6">${data.titulo}</h2>
         <p class="text-sm md:text-base text-slate-600 mt-2 md:mt-3 max-w-3xl mx-auto px-4 md:px-16">${data.descripcion}</p>
       </div>
-      <div class="brands_carousel-container relative">
-        <button class="brands_nav-btn brands_nav-prev absolute left-0 md:left-0 top-[6rem] md:top-[7.5rem] z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Anterior">
+      <div class="brands_carousel-container relative flex items-center justify-center">
+        <button class="brands_nav-btn brands_nav-prev absolute left-0 md:left-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Anterior">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
           </svg>
         </button>
-        <div class="brands_list-wrapper">
+        <div class="brands_list-wrapper mx-auto">
           <div class="brands_list">${miembrosDuplicados}</div>
         </div>
-        <button class="brands_nav-btn brands_nav-next absolute right-0 md:right-0 top-[6rem] md:top-[7.5rem] z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Siguiente">
+        <button class="brands_nav-btn brands_nav-next absolute right-0 md:right-0 top-1/2 -translate-y-1/2 z-10 bg-white/90 hover:bg-white shadow-lg rounded-full w-10 h-10 flex items-center justify-center transition-all hover:scale-110" aria-label="Siguiente">
           <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-slate-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
           </svg>
@@ -740,10 +762,6 @@ function renderAsociados() {
     lucide.createIcons();
   }
 }
-
-
-
-
 
 function renderPortafolio() {
   const section = document.getElementById('portafolio');
@@ -832,16 +850,34 @@ function renderPortafolio() {
                           </svg>
                         </button>
                         <input type="range" class="video-volume w-16 h-1 bg-white/30 rounded-full appearance-none cursor-pointer" min="0" max="1" step="0.1" value="1">
-                        <button class="video-fullscreen p-1.5 hover:bg-white/20 rounded-full transition-colors">
-                          <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <button class="video-fullscreen p-1.5 hover:bg-white/20 rounded-full transition-colors" title="Pantalla completa">
+                          <svg class="fullscreen-expand-icon h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                          </svg>
+                          <svg class="fullscreen-compress-icon h-4 w-4 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 9V4.5M9 9H4.5M9 9L3.75 3.75M9 15v4.5M9 15H4.5M9 15l-5.25 5.25M15 9h4.5M15 9V4.5M15 9l5.25-5.25M15 15h4.5M15 15v4.5m0-4.5l5.25 5.25" />
+                          </svg>
+                        </button>
+                        <button class="video-exit-fullscreen hidden absolute top-3 right-3 p-2 bg-black/60 hover:bg-black/80 rounded-full transition-colors z-50" title="Salir de pantalla completa (Esc)">
+                          <svg class="h-5 w-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                           </svg>
                         </button>
                       </div>
                     </div>
                   </div>
                 ` : `
-                  <img src="${m.url}" alt="${p.name}" class="w-full h-full object-cover">
+                  <div class="relative w-full h-full group/img">
+                    <img src="${m.url}" alt="${p.name}" class="w-full h-full object-cover">
+                    <!-- Expand Button -->
+                    <button class="image-expand-btn absolute top-3 right-3 h-9 w-9 rounded-full bg-black/50 text-white hover:bg-black/70 opacity-0 group-hover/img:opacity-100 transition-opacity flex items-center justify-center z-10" data-img-url="${m.url}" data-img-alt="${p.name}">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                      </svg>
+                    </button>
+                    <!-- Click overlay for expand -->
+                    <div class="image-expand-overlay absolute inset-0 cursor-pointer" data-img-url="${m.url}" data-img-alt="${p.name}"></div>
+                  </div>
                 `}
               </div>
             `).join('')}
@@ -1158,6 +1194,29 @@ function initCarouselModal() {
       playPauseBtn.addEventListener('click', togglePlay);
       video.addEventListener('click', togglePlay);
 
+      // Doble clic para expandir video
+      video.addEventListener('dblclick', (e) => {
+        e.stopPropagation();
+        if (!document.fullscreenElement) {
+          const videoContainer = video.parentElement;
+          if (videoContainer.requestFullscreen) {
+            videoContainer.requestFullscreen();
+          } else if (videoContainer.webkitRequestFullscreen) {
+            videoContainer.webkitRequestFullscreen();
+          } else if (videoContainer.msRequestFullscreen) {
+            videoContainer.msRequestFullscreen();
+          }
+        } else {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) {
+            document.webkitExitFullscreen();
+          } else if (document.msExitFullscreen) {
+            document.msExitFullscreen();
+          }
+        }
+      });
+
       video.addEventListener('play', () => updatePlayPauseUI(true));
       video.addEventListener('pause', () => updatePlayPauseUI(false));
       video.addEventListener('ended', () => updatePlayPauseUI(false));
@@ -1457,7 +1516,10 @@ function initPortafolioCarousels() {
     const dotsContainer = carousel.closest('.portafolio-card').querySelector('.carousel-dots');
     const dots = dotsContainer ? dotsContainer.querySelectorAll('.carousel-dot') : [];
 
-    if (slides.length <= 1) return;
+    if (slides.length <= 1) {
+      // Aún necesitamos inicializar los controles de video para proyectos con un solo slide
+      // La inicialización se hace al final de la función
+    }
 
     let currentIndex = 0;
 
@@ -1505,7 +1567,8 @@ function initPortafolioCarousels() {
       dot.addEventListener('click', () => showSlide(index));
     });
 
-    slides.forEach(slide => {
+    // Inicializar controles de video para todos los slides
+    function initVideoControls(slide) {
       const videoWrapper = slide.querySelector('.portafolio-video-wrapper');
       if (!videoWrapper) return;
 
@@ -1521,6 +1584,9 @@ function initPortafolioCarousels() {
       const muteIcon = slide.querySelector('.mute-icon');
       const volumeSlider = slide.querySelector('.video-volume');
       const fullscreenBtn = slide.querySelector('.video-fullscreen');
+      const exitFullscreenBtn = slide.querySelector('.video-exit-fullscreen');
+      const fullscreenExpandIcon = slide.querySelector('.fullscreen-expand-icon');
+      const fullscreenCompressIcon = slide.querySelector('.fullscreen-compress-icon');
       const timeDisplay = slide.querySelector('.video-time');
       const progressContainer = slide.querySelector('.video-progress-container');
       const progressBar = slide.querySelector('.video-progress-bar');
@@ -1542,6 +1608,34 @@ function initPortafolioCarousels() {
         }
       }
 
+      function updateFullscreenUI(isFullscreen) {
+        if (isFullscreen) {
+          fullscreenExpandIcon?.classList.add('hidden');
+          fullscreenCompressIcon?.classList.remove('hidden');
+          exitFullscreenBtn?.classList.remove('hidden');
+          controls?.classList.add('fullscreen-controls');
+        } else {
+          fullscreenExpandIcon?.classList.remove('hidden');
+          fullscreenCompressIcon?.classList.add('hidden');
+          exitFullscreenBtn?.classList.add('hidden');
+          controls?.classList.remove('fullscreen-controls');
+        }
+      }
+
+      // Listener para cambios de fullscreen
+      document.addEventListener('fullscreenchange', () => {
+        const isFullscreen = document.fullscreenElement === videoWrapper;
+        updateFullscreenUI(isFullscreen);
+      });
+
+      // Listener para salir de fullscreen con botón X
+      exitFullscreenBtn?.addEventListener('click', (e) => {
+        e.stopPropagation();
+        if (document.fullscreenElement) {
+          document.exitFullscreen();
+        }
+      });
+
       if (isYouTube) {
         const youtubeContainer = videoWrapper.querySelector('.portafolio-youtube-container');
         const poster = youtubeContainer.querySelector('.portafolio-youtube-poster');
@@ -1552,7 +1646,15 @@ function initPortafolioCarousels() {
         let playerInitialized = false;
 
         function initYouTubePlayer() {
-          if (playerInitialized || typeof YT === 'undefined' || !YT.Player) return;
+          if (playerInitialized) return;
+          
+          // Si la API de YouTube no está lista, esperar y reintentar
+          if (typeof YT === 'undefined' || !YT.Player) {
+            console.log('YouTube API not ready, waiting...');
+            setTimeout(initYouTubePlayer, 100);
+            return;
+          }
+          
           playerInitialized = true;
 
           playerContainer.classList.remove('hidden');
@@ -1681,6 +1783,33 @@ function initPortafolioCarousels() {
           }
         });
 
+        // Doble clic para expandir video de YouTube
+        poster?.addEventListener('dblclick', (e) => {
+          e.stopPropagation();
+          if (!document.fullscreenElement) {
+            if (videoWrapper.requestFullscreen) {
+              videoWrapper.requestFullscreen();
+            } else if (videoWrapper.webkitRequestFullscreen) {
+              videoWrapper.webkitRequestFullscreen();
+            }
+          } else {
+            document.exitFullscreen();
+          }
+        });
+
+        youtubeContainer?.addEventListener('dblclick', (e) => {
+          e.stopPropagation();
+          if (!document.fullscreenElement) {
+            if (videoWrapper.requestFullscreen) {
+              videoWrapper.requestFullscreen();
+            } else if (videoWrapper.webkitRequestFullscreen) {
+              videoWrapper.webkitRequestFullscreen();
+            }
+          } else {
+            document.exitFullscreen();
+          }
+        });
+
       } else {
         const video = videoWrapper.querySelector('video');
         if (!video) return;
@@ -1772,6 +1901,18 @@ function initPortafolioCarousels() {
           }
         });
 
+        // Doble clic para expandir video
+        video.addEventListener('dblclick', (e) => {
+          e.stopPropagation();
+          if (!document.fullscreenElement) {
+            if (videoWrapper.requestFullscreen) {
+              videoWrapper.requestFullscreen();
+            }
+          } else {
+            document.exitFullscreen();
+          }
+        });
+
         // Barra de progreso - click para seek
         let isDragging = false;
         
@@ -1795,7 +1936,90 @@ function initPortafolioCarousels() {
           isDragging = false;
         });
       }
-    });
+    }
+
+    // Inicializar controles de video para todos los slides
+    slides.forEach(slide => initVideoControls(slide));
+  });
+}
+
+
+// ==========================================
+// LIGHTBOX PARA IMÁGENES DEL PORTAFOLIO
+// ==========================================
+
+function createImageLightbox() {
+  const lightbox = document.createElement('div');
+  lightbox.id = 'imageLightbox';
+  lightbox.className = 'fixed inset-0 z-[60] hidden items-center justify-center bg-black/90 backdrop-blur-sm';
+  lightbox.innerHTML = `
+    <!-- Close button -->
+    <button id="closeLightbox" class="absolute top-4 right-4 z-20 bg-white/10 hover:bg-white/20 rounded-full p-2 text-white transition-colors">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Image container -->
+    <div class="relative max-w-[90vw] max-h-[90vh] flex items-center justify-center">
+      <img id="lightboxImage" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
+    </div>
+
+    <!-- Image caption -->
+    <div id="lightboxCaption" class="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/60 text-white px-4 py-2 rounded-full text-sm"></div>
+  `;
+  document.body.appendChild(lightbox);
+}
+
+function initImageLightbox() {
+  createImageLightbox();
+
+  const lightbox = document.getElementById('imageLightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxCaption = document.getElementById('lightboxCaption');
+  const closeBtn = document.getElementById('closeLightbox');
+
+  function openLightbox(imgUrl, imgAlt) {
+    lightboxImage.src = imgUrl;
+    lightboxImage.alt = imgAlt;
+    lightboxCaption.textContent = imgAlt;
+    lightbox.classList.remove('hidden');
+    lightbox.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox.classList.add('hidden');
+    lightbox.classList.remove('flex');
+    document.body.style.overflow = '';
+    lightboxImage.src = '';
+  }
+
+  // Event delegation for expand buttons and overlays
+  document.addEventListener('click', (e) => {
+    const expandBtn = e.target.closest('.image-expand-btn');
+    const expandOverlay = e.target.closest('.image-expand-overlay');
+
+    if (expandBtn) {
+      e.stopPropagation();
+      openLightbox(expandBtn.dataset.imgUrl, expandBtn.dataset.imgAlt);
+    } else if (expandOverlay) {
+      e.stopPropagation();
+      openLightbox(expandOverlay.dataset.imgUrl, expandOverlay.dataset.imgAlt);
+    }
+  });
+
+  // Close events
+  closeBtn?.addEventListener('click', closeLightbox);
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.classList.contains('hidden')) {
+      closeLightbox();
+    }
   });
 }
 
@@ -1809,7 +2033,7 @@ function initApp() {
   renderQuienesSomos();
   renderOrganigrama();
   renderAsociados();
-  renderProyectos();
+  // renderProyectos();
   renderPortafolio();
   renderFooter();
 
@@ -1821,6 +2045,7 @@ function initApp() {
   initCarouselModal();
   initProyectosVideoControls();
   initPortafolioCarousels();
+  initImageLightbox();
   initBackToTop();
   initMobileMenu();
 
@@ -1872,7 +2097,7 @@ function initFadeObserver() {
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.05, rootMargin: '0px 0px -50px 0px' }
   );
   document.querySelectorAll('.fade-section').forEach(section => observer.observe(section));
 }
@@ -2029,19 +2254,8 @@ function initModal() {
         <div class="overflow-y-auto flex-grow max-h-[30vh] md:max-h-[50vh] pr-2">
           <p id="modalBio" class="text-slate-600 leading-relaxed text-sm text-justify"></p>
         </div>
-        <!-- Iconos sociales y botón CV -->
-        <div class="flex justify-between items-center mt-4 md:mt-6 pt-4 border-t border-slate-100 flex-shrink-0">
-          <div class="flex items-center gap-4">
-            <a href="#" class="text-slate-400 hover:text-primary transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-            </a>
-            <a href="#" class="text-slate-400 hover:text-primary transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-            </a>
-            <a href="#" class="text-slate-400 hover:text-primary transition-colors">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-            </a>
-          </div>
+        <!-- Botón CV -->
+        <div class="flex justify-end items-center mt-4 md:mt-6 pt-4 border-t border-slate-100 flex-shrink-0">
           <a id="modalCvBtn" href="#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-cyan-500 to-teal-500 text-white text-sm font-medium rounded-lg hover:from-cyan-600 hover:to-teal-600 transition-all">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
@@ -2229,6 +2443,22 @@ function initProyectosVideoControls() {
       if (container.requestFullscreen) container.requestFullscreen();
       else if (container.webkitRequestFullscreen) container.webkitRequestFullscreen();
       else if (video.webkitEnterFullscreen) video.webkitEnterFullscreen();
+    });
+
+    // Doble clic para expandir video
+    video.addEventListener('dblclick', (e) => {
+      e.stopPropagation();
+      if (!document.fullscreenElement) {
+        if (container.requestFullscreen) {
+          container.requestFullscreen();
+        } else if (container.webkitRequestFullscreen) {
+          container.webkitRequestFullscreen();
+        } else if (video.webkitEnterFullscreen) {
+          video.webkitEnterFullscreen();
+        }
+      } else {
+        document.exitFullscreen();
+      }
     });
 
     let isDragging = false;
