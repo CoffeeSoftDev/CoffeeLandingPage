@@ -50,7 +50,7 @@ const apiData = {
 
     {
       id: 2,
-      name: `Roberto Rocha`,
+      name: `Roberto Rocha Macías`,
       position: `Industria y negocios`,
       image: `./assets/img/roberto_rocha.png`,
       description: `Roberto Rocha Macías
@@ -90,7 +90,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
     // ROW 3: Líderes del Proyecto (bajo "LIDER DEL PROYECTO")
     {
       id: 4,
-      name: `Javier GTZ Reynoso`,
+      name: `Javier Gutiérrez Reynoso`,
       position: `Proyectos y presupuesto`,
       image: `./assets/img/javier_gutierrez.png`,
       description: ``,
@@ -106,7 +106,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
     },
     {
       id: 6,
-      name: `Jorge O. Castañeda`,
+      name: `Jorge O. Castañeda Campillo`,
       position: `Universidad corporativa`,
       image: `./assets/img/jorge_o_castaneda.png`,
       description: `CEO global del Tony Buzan Group & Academy y una de las voces más influyentes a nivel internacional en pensamiento estratégico, innovación y liderazgo organizacional. Su trabajo se centra en el diseño de modelos que impulsan el crecimiento económico sostenible, integrando visión empresarial, gobernanza y desarrollo de talento.<br><br>Es creador del Mapeo Sistémico de Causas Raíz, metodología aplicada en gobiernos y empresas para comprender ecosistemas complejos y acelerar la toma de decisiones estratégicas. Ha desarrollado modelos propios de liderazgo e innovación utilizados en proyectos de gran escala que requieren alineación entre actores públicos y privados.<br><br>Académico, autor y coautor de diversas obras junto a Tony Buzan, el Dr. Castañeda combina rigor intelectual con aplicación práctica, aportando valor en iniciativas de transformación organizacional, atracción de inversión y desarrollo industrial de largo plazo.`,
@@ -123,7 +123,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
     },
     {
       id: 7,
-      name: `Alfredo Cerdio S`,
+      name: `Alfredo Cerdio Sánchez`,
       position: `Proyecto agroindustrial`,
       image: `./assets/img/alfredo_cerdio.png`,
       description: ``,
@@ -186,10 +186,11 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
     },
     {
       id: 19,
-      name: `Alberto Pineda T.`,
+      name: `Alberto Pineda Tuells `,
       position: `Análisis y Gestión`,
       image: `./assets/img/pineda.jpg`,
-      description: ``,
+        description: `Ingeniero en Electrónica y Comunicaciones, con una trayectoria que cruza finanzas, desarrollo económico, transformación institucional y liderazgo estratégico en los sectores público y privado. Ha ocupado posiciones clave en banca especializada, organismos empresariales, consejos directivos y gobiernos locales, participando en proyectos de alto impacto regional y nacional.<br><br>En 2024 fue distinguido con el Tony Buzan Award for Strategic Leadership, otorgado en la House of Lords, Palacio de Westminster, Londres, reconocimiento internacional a su liderazgo y visión estratégica. Su perfil combina capacidad técnica, experiencia financiera y articulación multisectorial, consolidándolo como una figura clave en la planeación y ejecución de iniciativas orientadas al crecimiento sostenible.`,
+
       row: 4,
       associatedWith: 7
     },
@@ -374,7 +375,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-01.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-05.jpeg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-02.jpg" },
-          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-03.jpg", position: "top" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-03.png", position: "top" },
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-04.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-01.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-02.jpg" },
@@ -902,12 +903,12 @@ function renderPortafolio() {
 
           <!-- Navigation Arrows -->
           ${mediaItems.length > 1 ? `
-            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-transparent md:bg-black/40 text-gray-300 hover:text-gray-400 md:text-white md:hover:bg-black/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <button class="carousel-prev absolute left-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-gray-400 md:bg-black/40 text-white hover:bg-gray-500 md:hover:bg-black/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-center justify-center shadow-lg">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
               </svg>
             </button>
-            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-transparent md:bg-black/40 text-gray-300 hover:text-gray-400 md:text-white md:hover:bg-black/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-center justify-center">
+            <button class="carousel-next absolute right-3 top-1/2 -translate-y-1/2 h-10 w-10 rounded-full bg-gray-400 md:bg-black/40 text-white hover:bg-gray-500 md:hover:bg-black/60 opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity flex items-center justify-center shadow-lg">
               <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
               </svg>
