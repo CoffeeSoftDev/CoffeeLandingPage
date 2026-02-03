@@ -47,7 +47,7 @@ const apiData = {
       side: `right`
     },
     // ROW 2: Directores
-    
+
     {
       id: 2,
       name: `Roberto Rocha`,
@@ -112,7 +112,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       description: `CEO global del Tony Buzan Group & Academy y una de las voces más influyentes a nivel internacional en pensamiento estratégico, innovación y liderazgo organizacional. Su trabajo se centra en el diseño de modelos que impulsan el crecimiento económico sostenible, integrando visión empresarial, gobernanza y desarrollo de talento.<br><br>Es creador del Mapeo Sistémico de Causas Raíz, metodología aplicada en gobiernos y empresas para comprender ecosistemas complejos y acelerar la toma de decisiones estratégicas. Ha desarrollado modelos propios de liderazgo e innovación utilizados en proyectos de gran escala que requieren alineación entre actores públicos y privados.<br><br>Académico, autor y coautor de diversas obras junto a Tony Buzan, el Dr. Castañeda combina rigor intelectual con aplicación práctica, aportando valor en iniciativas de transformación organizacional, atracción de inversión y desarrollo industrial de largo plazo.`,
       row: 3
     },
-   
+
     {
       id: 8,
       name: `Carlos Winkler Schroeder`,
@@ -137,7 +137,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       description: ``,
       row: 3
     },
-  
+
     {
       id: 10,
       name: `Jorge Romo G`,
@@ -146,7 +146,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
       description: ``,
       row: 3
     },
-   
+
     {
       id: 11,
       name: `Jean Francois Encinas`,
@@ -282,7 +282,7 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
         description: "Proyecto enfocado en el fortalecimiento de la soberanía agrícola mediante la producción local de insumos esenciales.",
         class_id: 1,
         media: [
-          { type: "image", url: "https://images.unsplash.com/photo-1574943320219-553eb213f72d?w=800" },
+          { type: "image", url: "./assets/img/fertilizantes/Planta-de-Fertilizantes-1.png" },
           { type: "image", url: "https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800" }
         ]
       },
@@ -306,7 +306,10 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
           { type: "image", url: "./assets/img/linea-k/linea-k-1.jpg" },
           { type: "image", url: "./assets/img/linea-k/linea-k-2.jpg" },
           { type: "image", url: "./assets/img/linea-k/linea-k-3.jpg" },
-          { type: "image", url: "./assets/img/linea-k/linea-k-4.jpg" }
+          { type: "image", url: "./assets/img/linea-k/linea-k-4.jpg" },
+          { type: "image", url: "./assets/img/linea-k/lineaK7.png" },
+          { type: "image", url: "./assets/img/linea-k/lineaK8.png" },
+          { type: "image", url: "./assets/img/linea-k/mapa-lineaK.png" },
         ]
       },
       {
@@ -338,8 +341,9 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
         description: "Proyecto de transporte masivo diseñado para conectar de manera eficiente el núcleo urbano con la zona portuaria.",
         class_id: 3,
         media: [
-          { type: "image", url: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800" },
-          { type: "image", url: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800" }
+          { type: "image", url: "./assets/img/tren_ligero/trenligero1.jpg" },
+          { type: "image", url: "./assets/img/tren_ligero/trenligero2.png" },
+          { type: "image", url: "./assets/img/tren_ligero/trenligero3.png" },
         ]
       },
       {
@@ -348,8 +352,8 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
         description: "Optimización de la movilidad regional mediante infraestructura de transferencia de pasajeros y carga.",
         class_id: 3,
         media: [
-          { type: "image", url: "https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=800" },
-          { type: "image", url: "https://images.unsplash.com/photo-1517649763962-0c623066013b?w=800" }
+          { type: "image", url: "./assets/img/transporte/terminal-de-corto-recorrido1.png" },
+          { type: "image", url: "./assets/img/transporte/terminal-de-corto-recorrido2.png" },
         ]
       },
       {
@@ -359,8 +363,6 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
         class_id: 4,
         media: [
           { type: "video", url: "https://www.youtube.com/embed/IrMPztPHlPg" },
-          // { type: "image", url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800" },
-          // { type: "image", url: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800" }
         ]
       },
       {
@@ -370,13 +372,13 @@ A lo largo de su carrera ha participado en áreas clave como banca agropecuaria,
         class_id: 5,
         media: [
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-01.jpg" },
+          { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-05.jpeg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-02.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-03.jpg", position: "top" },
           { type: "image", url: "assets/img/polos-de-desarrollo/corredor-interoceanico-04.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-01.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-02.jpg" },
           { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-03.jpeg" },
-          // { type: "image", url: "assets/img/polos-de-desarrollo/polos-de-desarrollo-04.jpeg" }
         ]
       }
     ]
@@ -486,20 +488,20 @@ function renderOrganigrama() {
       xs: { img: 'w-14 h-14 md:w-16 md:h-16', border: 'border-2', text: 'text-[8px] md:text-[9px]', subtext: 'text-[7px] md:text-[8px]', minW: 'min-w-[90px] md:min-w-[110px]', icon: 'w-6 h-6 md:w-8 md:h-8' }
     };
     const s = sizes[size];
-    
+
     // Clases para la caja del cargo: tamaño fijo para rows 3 y 4
-    const cargoClasses = fixedCargoSize 
-      ? 'w-[100px] md:w-[130px] h-[40px] md:h-[40px] flex items-center justify-center' 
+    const cargoClasses = fixedCargoSize
+      ? 'w-[100px] md:w-[130px] h-[40px] md:h-[40px] flex items-center justify-center'
       : s.minW;
-    
+
     // Clases para la caja del nombre: mismo ancho que cargo, alto 35px para rows 3 y 4
-    const nameClasses = fixedCargoSize 
-      ? 'w-[100px] md:w-[130px] h-[35px] md:h-[35px] flex items-center justify-center' 
+    const nameClasses = fixedCargoSize
+      ? 'w-[100px] md:w-[130px] h-[35px] md:h-[35px] flex items-center justify-center'
       : s.minW;
 
     // Verificar si existe imagen
     const hasImage = persona.image && persona.image.trim() !== '';
-    
+
     // Verificar si existe position
     const hasPosition = persona.position && persona.position.trim() !== '';
 
@@ -534,11 +536,11 @@ function renderOrganigrama() {
     const asociadoDer = asociados.find(a => a.associatedWith === director.id && a.side === 'right');
     const linkedIzq = linkedTos.find(a => a.linkedTo === director.id && a.side === 'left');
     const linkedDer = linkedTos.find(a => a.linkedTo === director.id && a.side === 'right');
-    
+
     // Si tiene asociados laterales, usar posicionamiento relativo para no afectar el centrado
     const hasLeftAssociate = asociadoIzq || linkedIzq;
     const hasRightAssociate = asociadoDer || linkedDer;
-    
+
     return `
       <div class="relative flex items-center justify-center">
         ${hasLeftAssociate ? `
@@ -584,7 +586,7 @@ function renderOrganigrama() {
   // Función para crear líder con sus subordinados (row 4) - subordinados en la misma fila con líneas hacia arriba
   const createLiderWithSubordinados = (lider, subs) => {
     const misSubordinados = subs.filter(s => s.associatedWith === lider.id);
-    
+
     if (misSubordinados.length === 0) {
       return `
         <div class="flex flex-col items-center">
@@ -626,7 +628,7 @@ function renderOrganigrama() {
   // Obtener asociado del CEO (lado derecho) - associatedWith usa línea sólida
   const ceoAsociadoDer = ceoAsociados.find(a => a.side === 'right');
   const ceoAsociadoIzq = ceoAsociados.find(a => a.side === 'left');
-  
+
   // Obtener linkedTo del CEO - usa línea punteada
   const ceoLinkedDer = ceoLinkedTo.find(a => a.linkedTo === ceo?.id && a.side === 'right');
   const ceoLinkedIzq = ceoLinkedTo.find(a => a.linkedTo === ceo?.id && a.side === 'left');
@@ -683,7 +685,7 @@ function renderOrganigrama() {
         <!-- Nivel 2: Directores con asociados laterales -->
         <div class="org-level-directores relative -mt-[2px]">
           <!-- Línea horizontal que conecta directores (solo entre los directores principales) -->
-          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[200px] lg:w-[280px] h-[2px] bg-[#034B84]"></div>
+          <div class="hidden md:block absolute top-0 left-1/2 -translate-x-1/2 w-[200px] lg:w-[448px] h-[2px] bg-[#034B84]"></div>
 
           <!-- Contenedor de directores con líneas verticales -->
           <div class="flex justify-center items-center gap-4 md:gap-[200px] lg:gap-[280px] pt-0 md:pt-4 flex-wrap">
@@ -1662,14 +1664,14 @@ function initPortafolioCarousels() {
 
         function initYouTubePlayer() {
           if (playerInitialized) return;
-          
+
           // Si la API de YouTube no está lista, esperar y reintentar
           if (typeof YT === 'undefined' || !YT.Player) {
             console.log('YouTube API not ready, waiting...');
             setTimeout(initYouTubePlayer, 100);
             return;
           }
-          
+
           playerInitialized = true;
 
           playerContainer.classList.remove('hidden');
@@ -1930,7 +1932,7 @@ function initPortafolioCarousels() {
 
         // Barra de progreso - click para seek
         let isDragging = false;
-        
+
         function seekToPosition(e) {
           const rect = progressContainer.getBoundingClientRect();
           const percent = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
