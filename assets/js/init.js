@@ -730,7 +730,10 @@ function renderAsociados() {
   if (!section) return;
 
   const data = apiData.asociados;
-  const equipo = apiData.equipo;
+  // Filtrar duplicados por imagen (ej: Alicia M Glez aparece 2 veces)
+  const equipo = apiData.equipo.filter((item, index, self) =>
+    index === self.findIndex(t => t.image === item.image)
+  );
 
   // Mostrar todos los miembros del equipo en el carrusel
   const miembrosHTML = equipo.map(m => {
@@ -1065,7 +1068,9 @@ function initCarouselModal() {
   const indicatorsContainer = document.getElementById('carouselIndicators');
 
   let currentIndex = 0;
-  const galeria = apiData.terminalPortuaria.galeria;
+  const galeria = apiData.terminalPortuaria.galeria.filter((item, index, self) =>
+    index === self.findIndex(t => t.src === item.src)
+  );
 
   function renderSlide(index) {
     const item = galeria[index];
